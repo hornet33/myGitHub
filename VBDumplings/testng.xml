@@ -21,11 +21,11 @@
 			<class name="VBDumplings.SampleTestNG"/>	
 		</classes>
 	</test>  <!-- ChromeTest -->
-	<!-- <test name="EdgeTest">
+	<test name="EdgeTest">
 		<parameter name = "browserType" value = "msedge" />
 		<parameter name = "driverVersion" value = "msedgedriver_v89.0.774.76_win64.exe" />
 		<classes>
 			<class name="VBDumplings.SampleTestNG"/>
 		</classes>
-	</test> --> <!-- EdgeTest -->
+	</test> <!-- EdgeTest -->
 </suite> <!-- SampleGoogleTestSuite -->
