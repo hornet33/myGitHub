@@ -1,4 +1,4 @@
-package Pages;
+package vbDumplingPages;
 
 public class FAQPage {
 
