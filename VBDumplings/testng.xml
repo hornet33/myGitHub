@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="SampleGoogleTestSuite" verbose="1" parallel="none">
+<suite name="VBDumplings_Test" verbose="1" parallel="none">
 	<!-- <parameter name = "driverPath" value = "C:\\Users\\Rahul Pradhan\\OneDrive\\Documents\\Selenium\\Drivers\\" /> -->
 	<test name="FirefoxTest">
 		<!--<groups>
@@ -28,4 +28,4 @@
 			<class name="VBDumplings.SampleTestNG"/>
 		</classes>
 	</test> --> <!-- EdgeTest -->
-</suite> <!-- SampleGoogleTestSuite -->
+</suite> <!-- VBDumplings_Test -->
