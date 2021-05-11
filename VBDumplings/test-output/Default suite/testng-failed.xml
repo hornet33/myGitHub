@@ -3,11 +3,11 @@
 <suite parallel="none" name="Failed suite [Default suite]">
   <test parallel="none" name="Default test(failed)">
     <classes>
-      <class name="vbDumplingTestRunners.vbdRunner">
+      <class name="vbDumplingTestRunners.testHomePage">
         <methods>
-          <include name="testMethod"/>
+          <include name="checkTitleText"/>
         </methods>
-      </class> <!-- vbDumplingTestRunners.vbdRunner -->
+      </class> <!-- vbDumplingTestRunners.testHomePage -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

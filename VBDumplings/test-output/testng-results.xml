@@ -1,83 +1,57 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results total="2" passed="2" failed="0" skipped="0">
+<testng-results total="6" passed="6" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2021-05-11T14:13:34Z" name="VBDumplings_Test" finished-at="2021-05-11T14:14:26Z" duration-ms="52061">
+  <suite started-at="2021-05-11T16:32:25Z" name="VBDumplings_Test" finished-at="2021-05-11T16:32:49Z" duration-ms="24467">
     <groups>
     </groups>
-    <test started-at="2021-05-11T14:13:34Z" name="FirefoxTest" finished-at="2021-05-11T14:14:05Z" duration-ms="30509">
-      <class name="vbDumplingTestRunners.vbdRunner">
-        <test-method is-config="true" signature="beforeMethod(java.lang.String)[pri:0, instance:vbDumplingTestRunners.vbdRunner@16aa8654]" started-at="2021-05-11T19:43:34Z" name="beforeMethod" finished-at="2021-05-11T19:43:34Z" duration-ms="31" status="PASS">
+    <test started-at="2021-05-11T16:32:25Z" name="FirefoxTest" finished-at="2021-05-11T16:32:49Z" duration-ms="24467">
+      <class name="vbDumplingTestRunners.testHomePage">
+        <test-method is-config="true" signature="testSetup(java.lang.String, java.lang.String)[pri:0, instance:vbDumplingTestRunners.testHomePage@135606db]" started-at="2021-05-11T22:02:25Z" name="testSetup" finished-at="2021-05-11T22:02:39Z" duration-ms="14560" status="PASS">
           <params>
             <param index="0">
               <value>
                 <![CDATA[firefox]]>
               </value>
             </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method signature="testMethod(java.lang.String)[pri:0, instance:vbDumplingTestRunners.vbdRunner@16aa8654]" started-at="2021-05-11T19:43:34Z" name="testMethod" finished-at="2021-05-11T19:43:57Z" duration-ms="23053" status="PASS">
-          <params>
-            <param index="0">
+            <param index="1">
               <value>
-                <![CDATA[firefox]]>
+                <![CDATA[https://vbdumplings.in/]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testMethod -->
-        <test-method is-config="true" signature="afterMethod(java.lang.String)[pri:0, instance:vbDumplingTestRunners.vbdRunner@16aa8654]" started-at="2021-05-11T19:43:57Z" name="afterMethod" finished-at="2021-05-11T19:44:05Z" duration-ms="7410" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[firefox]]>
-              </value>
-            </param>
-          </params>
+        </test-method> <!-- testSetup -->
+        <test-method signature="checkTitleText()[pri:0, instance:vbDumplingTestRunners.testHomePage@135606db]" started-at="2021-05-11T22:02:39Z" name="checkTitleText" finished-at="2021-05-11T22:02:39Z" duration-ms="47" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- afterMethod -->
-      </class> <!-- vbDumplingTestRunners.vbdRunner -->
+        </test-method> <!-- checkTitleText -->
+        <test-method signature="checkDescriptionText()[pri:0, instance:vbDumplingTestRunners.testHomePage@135606db]" started-at="2021-05-11T22:02:39Z" name="checkDescriptionText" finished-at="2021-05-11T22:02:39Z" duration-ms="19" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkDescriptionText -->
+        <test-method signature="checkHomePageLink()[pri:0, instance:vbDumplingTestRunners.testHomePage@135606db]" started-at="2021-05-11T22:02:39Z" name="checkHomePageLink" finished-at="2021-05-11T22:02:41Z" duration-ms="1237" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkHomePageLink -->
+        <test-method signature="checkMenuHomeLink()[pri:0, instance:vbDumplingTestRunners.testHomePage@135606db]" started-at="2021-05-11T22:02:41Z" name="checkMenuHomeLink" finished-at="2021-05-11T22:02:42Z" duration-ms="1438" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkMenuHomeLink -->
+        <test-method signature="checkMenuMenuLink()[pri:0, instance:vbDumplingTestRunners.testHomePage@135606db]" started-at="2021-05-11T22:02:42Z" name="checkMenuMenuLink" finished-at="2021-05-11T22:02:44Z" duration-ms="1892" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkMenuMenuLink -->
+        <test-method signature="checkMenuFAQLink()[pri:0, instance:vbDumplingTestRunners.testHomePage@135606db]" started-at="2021-05-11T22:02:44Z" name="checkMenuFAQLink" finished-at="2021-05-11T22:02:46Z" duration-ms="1537" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkMenuFAQLink -->
+        <test-method is-config="true" signature="testClose()[pri:0, instance:vbDumplingTestRunners.testHomePage@135606db]" started-at="2021-05-11T22:02:46Z" name="testClose" finished-at="2021-05-11T22:02:49Z" duration-ms="3721" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testClose -->
+      </class> <!-- vbDumplingTestRunners.testHomePage -->
     </test> <!-- FirefoxTest -->
-    <test started-at="2021-05-11T14:14:05Z" name="ChromeTest" finished-at="2021-05-11T14:14:26Z" duration-ms="21536">
-      <class name="vbDumplingTestRunners.vbdRunner">
-        <test-method is-config="true" signature="beforeMethod(java.lang.String)[pri:0, instance:vbDumplingTestRunners.vbdRunner@5cdec700]" started-at="2021-05-11T19:44:05Z" name="beforeMethod" finished-at="2021-05-11T19:44:05Z" duration-ms="0" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[chrome]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method signature="testMethod(java.lang.String)[pri:0, instance:vbDumplingTestRunners.vbdRunner@5cdec700]" started-at="2021-05-11T19:44:05Z" name="testMethod" finished-at="2021-05-11T19:44:25Z" duration-ms="19984" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[chrome]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testMethod -->
-        <test-method is-config="true" signature="afterMethod(java.lang.String)[pri:0, instance:vbDumplingTestRunners.vbdRunner@5cdec700]" started-at="2021-05-11T19:44:25Z" name="afterMethod" finished-at="2021-05-11T19:44:26Z" duration-ms="1551" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[chrome]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-      </class> <!-- vbDumplingTestRunners.vbdRunner -->
-    </test> <!-- ChromeTest -->
   </suite> <!-- VBDumplings_Test -->
 </testng-results>

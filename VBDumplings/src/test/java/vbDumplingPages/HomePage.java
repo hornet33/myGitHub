@@ -9,9 +9,9 @@ public class HomePage {
 	
 	WebDriver driver;
 	
-	@FindBy(className = "site-title") WebElement homePageTitle;
+	@FindBy(xpath = "//h1") WebElement homePageTitle;
 	@FindBy(xpath = "//h1/a") WebElement homePageLink;
-	@FindBy(className = "site-description") WebElement homePageDescription;
+	@FindBy(xpath = "//p[@class='site-description']") WebElement homePageDescription;
 	@FindBy(xpath = "//a[text()='Home']") WebElement menuHomeLink;
 	@FindBy(xpath = "//a[text()='Menu']") WebElement menuMenuLink;
 	@FindBy(xpath = "//a[text()='FAQs']") WebElement menuFAQLink;
@@ -63,5 +63,9 @@ public class HomePage {
 	
 	public void clickBodyOrderNowLink() {
 		bodyOrderNowLink.click();
+	}
+	
+	public String getPageTitle() {
+		return(driver.getTitle());
 	}
 }

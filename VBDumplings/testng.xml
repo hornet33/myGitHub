@@ -2,6 +2,8 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="VBDumplings_Test" verbose="1" parallel="none">
 	<!-- <parameter name = "driverPath" value = "C:\\Users\\Rahul Pradhan\\OneDrive\\Documents\\Selenium\\Drivers\\" /> -->
+	<parameter name = "vbdURL" value = "https://vbdumplings.in/" />
+	
 	<test name="FirefoxTest">
 		<!--<groups>
 			<run>
@@ -9,23 +11,23 @@
 			</run>
 		</groups>-->
 		<parameter name = "browserType" value = "firefox" />
-		<!-- <parameter name = "driverVersion" value = "geckodriver-v0.29.0.exe" /> -->
 		<classes>
-			<class name="vbDumplingTestRunners.vbdRunner"/>	
+			<class name="vbDumplingTestRunners.testHomePage"/>	
 		</classes>
 	</test> <!-- FirefoxTest -->
-	<test name="ChromeTest">
+	
+	<!-- <test name="ChromeTest">
 		<parameter name = "browserType" value = "chrome" />
-		<!-- <parameter name = "driverVersion" value = "chromedriver_v89.exe" /> -->
 		<classes>
-			<class name="vbDumplingTestRunners.vbdRunner"/>	
+			<class name="vbDumplingTestRunners.testHomePage"/>
 		</classes>
-	</test>  <!-- ChromeTest -->
+	</test>  --> <!-- ChromeTest -->
+	
 	<!-- <test name="EdgeTest">
 		<parameter name = "browserType" value = "msedge" />
-		<parameter name = "driverVersion" value = "msedgedriver_v89.0.774.76_win64.exe" />
 		<classes>
-			<class name="vbDumplingTestRunners.vbdRunner"/>
+			<class name="vbDumplingTestRunners.testHomePage"/>	
 		</classes>
 	</test> --> <!-- EdgeTest -->
+	
 </suite> <!-- VBDumplings_Test -->
