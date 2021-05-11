@@ -11,21 +11,21 @@
 		<parameter name = "browserType" value = "firefox" />
 		<!-- <parameter name = "driverVersion" value = "geckodriver-v0.29.0.exe" /> -->
 		<classes>
-			<class name="VBDumplings.SampleTestNG"/>	
+			<class name="vbDumplingTestRunners.vbdRunner"/>	
 		</classes>
 	</test> <!-- FirefoxTest -->
 	<test name="ChromeTest">
 		<parameter name = "browserType" value = "chrome" />
 		<!-- <parameter name = "driverVersion" value = "chromedriver_v89.exe" /> -->
 		<classes>
-			<class name="VBDumplings.SampleTestNG"/>	
+			<class name="vbDumplingTestRunners.vbdRunner"/>	
 		</classes>
 	</test>  <!-- ChromeTest -->
 	<!-- <test name="EdgeTest">
 		<parameter name = "browserType" value = "msedge" />
 		<parameter name = "driverVersion" value = "msedgedriver_v89.0.774.76_win64.exe" />
 		<classes>
-			<class name="VBDumplings.SampleTestNG"/>
+			<class name="vbDumplingTestRunners.vbdRunner"/>
 		</classes>
 	</test> --> <!-- EdgeTest -->
 </suite> <!-- VBDumplings_Test -->
