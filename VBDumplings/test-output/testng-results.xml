@@ -2,22 +2,22 @@
 <testng-results total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2021-05-11T14:05:54Z" name="Default suite" finished-at="2021-05-11T14:05:54Z" duration-ms="16">
+  <suite started-at="2021-05-11T14:07:43Z" name="Default suite" finished-at="2021-05-11T14:07:43Z" duration-ms="16">
     <groups>
     </groups>
-    <test started-at="2021-05-11T14:05:54Z" name="Default test" finished-at="2021-05-11T14:05:54Z" duration-ms="16">
+    <test started-at="2021-05-11T14:07:43Z" name="Default test" finished-at="2021-05-11T14:07:43Z" duration-ms="16">
       <class name="vbDumplingTestRunners.SampleTestNG">
-        <test-method signature="testMethod(java.lang.String)[pri:0, instance:vbDumplingTestRunners.SampleTestNG@127a7a2e]" started-at="2021-05-11T19:35:54Z" name="testMethod" finished-at="2021-05-11T19:35:54Z" duration-ms="0" status="FAIL">
+        <test-method signature="testMethod(java.lang.String)[pri:0, instance:vbDumplingTestRunners.SampleTestNG@14008db3]" started-at="2021-05-11T19:37:43Z" name="testMethod" finished-at="2021-05-11T19:37:43Z" duration-ms="0" status="FAIL">
           <exception class="org.testng.TestNGException">
             <message>
               <![CDATA[
 Parameter 'browserType' is required by @Test on method testMethod but has not been marked @Optional or defined
-in C:\Users\Rahul Pradhan\AppData\Local\Temp\testng-eclipse-365241163\testng-customsuite.xml]]>
+in C:\Users\Rahul Pradhan\AppData\Local\Temp\testng-eclipse-1171598760\testng-customsuite.xml]]>
             </message>
             <full-stacktrace>
               <![CDATA[org.testng.TestNGException: 
 Parameter 'browserType' is required by @Test on method testMethod but has not been marked @Optional or defined
-in C:\Users\Rahul Pradhan\AppData\Local\Temp\testng-eclipse-365241163\testng-customsuite.xml
+in C:\Users\Rahul Pradhan\AppData\Local\Temp\testng-eclipse-1171598760\testng-customsuite.xml
 	at org.testng.internal.Parameters.createParameters(Parameters.java:155)
 	at org.testng.internal.Parameters.createParameters(Parameters.java:355)
 	at org.testng.internal.Parameters.handleParameters(Parameters.java:447)
