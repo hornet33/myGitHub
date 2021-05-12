@@ -16,12 +16,12 @@
 		</classes>
 	</test> <!-- FirefoxTest -->
 	
-	<!-- <test name="ChromeTest">
+	<test name="ChromeTest">
 		<parameter name = "browserType" value = "chrome" />
 		<classes>
 			<class name="vbDumplingTestRunners.testHomePage"/>
 		</classes>
-	</test>  --> <!-- ChromeTest -->
+	</test> <!-- ChromeTest -->
 	
 	<!-- <test name="EdgeTest">
 		<parameter name = "browserType" value = "msedge" />
