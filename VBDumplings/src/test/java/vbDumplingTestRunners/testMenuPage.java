@@ -6,8 +6,8 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.Assert;
-import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeTest;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 import io.github.bonigarcia.wdm.WebDriverManager;
@@ -21,7 +21,7 @@ public class testMenuPage{
 	WebDriver driver;
 	MenuPage objMenuPage;
 	
-	@BeforeTest
+	@BeforeClass
 	@Parameters({"browserType","vbdURL"})
 	public void testSetup(String browserType, String vbdURL) {
 		if (browserType.equalsIgnoreCase("chrome")) {			
@@ -66,7 +66,7 @@ public class testMenuPage{
 		Assert.assertEquals(objMenuPage.getMenuPageMenuCategoryTwoText(), expectedMenuCategoryTwoText);
 	}
 	
-	@AfterTest
+	@AfterClass
 	public void testClose() {
 		driver.quit();
 	}

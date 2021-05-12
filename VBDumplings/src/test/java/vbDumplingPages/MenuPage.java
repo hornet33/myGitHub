@@ -15,10 +15,8 @@ public class MenuPage {
 	@FindBy(xpath = "//h1[@class='entry-title']") WebElement menuPageLHSHeader;
 	@FindBy(xpath = "(//h4)[1]") WebElement menuPageMenuCategoryOne;
 	@FindBy(xpath = "(//h4)[2]") WebElement menuPageMenuCategoryTwo;
-	@FindBy(xpath = "//div[@class='wp-block-column']/p/strong") List<WebElement> menuPageMenuItemName;
-	@FindBy(xpath = "//div[@class='wp-block-column']/p") List<WebElement> menuPageMenuItemFullText;
-	@FindBy(xpath = "//div[@class='wp-block-column is-vertically-aligned-top']/p/strong") List<WebElement> menuPageMenuItemNameRemaining;
-	@FindBy(xpath = "//div[@class='wp-block-column is-vertically-aligned-top']/p") List<WebElement> menuPageMenuItemFullTextRemaining;
+	@FindBy(xpath = "//div[starts-with(@class,'wp-block-column')]/p/strong") List<WebElement> menuPageMenuItemName;
+	@FindBy(xpath = "//div[starts-with(@class,'wp-block-column')]/p") List<WebElement> menuPageMenuItemFullText;
 	
 	public MenuPage(WebDriver driver) {
 		this.driver = driver;

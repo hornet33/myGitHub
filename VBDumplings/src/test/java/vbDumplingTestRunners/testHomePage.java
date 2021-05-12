@@ -6,8 +6,8 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.Assert;
-import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeTest;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 import io.github.bonigarcia.wdm.WebDriverManager;
@@ -27,7 +27,7 @@ public class testHomePage{
 	WebDriver driver;
 	HomePage objHomePage;
 	
-	@BeforeTest
+	@BeforeClass
 	@Parameters({"browserType","vbdURL"})
 	public void testSetup(String browserType, String vbdURL) {
 		if (browserType.equalsIgnoreCase("chrome")) {			
@@ -122,7 +122,7 @@ public class testHomePage{
 		objHomePage.verifyOrderPageHeader(originalWindow, expectedOrderPageHeader);
 	}
 	
-	@AfterTest
+	@AfterClass
 	public void testClose() {
 		driver.quit();
 	}

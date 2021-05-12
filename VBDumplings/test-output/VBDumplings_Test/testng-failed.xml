@@ -15,7 +15,6 @@
       </class> <!-- vbDumplingTestRunners.testHomePage -->
       <class name="vbDumplingTestRunners.testMenuPage">
         <methods>
-          <include name="checkLHSHeaderText"/>
           <include name="testSetup"/>
           <include name="testClose"/>
         </methods>
