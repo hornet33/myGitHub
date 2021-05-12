@@ -1,5 +1,6 @@
 package vbDumplingTestRunners;
 
+import java.util.ArrayList;
 import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -18,6 +19,14 @@ public class testMenuPage{
 	final String expectedLHSHeaderText = "Menu";
 	final String expectedMenuCategoryOneText = "Steamed Vegetable Momos";
 	final String expectedMenuCategoryTwoText = "Pan-Fried Vegetable Momos";
+	final String[] expectedMenuItemNames = 
+		{"Wheat/Maida Cabbage","Wheat/Maida Soya-chunk","Wheat/Maida Paneer","Wheat/Maida Cabbage + Cheese","Wheat/Maida Soya-chunk + Cheese",
+		 "Wheat/Maida Paneer + Cheese","Pan-fried Maida Cabbage","Pan-fried Maida Cabbage + Cheese","Pan-fried Maida Soya-chunk","Pan-fried Maida Soya-chunk + Cheese"
+		 };
+	final String[] expectedMenuItemPrices = 
+		{"₹55 per plate","₹55 per plate","₹60 per plate","₹60 per plate","₹60 per plate",
+		 "₹65 per plate","₹70 per plate","₹75 per plate","₹70 per plate","₹75 per plate"				
+		};
 	WebDriver driver;
 	MenuPage objMenuPage;
 	
@@ -64,6 +73,28 @@ public class testMenuPage{
 	@Test(priority=21)
 	public void checkMenuCategoryTwoText() {
 		Assert.assertEquals(objMenuPage.getMenuPageMenuCategoryTwoText(), expectedMenuCategoryTwoText);
+	}
+	
+	@Test(priority=22)
+	public void checkMenuItemNames() {
+		ArrayList<String> actualMenuItemNames = objMenuPage.getMenuPageMenuItemNames();
+		for(int i=0;i<expectedMenuItemNames.length;i++) {
+			System.out.println("Menu Item Name (Expected -- Actual): '" + expectedMenuItemNames[i].trim() + "' -- '" + actualMenuItemNames.get(i).trim() + "'");
+			if(expectedMenuItemNames[i].trim().equals(actualMenuItemNames.get(i).trim())) {
+				Assert.assertTrue(true);
+			}
+			else {
+				Assert.assertFalse(false);
+			}
+		}
+	}
+	
+	@Test(priority=23)
+	public void checkMenuItemPrices() {
+		ArrayList<String> actualMenuItemFullText = objMenuPage.getMenuPageMenuItemFullText();
+		for(String s: actualMenuItemFullText) {
+			System.out.println("'" + s.substring(s.indexOf("₹")) + "'");
+		}
 	}
 	
 	@AfterClass

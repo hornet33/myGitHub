@@ -10,7 +10,7 @@
 			<class name="vbDumplingTestRunners.testHomePage"/>	
 			<class name="vbDumplingTestRunners.testMenuPage"/>
 		</classes>
-	</test> <!-- FirefoxTest -->
+	</test>  <!-- FirefoxTest -->
 	
 	<test name="ChromeTest">
 		<parameter name = "browserType" value = "chrome" />
