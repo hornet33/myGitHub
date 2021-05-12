@@ -13,6 +13,13 @@
           <include name="testClose"/>
         </methods>
       </class> <!-- vbDumplingTestRunners.testHomePage -->
+      <class name="vbDumplingTestRunners.testMenuPage">
+        <methods>
+          <include name="checkLHSHeaderText"/>
+          <include name="testSetup"/>
+          <include name="testClose"/>
+        </methods>
+      </class> <!-- vbDumplingTestRunners.testMenuPage -->
     </classes>
   </test> <!-- FirefoxTest(failed) -->
 </suite> <!-- Failed suite [VBDumplings_Test] -->

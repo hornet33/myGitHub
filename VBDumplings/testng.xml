@@ -4,7 +4,8 @@
 	<!-- <parameter name = "driverPath" value = "C:\\Users\\Rahul Pradhan\\OneDrive\\Documents\\Selenium\\Drivers\\" /> -->
 	<parameter name = "vbdURL" value = "https://vbdumplings.in/" />
 	
-	<test name="FirefoxTest">
+	<!-- Firefox Tests -->
+	<test name="HomePageTest_Firefox">
 		<!--<groups>
 			<run>
 				<include name = "group2" />
@@ -14,19 +15,38 @@
 		<classes>
 			<class name="vbDumplingTestRunners.testHomePage"/>	
 		</classes>
-	</test> <!-- FirefoxTest -->
-	
-	<test name="ChromeTest">
-		<parameter name = "browserType" value = "chrome" />
+	</test> <!-- HomePageTest_Firefox -->
+	<test name="MenuPageTest_Firefox">
+		<parameter name = "browserType" value = "firefox" />
 		<classes>
-			<class name="vbDumplingTestRunners.testHomePage"/>
+			<class name="vbDumplingTestRunners.testMenuPage"/>	
 		</classes>
-	</test> <!-- ChromeTest -->
+	</test> <!-- MenuPageTest_Firefox -->
+	
+	<!-- Chrome Tests -->
+	<test name="HomePageTest_Chrome">
+		<!--<groups>
+			<run>
+				<include name = "group2" />
+			</run>
+		</groups>-->
+		<parameter name = "browserType" value = "Chrome" />
+		<classes>
+			<class name="vbDumplingTestRunners.testHomePage"/>	
+		</classes>
+	</test> <!-- HomePageTest_Chrome -->
+	<test name="MenuPageTest_Chrome">
+		<parameter name = "browserType" value = "Chrome" />
+		<classes>
+			<class name="vbDumplingTestRunners.testMenuPage"/>	
+		</classes>
+	</test> <!-- MenuPageTest_Chrome -->
 	
 	<!-- <test name="EdgeTest">
 		<parameter name = "browserType" value = "msedge" />
 		<classes>
 			<class name="vbDumplingTestRunners.testHomePage"/>	
+			<class name="vbDumplingTestRunners.testMenuPage"/>	
 		</classes>
 	</test> --> <!-- EdgeTest -->
 	
