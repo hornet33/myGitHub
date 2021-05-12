@@ -1,9 +1,11 @@
 package vbDumplingPages;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.testng.Assert;
 
 public class HomePage {
 	
@@ -20,6 +22,7 @@ public class HomePage {
 	@FindBy(xpath = "//a[text()='About']") WebElement menuAboutLink;
 	@FindBy(xpath = "//a[text()='order now']") WebElement bodyOrderNowLink;
 	@FindBy(xpath = "//h2[@class='entry-title']") WebElement homeLHSHeader;
+	@FindBy(xpath = "//h3[@id='ff-title-root']") WebElement orderPageHeader;
 	
 	public HomePage(WebDriver driver) {
 		this.driver = driver;
@@ -72,5 +75,18 @@ public class HomePage {
 	
 	public String getPageTitle() {
 		return(driver.getTitle());
+	}
+	
+	public void verifyOrderPageHeader(String originalWindow,String expectedOrderPageHeader) {
+		//Loop through until we find a new window handle
+		for (String windowHandle : driver.getWindowHandles()) {
+			if(!originalWindow.contentEquals(windowHandle)) {
+		        driver.switchTo().window(windowHandle);
+		        break;
+		    }
+		}
+		Assert.assertEquals(orderPageHeader.getText(),expectedOrderPageHeader);
+		driver.close();
+		driver.switchTo().window(originalWindow);
 	}
 }

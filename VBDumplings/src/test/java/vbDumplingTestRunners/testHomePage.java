@@ -1,7 +1,7 @@
 package vbDumplingTestRunners;
 
+import java.util.ArrayList;
 import java.util.concurrent.TimeUnit;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
@@ -24,6 +24,7 @@ public class testHomePage{
 	final String expectedTestimonialsPageTitle = "Testimonials – VB Dumplings";
 	final String expectedAboutPageTitle = "About – VB Dumplings";
 	final String expectedLHSHeaderText = "Welcome to VB Dumplings!";
+	final String expectedOrderPageHeader = "VB Dumplings";
 	WebDriver driver;
 	HomePage objHomePage;
 	
@@ -104,6 +105,22 @@ public class testHomePage{
 	public void checkLHSHeaderText() {
 		objHomePage.clickMenuHomeLink();
 		Assert.assertEquals(objHomePage.getLHSHeaderText().toUpperCase(),expectedLHSHeaderText.toUpperCase());
+	}
+	
+	@Test(priority=10)
+	public void checkMenuOrderLink() {
+		//Store the ID of the original window
+		String originalWindow = driver.getWindowHandle();	
+		objHomePage.clickMenuOrderLink();		
+		objHomePage.verifyOrderPageHeader(originalWindow, expectedOrderPageHeader);
+	}
+	
+	@Test(priority=11)
+	public void checkBodyOrderNowLink() {
+		//Store the ID of the original window
+		String originalWindow = driver.getWindowHandle();	
+		objHomePage.clickBodyOrderNowLink();		
+		objHomePage.verifyOrderPageHeader(originalWindow, expectedOrderPageHeader);
 	}
 	
 	@AfterTest

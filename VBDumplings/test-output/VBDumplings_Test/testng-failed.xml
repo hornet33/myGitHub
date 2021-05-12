@@ -8,7 +8,7 @@
     <classes>
       <class name="vbDumplingTestRunners.testHomePage">
         <methods>
-          <include name="checkTitleText"/>
+          <include name="checkMenuOrderLink"/>
           <include name="testSetup"/>
           <include name="testClose"/>
         </methods>
