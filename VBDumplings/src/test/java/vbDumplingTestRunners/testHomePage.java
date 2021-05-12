@@ -21,6 +21,9 @@ public class testHomePage{
 	final String expectedHomePageTitle = "VB Dumplings – Authentic vegetarian Darjeeling momos!";
 	final String expectedMenuPageTitle = "Menu – VB Dumplings";
 	final String expectedFAQPageTitle = "FAQs – VB Dumplings";
+	final String expectedTestimonialsPageTitle = "Testimonials – VB Dumplings";
+	final String expectedAboutPageTitle = "About – VB Dumplings";
+	final String expectedLHSHeaderText = "Welcome to VB Dumplings!";
 	WebDriver driver;
 	HomePage objHomePage;
 	
@@ -83,6 +86,24 @@ public class testHomePage{
 	public void checkMenuFAQLink() {
 		objHomePage.clickMenuFAQLink();
 		Assert.assertEquals(objHomePage.getPageTitle(), expectedFAQPageTitle);
+	}
+	
+	@Test(priority=7)
+	public void checkMenuTestimonialsLink() {
+		objHomePage.clickMenuTestimonialsLink();
+		Assert.assertEquals(objHomePage.getPageTitle(), expectedTestimonialsPageTitle);
+	}
+	
+	@Test(priority=8)
+	public void checkMenuAboutLink() {
+		objHomePage.clickMenuAboutLink();
+		Assert.assertEquals(objHomePage.getPageTitle(), expectedAboutPageTitle);
+	}
+	
+	@Test(priority=9)
+	public void checkLHSHeaderText() {
+		objHomePage.clickMenuHomeLink();
+		Assert.assertEquals(objHomePage.getLHSHeaderText().toUpperCase(),expectedLHSHeaderText.toUpperCase());
 	}
 	
 	@AfterTest

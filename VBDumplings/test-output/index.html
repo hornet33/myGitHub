@@ -23,7 +23,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -37,7 +37,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-VBDumplings_Test" class="navigator-link">
-              <span class="suite-name border-passed">VBDumplings_Test</span>
+              <span class="suite-name border-failed">VBDumplings_Test</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -90,7 +90,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">6 methods,   6 passed</span>
+                    <span class="method-stats">9 methods, 1 failed,   8 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-VBDumplings_Test" class="hide-methods failed suite-VBDumplings_Test"> (hide)</a> <!-- hide-methods failed suite-VBDumplings_Test -->
+                      <a href="#" panel-name="suite-VBDumplings_Test" class="show-methods failed suite-VBDumplings_Test"> (show)</a> <!-- show-methods failed suite-VBDumplings_Test -->
+                    </span>
+                    <div class="method-list-content failed suite-VBDumplings_Test">
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-VBDumplings_Test" title="vbDumplingTestRunners.testHomePage" class="method navigator-link" hash-for-method="checkLHSHeaderText">checkLHSHeaderText</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-VBDumplings_Test -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -111,6 +125,11 @@
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-VBDumplings_Test" title="vbDumplingTestRunners.testHomePage" class="method navigator-link" hash-for-method="checkMenuAboutLink">checkMenuAboutLink</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-VBDumplings_Test" title="vbDumplingTestRunners.testHomePage" class="method navigator-link" hash-for-method="checkMenuFAQLink">checkMenuFAQLink</a> <!-- method navigator-link -->
                       </span>
                       <br/>
@@ -122,6 +141,11 @@
                       <span>
                         <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-VBDumplings_Test" title="vbDumplingTestRunners.testHomePage" class="method navigator-link" hash-for-method="checkMenuMenuLink">checkMenuMenuLink</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-VBDumplings_Test" title="vbDumplingTestRunners.testHomePage" class="method navigator-link" hash-for-method="checkMenuTestimonialsLink">checkMenuTestimonialsLink</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
@@ -141,6 +165,95 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-VBDumplings_Test" class="panel VBDumplings_Test">
+          <div class="suite-VBDumplings_Test-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">vbDumplingTestRunners.testHomePage</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="checkLHSHeaderText">
+                  </a> <!-- checkLHSHeaderText -->
+                  <span class="method-name">checkLHSHeaderText</span>
+                  <div class="stack-trace"><b>"org.openqa.selenium.WebDriverException: TypeError: browsingContextFn().currentWindowGlobal is null
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;RAHUL-LAPTOP&apos;, ip: &apos;192.168.0.105&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.10&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 88.0.1, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20210504152106, moz:geckodriverVersion: 0.29.0, moz:headless: false, moz:processID: 8324, moz:profile: C:\Users\Rahul Pradhan\AppD..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 6bdee85e-0bfc-4ee3-9e32-9bf407cb1569
+*** Element info: {Using=xpath, value=//h2[@class=&apos;entry-title&apos;]}
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at com.sun.proxy.$Proxy13.getText(Unknown Source)
+	at vbDumplingPages.HomePage.getLHSHeaderText(HomePage.java:34)
+	at vbDumplingTestRunners.testHomePage.checkLHSHeaderText(testHomePage.java:105)
+... Removed 28 stack frames<br/> org.openqa.selenium.WebDriverException: TypeError: browsingContextFn().currentWindowGlobal is null
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;RAHUL-LAPTOP&apos;, ip: &apos;192.168.0.105&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.10&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 88.0.1, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20210504152106, moz:geckodriverVersion: 0.29.0, moz:headless: false, moz:processID: 8324, moz:profile: C:\Users\Rahul Pradhan\AppD..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 6bdee85e-0bfc-4ee3-9e32-9bf407cb1569
+*** Element info: {Using=xpath, value=//h2[@class=&apos;entry-title&apos;]}
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at com.sun.proxy.$Proxy13.getText(Unknown Source)
+	at vbDumplingPages.HomePage.getLHSHeaderText(HomePage.java:34)
+	at vbDumplingTestRunners.testHomePage.checkLHSHeaderText(testHomePage.java:105)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+"</b><br>java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)<br>java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)<br>java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)<br>java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)<br>org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)<br>org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)<br>org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)<br>org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)<br>org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)<br>org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)<br>org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)<br>org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)<br>org.openqa.selenium.By$ByXPath.findElement(By.java:353)<br>org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)<br>org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)<br>org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)<br>com.sun.proxy.$Proxy13.getText(Unknown Source)<br>vbDumplingPages.HomePage.getLHSHeaderText(HomePage.java:34)<br>vbDumplingTestRunners.testHomePage.checkLHSHeaderText(testHomePage.java:105)<br>java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br>java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)<br>java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)<br>java.base/java.lang.reflect.Method.invoke(Method.java:566)<br>org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)<br>org.testng.internal.Invoker.invokeMethod(Invoker.java:714)<br>org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)<br>org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)<br>org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)<br>org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)<br>org.testng.TestRunner.privateRun(TestRunner.java:767)<br>org.testng.TestRunner.run(TestRunner.java:617)<br>org.testng.SuiteRunner.runTest(SuiteRunner.java:334)<br>org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)<br>org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)<br>org.testng.SuiteRunner.run(SuiteRunner.java:240)<br>org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)<br>org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)<br>org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)<br>org.testng.TestNG.runSuitesLocally(TestNG.java:1123)<br>org.testng.TestNG.run(TestNG.java:1031)<br>org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)<br>org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)<br>org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)<br>
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-VBDumplings_Test-class-failed -->
           <div class="suite-VBDumplings_Test-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
@@ -163,6 +276,13 @@
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
+                  <a name="checkMenuAboutLink">
+                  </a> <!-- checkMenuAboutLink -->
+                  <span class="method-name">checkMenuAboutLink</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
                   <a name="checkMenuFAQLink">
                   </a> <!-- checkMenuFAQLink -->
                   <span class="method-name">checkMenuFAQLink</span>
@@ -180,6 +300,13 @@
                   <a name="checkMenuMenuLink">
                   </a> <!-- checkMenuMenuLink -->
                   <span class="method-name">checkMenuMenuLink</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="checkMenuTestimonialsLink">
+                  </a> <!-- checkMenuTestimonialsLink -->
+                  <span class="method-name">checkMenuTestimonialsLink</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
@@ -245,36 +372,48 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(6);
+data.addRows(9);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'checkMenuMenuLink')
+data.setCell(0, 1, 'checkLHSHeaderText')
 data.setCell(0, 2, 'vbDumplingTestRunners.testHomePage')
-data.setCell(0, 3, 1892);
+data.setCell(0, 3, 6422);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'checkMenuFAQLink')
+data.setCell(1, 1, 'checkMenuMenuLink')
 data.setCell(1, 2, 'vbDumplingTestRunners.testHomePage')
-data.setCell(1, 3, 1537);
+data.setCell(1, 3, 1698);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'checkMenuHomeLink')
+data.setCell(2, 1, 'checkMenuTestimonialsLink')
 data.setCell(2, 2, 'vbDumplingTestRunners.testHomePage')
-data.setCell(2, 3, 1438);
+data.setCell(2, 3, 1510);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'checkHomePageLink')
+data.setCell(3, 1, 'checkMenuAboutLink')
 data.setCell(3, 2, 'vbDumplingTestRunners.testHomePage')
-data.setCell(3, 3, 1237);
+data.setCell(3, 3, 1473);
 data.setCell(4, 0, 4)
-data.setCell(4, 1, 'checkTitleText')
+data.setCell(4, 1, 'checkMenuFAQLink')
 data.setCell(4, 2, 'vbDumplingTestRunners.testHomePage')
-data.setCell(4, 3, 47);
+data.setCell(4, 3, 1256);
 data.setCell(5, 0, 5)
-data.setCell(5, 1, 'checkDescriptionText')
+data.setCell(5, 1, 'checkHomePageLink')
 data.setCell(5, 2, 'vbDumplingTestRunners.testHomePage')
-data.setCell(5, 3, 19);
+data.setCell(5, 3, 691);
+data.setCell(6, 0, 6)
+data.setCell(6, 1, 'checkMenuHomeLink')
+data.setCell(6, 2, 'vbDumplingTestRunners.testHomePage')
+data.setCell(6, 3, 577);
+data.setCell(7, 0, 7)
+data.setCell(7, 1, 'checkTitleText')
+data.setCell(7, 2, 'vbDumplingTestRunners.testHomePage')
+data.setCell(7, 3, 67);
+data.setCell(8, 0, 8)
+data.setCell(8, 1, 'checkDescriptionText')
+data.setCell(8, 2, 'vbDumplingTestRunners.testHomePage')
+data.setCell(8, 3, 26);
 window.suiteTableData['VBDumplings_Test']= { tableData: data, tableDiv: 'times-div-VBDumplings_Test'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 6 seconds</span>
+              <span class="suite-total-time">Total running time: 13 seconds</span>
               <div id="times-div-VBDumplings_Test">
               </div> <!-- times-div-VBDumplings_Test -->
             </div> <!-- times-div -->
@@ -307,31 +446,47 @@ return data;
               </div> <!-- configuration-test before -->
               <div class="test-method">
                 <span class="method-name">checkTitleText</span>
-                <span class="method-start">14567 ms</span>
+                <span class="method-start">15147 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">checkDescriptionText</span>
-                <span class="method-start">14615 ms</span>
+                <span class="method-start">15216 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">checkHomePageLink</span>
-                <span class="method-start">14636 ms</span>
+                <span class="method-start">15243 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">checkMenuHomeLink</span>
-                <span class="method-start">15874 ms</span>
+                <span class="method-start">15935 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">checkMenuMenuLink</span>
-                <span class="method-start">17313 ms</span>
+                <span class="method-start">16513 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">checkMenuFAQLink</span>
-                <span class="method-start">19207 ms</span>
+                <span class="method-start">18212 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">checkMenuTestimonialsLink</span>
+                <span class="method-start">19469 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">checkMenuAboutLink</span>
+                <span class="method-start">20980 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">checkLHSHeaderText</span>
+                <span class="method-start">22453 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-test after">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">testClose</span>
-                <span class="method-start">20746 ms</span>
+                <span class="method-start">28881 ms</span>
               </div> <!-- configuration-test after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

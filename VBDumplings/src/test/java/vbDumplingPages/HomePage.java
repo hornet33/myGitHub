@@ -19,6 +19,7 @@ public class HomePage {
 	@FindBy(xpath = "//a[text()='Order']") WebElement menuOrderLink;
 	@FindBy(xpath = "//a[text()='About']") WebElement menuAboutLink;
 	@FindBy(xpath = "//a[text()='order now']") WebElement bodyOrderNowLink;
+	@FindBy(xpath = "//h2[@class='entry-title']") WebElement homeLHSHeader;
 	
 	public HomePage(WebDriver driver) {
 		this.driver = driver;
@@ -27,6 +28,10 @@ public class HomePage {
 	
 	public String getHeaderText() {
 		return(homePageTitle.getText());
+	}
+	
+	public String getLHSHeaderText() {
+		return(homeLHSHeader.getText());
 	}
 	
 	public void clickHomePageLink() {

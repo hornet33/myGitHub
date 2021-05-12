@@ -1,13 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite parallel="none" name="Failed suite [Default suite]">
-  <test parallel="none" name="Default test(failed)">
+<suite parallel="none" name="Failed suite [VBDumplings_Test]">
+  <parameter name="vbdURL" value="https://vbdumplings.in/"/>
+  <parameter name="browserType" value="firefox"/>
+  <test parallel="none" name="FirefoxTest(failed)">
+    <parameter name="browserType" value="firefox"/>
     <classes>
       <class name="vbDumplingTestRunners.testHomePage">
         <methods>
-          <include name="checkTitleText"/>
+          <include name="testSetup"/>
+          <include name="checkLHSHeaderText"/>
+          <include name="testClose"/>
         </methods>
       </class> <!-- vbDumplingTestRunners.testHomePage -->
     </classes>
-  </test> <!-- Default test(failed) -->
-</suite> <!-- Failed suite [Default suite] -->
+  </test> <!-- FirefoxTest(failed) -->
+</suite> <!-- Failed suite [VBDumplings_Test] -->

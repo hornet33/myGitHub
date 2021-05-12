@@ -31,24 +31,87 @@ div.shootout {padding:2em;border:3px #4854A8 solid}
 <body>
 <table cellspacing="0" cellpadding="0" class="result">
 <tr><th>Test</th><th class="numi">Methods<br/>Passed</th><th class="numi">Scenarios<br/>Passed</th><th class="numi"># skipped</th><th class="numi"># failed</th><th class="numi">Total<br/>Time</th><th class="numi">Included<br/>Groups</th><th class="numi">Excluded<br/>Groups</th></tr>
-<tr><td style="text-align:left;padding-right:2em">FirefoxTest</td><td class="numi">6</td><td class="numi">6</td><td class="numi">0</td><td class="numi">0</td><td class="numi">24.5 seconds</td><td class="numi"></td><td class="numi"></td></tr>
+<tr><td style="text-align:left;padding-right:2em">FirefoxTest</td><td class="numi">8</td><td class="numi">8</td><td class="numi">0</td><td class="numi_attn">1</td><td class="numi">31.1 seconds</td><td class="numi"></td><td class="numi"></td></tr>
 </table>
 <table cellspacing="0" cellpadding="0" class="passed" id="summary">
 <tr><th>Class</th><th>Method</th><th># of<br/>Scenarios</th><th>Start</th><th>Time<br/>(ms)</th></tr>
+<tr><th colspan="4">FirefoxTest &#8212; failed (configuration methods)</th></tr>
+<tr class="failedodd"><td rowspan="1">vbDumplingTestRunners.testHomePage</td><td><a href="#m1"><b>testClose</b>  </a></td><td class="numi">1</td><td>1620796191962</td><td class="numi">0</td></tr>
+<tr><th colspan="4">FirefoxTest &#8212; failed</th></tr>
+<tr class="failedodd"><td rowspan="1">vbDumplingTestRunners.testHomePage</td><td><a href="#m2"><b>checkLHSHeaderText</b>  </a></td><td class="numi">1</td><td>1620796185534</td><td class="numi">6422</td></tr>
 <tr><th colspan="4">FirefoxTest &#8212; passed</th></tr>
-<tr class="passedodd"><td rowspan="6">vbDumplingTestRunners.testHomePage</td><td><a href="#m1"><b>checkTitleText</b>  </a></td><td class="numi">1</td><td>1620750759882</td><td class="numi">47</td></tr><tr class="passedodd"><td><a href="#m2"><b>checkDescriptionText</b>  </a></td><td class="numi">1</td><td>1620750759930</td><td class="numi">19</td></tr><tr class="passedodd"><td><a href="#m3"><b>checkHomePageLink</b>  </a></td><td class="numi">1</td><td>1620750759951</td><td class="numi">1237</td></tr><tr class="passedodd"><td><a href="#m4"><b>checkMenuHomeLink</b>  </a></td><td class="numi">1</td><td>1620750761189</td><td class="numi">1438</td></tr><tr class="passedodd"><td><a href="#m5"><b>checkMenuMenuLink</b>  </a></td><td class="numi">1</td><td>1620750762628</td><td class="numi">1892</td></tr><tr class="passedodd"><td><a href="#m6"><b>checkMenuFAQLink</b>  </a></td><td class="numi">1</td><td>1620750764522</td><td class="numi">1537</td></tr>
+<tr class="passedodd"><td rowspan="8">vbDumplingTestRunners.testHomePage</td><td><a href="#m3"><b>checkTitleText</b>  </a></td><td class="numi">1</td><td>1620796178228</td><td class="numi">67</td></tr><tr class="passedodd"><td><a href="#m4"><b>checkDescriptionText</b>  </a></td><td class="numi">1</td><td>1620796178297</td><td class="numi">26</td></tr><tr class="passedodd"><td><a href="#m5"><b>checkHomePageLink</b>  </a></td><td class="numi">1</td><td>1620796178324</td><td class="numi">691</td></tr><tr class="passedodd"><td><a href="#m6"><b>checkMenuHomeLink</b>  </a></td><td class="numi">1</td><td>1620796179016</td><td class="numi">577</td></tr><tr class="passedodd"><td><a href="#m7"><b>checkMenuMenuLink</b>  </a></td><td class="numi">1</td><td>1620796179594</td><td class="numi">1698</td></tr><tr class="passedodd"><td><a href="#m8"><b>checkMenuFAQLink</b>  </a></td><td class="numi">1</td><td>1620796181293</td><td class="numi">1256</td></tr><tr class="passedodd"><td><a href="#m9"><b>checkMenuTestimonialsLink</b>  </a></td><td class="numi">1</td><td>1620796182550</td><td class="numi">1510</td></tr><tr class="passedodd"><td><a href="#m10"><b>checkMenuAboutLink</b>  </a></td><td class="numi">1</td><td>1620796184061</td><td class="numi">1473</td></tr>
 </table>
 <h1>FirefoxTest</h1>
-<h2 id="m1">vbDumplingTestRunners.testHomePage:checkMenuFAQLink</h2>
+<h2 id="m1">vbDumplingTestRunners.testHomePage:testClose</h2>
+<div style="padding-left:3em">
+<p>Failed to decode response from marionette
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;RAHUL-LAPTOP&apos;, ip: &apos;192.168.0.105&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.10&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 88.0.1, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20210504152106, moz:geckodriverVersion: 0.29.0, moz:headless: false, moz:processID: 8324, moz:profile: C:\Users\Rahul Pradhan\AppD..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 6bdee85e-0bfc-4ee3-9e32-9bf407cb1569</p>
+java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+<br/>at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+<br/>at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+<br/>at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+<br/>at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+<br/>at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+<br/>at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+<br/>at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+<br/>at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:609)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.quit(RemoteWebDriver.java:452)
+<br/>at vbDumplingTestRunners.testHomePage.testClose(testHomePage.java:110)
+<br/>23 lines not shown
+</div>
 <p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m2">vbDumplingTestRunners.testHomePage:checkHomePageLink</h2>
+<h2 id="m2">vbDumplingTestRunners.testHomePage:checkLHSHeaderText</h2>
+<div style="padding-left:3em">
+<p>TypeError: browsingContextFn().currentWindowGlobal is null
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;RAHUL-LAPTOP&apos;, ip: &apos;192.168.0.105&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.10&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 88.0.1, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20210504152106, moz:geckodriverVersion: 0.29.0, moz:headless: false, moz:processID: 8324, moz:profile: C:\Users\Rahul Pradhan\AppD..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 6bdee85e-0bfc-4ee3-9e32-9bf407cb1569
+*** Element info: {Using=xpath, value=//h2[@class=&apos;entry-title&apos;]}</p>
+java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+<br/>at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+<br/>at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+<br/>at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+<br/>at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+<br/>at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+<br/>at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+<br/>at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+<br/>at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+<br/>at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+<br/>at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+<br/>at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+<br/>at com.sun.proxy.$Proxy13.getText(Unknown Source)
+<br/>at vbDumplingPages.HomePage.getLHSHeaderText(HomePage.java:34)
+<br/>at vbDumplingTestRunners.testHomePage.checkLHSHeaderText(testHomePage.java:105)
+<br/>25 lines not shown
+</div>
 <p class="totop"><a href="#summary">back to summary</a></p>
 <h2 id="m3">vbDumplingTestRunners.testHomePage:checkDescriptionText</h2>
 <p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m4">vbDumplingTestRunners.testHomePage:checkTitleText</h2>
+<h2 id="m4">vbDumplingTestRunners.testHomePage:checkMenuTestimonialsLink</h2>
 <p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m5">vbDumplingTestRunners.testHomePage:checkMenuMenuLink</h2>
+<h2 id="m5">vbDumplingTestRunners.testHomePage:checkMenuAboutLink</h2>
 <p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m6">vbDumplingTestRunners.testHomePage:checkMenuHomeLink</h2>
+<h2 id="m6">vbDumplingTestRunners.testHomePage:checkMenuFAQLink</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m7">vbDumplingTestRunners.testHomePage:checkHomePageLink</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m8">vbDumplingTestRunners.testHomePage:checkTitleText</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m9">vbDumplingTestRunners.testHomePage:checkMenuHomeLink</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m10">vbDumplingTestRunners.testHomePage:checkMenuMenuLink</h2>
 <p class="totop"><a href="#summary">back to summary</a></p>
 </body></html>
