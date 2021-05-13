@@ -24,8 +24,8 @@ public class testMenuPage{
 		 "Wheat/Maida Paneer + Cheese","Pan-fried Maida Cabbage","Pan-fried Maida Cabbage + Cheese","Pan-fried Maida Soya-chunk","Pan-fried Maida Soya-chunk + Cheese"
 		 };
 	final String[] expectedMenuItemPrices = 
-		{"₹55 per plate","₹55 per plate","₹60 per plate","₹60 per plate","₹60 per plate",
-		 "₹65 per plate","₹70 per plate","₹75 per plate","₹70 per plate","₹75 per plate"				
+		{"55 per plate","55 per plate","60 per plate","60 per plate","60 per plate",
+		 "65 per plate","70 per plate","75 per plate","70 per plate","75 per plate"				
 		};
 	WebDriver driver;
 	MenuPage objMenuPage;
@@ -92,8 +92,14 @@ public class testMenuPage{
 	@Test(priority=23)
 	public void checkMenuItemPrices() {
 		ArrayList<String> actualMenuItemFullText = objMenuPage.getMenuPageMenuItemFullText();
+		int i = 0;
+		int priceIndexInFullText = 0;
 		for(String s: actualMenuItemFullText) {
-			System.out.println("'" + s.substring(s.indexOf("₹")) + "'");
+			priceIndexInFullText = s.indexOf("\n")+2;
+			System.out.println("Menu Prices (Expected -- Actual): '" + expectedMenuItemPrices[i].trim() + "' -- '" + 
+			s.substring(priceIndexInFullText).trim() + "'");
+			Assert.assertEquals(expectedMenuItemPrices[i].trim(), s.substring(priceIndexInFullText).trim());
+			i++;
 		}
 	}
 	
