@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results total="32" passed="32" failed="0" skipped="0">
+<testng-results total="44" passed="44" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2021-05-14T05:17:01Z" name="VBDumplings_Test" finished-at="2021-05-14T05:18:41Z" duration-ms="100656">
+  <suite started-at="2021-05-14T09:15:46Z" name="VBDumplings_Test" finished-at="2021-05-14T09:18:33Z" duration-ms="166812">
     <groups>
     </groups>
-    <test started-at="2021-05-14T05:17:01Z" name="FirefoxTest" finished-at="2021-05-14T05:17:51Z" duration-ms="50527">
+    <test started-at="2021-05-14T09:15:46Z" name="FirefoxTest" finished-at="2021-05-14T09:17:25Z" duration-ms="99338">
       <class name="vbDumplingTestRunners.testMenuPage">
-        <test-method is-config="true" signature="initDriver(java.lang.String, java.lang.String)[pri:0, instance:vbDumplingTestRunners.testMenuPage@2a225dd7]" started-at="2021-05-14T10:47:29Z" name="initDriver" finished-at="2021-05-14T10:47:48Z" duration-ms="18640" status="PASS">
+        <test-method is-config="true" signature="initDriver(java.lang.String, java.lang.String)[pri:0, instance:vbDumplingTestRunners.testMenuPage@490caf5f]" started-at="2021-05-14T14:46:42Z" name="initDriver" finished-at="2021-05-14T14:47:00Z" duration-ms="18632" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -23,33 +23,33 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initDriver -->
-        <test-method signature="checkLHSHeaderText()[pri:0, instance:vbDumplingTestRunners.testMenuPage@2a225dd7]" started-at="2021-05-14T10:47:48Z" name="checkLHSHeaderText" finished-at="2021-05-14T10:47:48Z" duration-ms="44" status="PASS">
+        <test-method signature="checkLHSHeaderText()[pri:0, instance:vbDumplingTestRunners.testMenuPage@490caf5f]" started-at="2021-05-14T14:47:00Z" name="checkLHSHeaderText" finished-at="2021-05-14T14:47:00Z" duration-ms="32" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- checkLHSHeaderText -->
-        <test-method signature="checkMenuCategoryOneText()[pri:0, instance:vbDumplingTestRunners.testMenuPage@2a225dd7]" started-at="2021-05-14T10:47:48Z" name="checkMenuCategoryOneText" finished-at="2021-05-14T10:47:48Z" duration-ms="17" status="PASS">
+        <test-method signature="checkMenuCategoryOneText()[pri:0, instance:vbDumplingTestRunners.testMenuPage@490caf5f]" started-at="2021-05-14T14:47:00Z" name="checkMenuCategoryOneText" finished-at="2021-05-14T14:47:00Z" duration-ms="17" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- checkMenuCategoryOneText -->
-        <test-method signature="checkMenuCategoryTwoText()[pri:0, instance:vbDumplingTestRunners.testMenuPage@2a225dd7]" started-at="2021-05-14T10:47:48Z" name="checkMenuCategoryTwoText" finished-at="2021-05-14T10:47:48Z" duration-ms="15" status="PASS">
+        <test-method signature="checkMenuCategoryTwoText()[pri:0, instance:vbDumplingTestRunners.testMenuPage@490caf5f]" started-at="2021-05-14T14:47:00Z" name="checkMenuCategoryTwoText" finished-at="2021-05-14T14:47:00Z" duration-ms="29" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- checkMenuCategoryTwoText -->
-        <test-method signature="checkMenuItemNames()[pri:0, instance:vbDumplingTestRunners.testMenuPage@2a225dd7]" started-at="2021-05-14T10:47:48Z" name="checkMenuItemNames" finished-at="2021-05-14T10:47:48Z" duration-ms="74" status="PASS">
+        <test-method signature="checkMenuItemNames()[pri:0, instance:vbDumplingTestRunners.testMenuPage@490caf5f]" started-at="2021-05-14T14:47:00Z" name="checkMenuItemNames" finished-at="2021-05-14T14:47:00Z" duration-ms="68" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- checkMenuItemNames -->
-        <test-method signature="checkMenuItemPrices()[pri:0, instance:vbDumplingTestRunners.testMenuPage@2a225dd7]" started-at="2021-05-14T10:47:48Z" name="checkMenuItemPrices" finished-at="2021-05-14T10:47:48Z" duration-ms="95" status="PASS">
+        <test-method signature="checkMenuItemPrices()[pri:0, instance:vbDumplingTestRunners.testMenuPage@490caf5f]" started-at="2021-05-14T14:47:00Z" name="checkMenuItemPrices" finished-at="2021-05-14T14:47:00Z" duration-ms="85" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- checkMenuItemPrices -->
-        <test-method is-config="true" signature="testClose()[pri:0, instance:vbDumplingTestRunners.testMenuPage@2a225dd7]" started-at="2021-05-14T10:47:48Z" name="testClose" finished-at="2021-05-14T10:47:51Z" duration-ms="3386" status="PASS">
+        <test-method is-config="true" signature="testClose()[pri:0, instance:vbDumplingTestRunners.testMenuPage@490caf5f]" started-at="2021-05-14T14:47:00Z" name="testClose" finished-at="2021-05-14T14:47:03Z" duration-ms="3054" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testClose -->
       </class> <!-- vbDumplingTestRunners.testMenuPage -->
       <class name="vbDumplingTestRunners.testHomePage">
-        <test-method is-config="true" signature="initDriver(java.lang.String, java.lang.String)[pri:0, instance:vbDumplingTestRunners.testHomePage@58594a11]" started-at="2021-05-14T10:47:01Z" name="initDriver" finished-at="2021-05-14T10:47:12Z" duration-ms="11137" status="PASS">
+        <test-method is-config="true" signature="initDriver(java.lang.String, java.lang.String)[pri:0, instance:vbDumplingTestRunners.testHomePage@5b3f61ff]" started-at="2021-05-14T14:45:46Z" name="initDriver" finished-at="2021-05-14T14:46:22Z" duration-ms="36559" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -65,59 +65,105 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initDriver -->
-        <test-method signature="checkTitleText()[pri:0, instance:vbDumplingTestRunners.testHomePage@58594a11]" started-at="2021-05-14T10:47:12Z" name="checkTitleText" finished-at="2021-05-14T10:47:12Z" duration-ms="60" status="PASS">
+        <test-method signature="checkTitleText()[pri:0, instance:vbDumplingTestRunners.testHomePage@5b3f61ff]" started-at="2021-05-14T14:46:22Z" name="checkTitleText" finished-at="2021-05-14T14:46:23Z" duration-ms="343" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- checkTitleText -->
-        <test-method signature="checkDescriptionText()[pri:0, instance:vbDumplingTestRunners.testHomePage@58594a11]" started-at="2021-05-14T10:47:12Z" name="checkDescriptionText" finished-at="2021-05-14T10:47:12Z" duration-ms="20" status="PASS">
+        <test-method signature="checkDescriptionText()[pri:0, instance:vbDumplingTestRunners.testHomePage@5b3f61ff]" started-at="2021-05-14T14:46:23Z" name="checkDescriptionText" finished-at="2021-05-14T14:46:23Z" duration-ms="29" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- checkDescriptionText -->
-        <test-method signature="checkHomePageLink()[pri:0, instance:vbDumplingTestRunners.testHomePage@58594a11]" started-at="2021-05-14T10:47:12Z" name="checkHomePageLink" finished-at="2021-05-14T10:47:14Z" duration-ms="1563" status="PASS">
+        <test-method signature="checkHomePageLink()[pri:0, instance:vbDumplingTestRunners.testHomePage@5b3f61ff]" started-at="2021-05-14T14:46:23Z" name="checkHomePageLink" finished-at="2021-05-14T14:46:24Z" duration-ms="1058" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- checkHomePageLink -->
-        <test-method signature="checkMenuHomeLink()[pri:0, instance:vbDumplingTestRunners.testHomePage@58594a11]" started-at="2021-05-14T10:47:14Z" name="checkMenuHomeLink" finished-at="2021-05-14T10:47:15Z" duration-ms="1180" status="PASS">
+        <test-method signature="checkMenuHomeLink()[pri:0, instance:vbDumplingTestRunners.testHomePage@5b3f61ff]" started-at="2021-05-14T14:46:24Z" name="checkMenuHomeLink" finished-at="2021-05-14T14:46:25Z" duration-ms="643" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- checkMenuHomeLink -->
-        <test-method signature="checkMenuMenuLink()[pri:0, instance:vbDumplingTestRunners.testHomePage@58594a11]" started-at="2021-05-14T10:47:15Z" name="checkMenuMenuLink" finished-at="2021-05-14T10:47:17Z" duration-ms="2437" status="PASS">
+        <test-method signature="checkMenuMenuLink()[pri:0, instance:vbDumplingTestRunners.testHomePage@5b3f61ff]" started-at="2021-05-14T14:46:25Z" name="checkMenuMenuLink" finished-at="2021-05-14T14:46:26Z" duration-ms="1830" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- checkMenuMenuLink -->
-        <test-method signature="checkMenuFAQLink()[pri:0, instance:vbDumplingTestRunners.testHomePage@58594a11]" started-at="2021-05-14T10:47:17Z" name="checkMenuFAQLink" finished-at="2021-05-14T10:47:19Z" duration-ms="2016" status="PASS">
+        <test-method signature="checkMenuFAQLink()[pri:0, instance:vbDumplingTestRunners.testHomePage@5b3f61ff]" started-at="2021-05-14T14:46:26Z" name="checkMenuFAQLink" finished-at="2021-05-14T14:46:28Z" duration-ms="1514" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- checkMenuFAQLink -->
-        <test-method signature="checkMenuTestimonialsLink()[pri:0, instance:vbDumplingTestRunners.testHomePage@58594a11]" started-at="2021-05-14T10:47:19Z" name="checkMenuTestimonialsLink" finished-at="2021-05-14T10:47:21Z" duration-ms="1486" status="PASS">
+        <test-method signature="checkMenuTestimonialsLink()[pri:0, instance:vbDumplingTestRunners.testHomePage@5b3f61ff]" started-at="2021-05-14T14:46:28Z" name="checkMenuTestimonialsLink" finished-at="2021-05-14T14:46:30Z" duration-ms="1958" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- checkMenuTestimonialsLink -->
-        <test-method signature="checkMenuAboutLink()[pri:0, instance:vbDumplingTestRunners.testHomePage@58594a11]" started-at="2021-05-14T10:47:21Z" name="checkMenuAboutLink" finished-at="2021-05-14T10:47:22Z" duration-ms="1468" status="PASS">
+        <test-method signature="checkMenuAboutLink()[pri:0, instance:vbDumplingTestRunners.testHomePage@5b3f61ff]" started-at="2021-05-14T14:46:30Z" name="checkMenuAboutLink" finished-at="2021-05-14T14:46:31Z" duration-ms="1344" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- checkMenuAboutLink -->
-        <test-method signature="checkLHSHeaderText()[pri:0, instance:vbDumplingTestRunners.testHomePage@58594a11]" started-at="2021-05-14T10:47:22Z" name="checkLHSHeaderText" finished-at="2021-05-14T10:47:23Z" duration-ms="1255" status="PASS">
+        <test-method signature="checkLHSHeaderText()[pri:0, instance:vbDumplingTestRunners.testHomePage@5b3f61ff]" started-at="2021-05-14T14:46:31Z" name="checkLHSHeaderText" finished-at="2021-05-14T14:46:32Z" duration-ms="650" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- checkLHSHeaderText -->
-        <test-method signature="checkMenuOrderLink()[pri:0, instance:vbDumplingTestRunners.testHomePage@58594a11]" started-at="2021-05-14T10:47:23Z" name="checkMenuOrderLink" finished-at="2021-05-14T10:47:26Z" duration-ms="2395" status="PASS">
+        <test-method signature="checkMenuOrderLink()[pri:0, instance:vbDumplingTestRunners.testHomePage@5b3f61ff]" started-at="2021-05-14T14:46:32Z" name="checkMenuOrderLink" finished-at="2021-05-14T14:46:36Z" duration-ms="4559" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- checkMenuOrderLink -->
-        <test-method signature="checkBodyOrderNowLink()[pri:0, instance:vbDumplingTestRunners.testHomePage@58594a11]" started-at="2021-05-14T10:47:26Z" name="checkBodyOrderNowLink" finished-at="2021-05-14T10:47:27Z" duration-ms="822" status="PASS">
+        <test-method signature="checkBodyOrderNowLink()[pri:0, instance:vbDumplingTestRunners.testHomePage@5b3f61ff]" started-at="2021-05-14T14:46:36Z" name="checkBodyOrderNowLink" finished-at="2021-05-14T14:46:39Z" duration-ms="2533" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- checkBodyOrderNowLink -->
-        <test-method is-config="true" signature="testClose()[pri:0, instance:vbDumplingTestRunners.testHomePage@58594a11]" started-at="2021-05-14T10:47:27Z" name="testClose" finished-at="2021-05-14T10:47:29Z" duration-ms="2390" status="PASS">
+        <test-method is-config="true" signature="testClose()[pri:0, instance:vbDumplingTestRunners.testHomePage@5b3f61ff]" started-at="2021-05-14T14:46:39Z" name="testClose" finished-at="2021-05-14T14:46:42Z" duration-ms="2625" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testClose -->
       </class> <!-- vbDumplingTestRunners.testHomePage -->
+      <class name="vbDumplingTestRunners.testFaqPage">
+        <test-method is-config="true" signature="initDriver(java.lang.String, java.lang.String)[pri:0, instance:vbDumplingTestRunners.testFaqPage@7ef27d7f]" started-at="2021-05-14T14:47:03Z" name="initDriver" finished-at="2021-05-14T14:47:14Z" duration-ms="10959" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[firefox]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[https://vbdumplings.in/]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initDriver -->
+        <test-method signature="checkFaqPageLHSHeaderText()[pri:0, instance:vbDumplingTestRunners.testFaqPage@7ef27d7f]" started-at="2021-05-14T14:47:14Z" name="checkFaqPageLHSHeaderText" finished-at="2021-05-14T14:47:14Z" duration-ms="37" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkFaqPageLHSHeaderText -->
+        <test-method signature="checkFaqPageContentHeaderText()[pri:0, instance:vbDumplingTestRunners.testFaqPage@7ef27d7f]" started-at="2021-05-14T14:47:14Z" name="checkFaqPageContentHeaderText" finished-at="2021-05-14T14:47:14Z" duration-ms="19" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkFaqPageContentHeaderText -->
+        <test-method signature="checkFaqPageQuestions()[pri:0, instance:vbDumplingTestRunners.testFaqPage@7ef27d7f]" started-at="2021-05-14T14:47:14Z" name="checkFaqPageQuestions" finished-at="2021-05-14T14:47:15Z" duration-ms="89" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkFaqPageQuestions -->
+        <test-method signature="clickAllFaqPageQuestionsExpand()[pri:0, instance:vbDumplingTestRunners.testFaqPage@7ef27d7f]" started-at="2021-05-14T14:47:15Z" name="clickAllFaqPageQuestionsExpand" finished-at="2021-05-14T14:47:17Z" duration-ms="2889" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- clickAllFaqPageQuestionsExpand -->
+        <test-method signature="checkOrderFormLink()[pri:0, instance:vbDumplingTestRunners.testFaqPage@7ef27d7f]" started-at="2021-05-14T14:47:17Z" name="checkOrderFormLink" finished-at="2021-05-14T14:47:20Z" duration-ms="2960" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkOrderFormLink -->
+        <test-method signature="clickAllFaqPageQuestionsCollapse()[pri:0, instance:vbDumplingTestRunners.testFaqPage@7ef27d7f]" started-at="2021-05-14T14:47:20Z" name="clickAllFaqPageQuestionsCollapse" finished-at="2021-05-14T14:47:24Z" duration-ms="3251" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- clickAllFaqPageQuestionsCollapse -->
+        <test-method is-config="true" signature="afterClass()[pri:0, instance:vbDumplingTestRunners.testFaqPage@7ef27d7f]" started-at="2021-05-14T14:47:24Z" name="afterClass" finished-at="2021-05-14T14:47:25Z" duration-ms="1537" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+      </class> <!-- vbDumplingTestRunners.testFaqPage -->
     </test> <!-- FirefoxTest -->
-    <test started-at="2021-05-14T05:17:51Z" name="ChromeTest" finished-at="2021-05-14T05:18:41Z" duration-ms="50114">
+    <test started-at="2021-05-14T09:17:25Z" name="ChromeTest" finished-at="2021-05-14T09:18:33Z" duration-ms="67465">
       <class name="vbDumplingTestRunners.testMenuPage">
-        <test-method is-config="true" signature="initDriver(java.lang.String, java.lang.String)[pri:0, instance:vbDumplingTestRunners.testMenuPage@4e31276e]" started-at="2021-05-14T10:48:34Z" name="initDriver" finished-at="2021-05-14T10:48:40Z" duration-ms="6257" status="PASS">
+        <test-method is-config="true" signature="initDriver(java.lang.String, java.lang.String)[pri:0, instance:vbDumplingTestRunners.testMenuPage@662706a7]" started-at="2021-05-14T14:48:11Z" name="initDriver" finished-at="2021-05-14T14:48:18Z" duration-ms="6768" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -133,33 +179,33 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initDriver -->
-        <test-method signature="checkLHSHeaderText()[pri:0, instance:vbDumplingTestRunners.testMenuPage@4e31276e]" started-at="2021-05-14T10:48:40Z" name="checkLHSHeaderText" finished-at="2021-05-14T10:48:40Z" duration-ms="39" status="PASS">
+        <test-method signature="checkLHSHeaderText()[pri:0, instance:vbDumplingTestRunners.testMenuPage@662706a7]" started-at="2021-05-14T14:48:18Z" name="checkLHSHeaderText" finished-at="2021-05-14T14:48:18Z" duration-ms="43" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- checkLHSHeaderText -->
-        <test-method signature="checkMenuCategoryOneText()[pri:0, instance:vbDumplingTestRunners.testMenuPage@4e31276e]" started-at="2021-05-14T10:48:40Z" name="checkMenuCategoryOneText" finished-at="2021-05-14T10:48:40Z" duration-ms="22" status="PASS">
+        <test-method signature="checkMenuCategoryOneText()[pri:0, instance:vbDumplingTestRunners.testMenuPage@662706a7]" started-at="2021-05-14T14:48:18Z" name="checkMenuCategoryOneText" finished-at="2021-05-14T14:48:18Z" duration-ms="35" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- checkMenuCategoryOneText -->
-        <test-method signature="checkMenuCategoryTwoText()[pri:0, instance:vbDumplingTestRunners.testMenuPage@4e31276e]" started-at="2021-05-14T10:48:40Z" name="checkMenuCategoryTwoText" finished-at="2021-05-14T10:48:40Z" duration-ms="31" status="PASS">
+        <test-method signature="checkMenuCategoryTwoText()[pri:0, instance:vbDumplingTestRunners.testMenuPage@662706a7]" started-at="2021-05-14T14:48:18Z" name="checkMenuCategoryTwoText" finished-at="2021-05-14T14:48:18Z" duration-ms="34" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- checkMenuCategoryTwoText -->
-        <test-method signature="checkMenuItemNames()[pri:0, instance:vbDumplingTestRunners.testMenuPage@4e31276e]" started-at="2021-05-14T10:48:40Z" name="checkMenuItemNames" finished-at="2021-05-14T10:48:40Z" duration-ms="171" status="PASS">
+        <test-method signature="checkMenuItemNames()[pri:0, instance:vbDumplingTestRunners.testMenuPage@662706a7]" started-at="2021-05-14T14:48:18Z" name="checkMenuItemNames" finished-at="2021-05-14T14:48:18Z" duration-ms="182" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- checkMenuItemNames -->
-        <test-method signature="checkMenuItemPrices()[pri:0, instance:vbDumplingTestRunners.testMenuPage@4e31276e]" started-at="2021-05-14T10:48:40Z" name="checkMenuItemPrices" finished-at="2021-05-14T10:48:41Z" duration-ms="239" status="PASS">
+        <test-method signature="checkMenuItemPrices()[pri:0, instance:vbDumplingTestRunners.testMenuPage@662706a7]" started-at="2021-05-14T14:48:18Z" name="checkMenuItemPrices" finished-at="2021-05-14T14:48:18Z" duration-ms="180" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- checkMenuItemPrices -->
-        <test-method is-config="true" signature="testClose()[pri:0, instance:vbDumplingTestRunners.testMenuPage@4e31276e]" started-at="2021-05-14T10:48:41Z" name="testClose" finished-at="2021-05-14T10:48:41Z" duration-ms="675" status="PASS">
+        <test-method is-config="true" signature="testClose()[pri:0, instance:vbDumplingTestRunners.testMenuPage@662706a7]" started-at="2021-05-14T14:48:18Z" name="testClose" finished-at="2021-05-14T14:48:19Z" duration-ms="664" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testClose -->
       </class> <!-- vbDumplingTestRunners.testMenuPage -->
       <class name="vbDumplingTestRunners.testHomePage">
-        <test-method is-config="true" signature="initDriver(java.lang.String, java.lang.String)[pri:0, instance:vbDumplingTestRunners.testHomePage@df6620a]" started-at="2021-05-14T10:47:51Z" name="initDriver" finished-at="2021-05-14T10:48:20Z" duration-ms="28269" status="PASS">
+        <test-method is-config="true" signature="initDriver(java.lang.String, java.lang.String)[pri:0, instance:vbDumplingTestRunners.testHomePage@7674b62c]" started-at="2021-05-14T14:47:25Z" name="initDriver" finished-at="2021-05-14T14:47:53Z" duration-ms="27983" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -175,55 +221,101 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initDriver -->
-        <test-method signature="checkTitleText()[pri:0, instance:vbDumplingTestRunners.testHomePage@df6620a]" started-at="2021-05-14T10:48:20Z" name="checkTitleText" finished-at="2021-05-14T10:48:20Z" duration-ms="43" status="PASS">
+        <test-method signature="checkTitleText()[pri:0, instance:vbDumplingTestRunners.testHomePage@7674b62c]" started-at="2021-05-14T14:47:53Z" name="checkTitleText" finished-at="2021-05-14T14:47:53Z" duration-ms="39" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- checkTitleText -->
-        <test-method signature="checkDescriptionText()[pri:0, instance:vbDumplingTestRunners.testHomePage@df6620a]" started-at="2021-05-14T10:48:20Z" name="checkDescriptionText" finished-at="2021-05-14T10:48:20Z" duration-ms="53" status="PASS">
+        <test-method signature="checkDescriptionText()[pri:0, instance:vbDumplingTestRunners.testHomePage@7674b62c]" started-at="2021-05-14T14:47:53Z" name="checkDescriptionText" finished-at="2021-05-14T14:47:53Z" duration-ms="37" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- checkDescriptionText -->
-        <test-method signature="checkHomePageLink()[pri:0, instance:vbDumplingTestRunners.testHomePage@df6620a]" started-at="2021-05-14T10:48:20Z" name="checkHomePageLink" finished-at="2021-05-14T10:48:20Z" duration-ms="701" status="PASS">
+        <test-method signature="checkHomePageLink()[pri:0, instance:vbDumplingTestRunners.testHomePage@7674b62c]" started-at="2021-05-14T14:47:53Z" name="checkHomePageLink" finished-at="2021-05-14T14:47:55Z" duration-ms="1554" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- checkHomePageLink -->
-        <test-method signature="checkMenuHomeLink()[pri:0, instance:vbDumplingTestRunners.testHomePage@df6620a]" started-at="2021-05-14T10:48:20Z" name="checkMenuHomeLink" finished-at="2021-05-14T10:48:21Z" duration-ms="579" status="PASS">
+        <test-method signature="checkMenuHomeLink()[pri:0, instance:vbDumplingTestRunners.testHomePage@7674b62c]" started-at="2021-05-14T14:47:55Z" name="checkMenuHomeLink" finished-at="2021-05-14T14:47:56Z" duration-ms="1484" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- checkMenuHomeLink -->
-        <test-method signature="checkMenuMenuLink()[pri:0, instance:vbDumplingTestRunners.testHomePage@df6620a]" started-at="2021-05-14T10:48:21Z" name="checkMenuMenuLink" finished-at="2021-05-14T10:48:23Z" duration-ms="1859" status="PASS">
+        <test-method signature="checkMenuMenuLink()[pri:0, instance:vbDumplingTestRunners.testHomePage@7674b62c]" started-at="2021-05-14T14:47:56Z" name="checkMenuMenuLink" finished-at="2021-05-14T14:47:59Z" duration-ms="2823" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- checkMenuMenuLink -->
-        <test-method signature="checkMenuFAQLink()[pri:0, instance:vbDumplingTestRunners.testHomePage@df6620a]" started-at="2021-05-14T10:48:23Z" name="checkMenuFAQLink" finished-at="2021-05-14T10:48:24Z" duration-ms="1627" status="PASS">
+        <test-method signature="checkMenuFAQLink()[pri:0, instance:vbDumplingTestRunners.testHomePage@7674b62c]" started-at="2021-05-14T14:47:59Z" name="checkMenuFAQLink" finished-at="2021-05-14T14:48:01Z" duration-ms="1461" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- checkMenuFAQLink -->
-        <test-method signature="checkMenuTestimonialsLink()[pri:0, instance:vbDumplingTestRunners.testHomePage@df6620a]" started-at="2021-05-14T10:48:24Z" name="checkMenuTestimonialsLink" finished-at="2021-05-14T10:48:26Z" duration-ms="1821" status="PASS">
+        <test-method signature="checkMenuTestimonialsLink()[pri:0, instance:vbDumplingTestRunners.testHomePage@7674b62c]" started-at="2021-05-14T14:48:01Z" name="checkMenuTestimonialsLink" finished-at="2021-05-14T14:48:02Z" duration-ms="1848" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- checkMenuTestimonialsLink -->
-        <test-method signature="checkMenuAboutLink()[pri:0, instance:vbDumplingTestRunners.testHomePage@df6620a]" started-at="2021-05-14T10:48:26Z" name="checkMenuAboutLink" finished-at="2021-05-14T10:48:29Z" duration-ms="2704" status="PASS">
+        <test-method signature="checkMenuAboutLink()[pri:0, instance:vbDumplingTestRunners.testHomePage@7674b62c]" started-at="2021-05-14T14:48:02Z" name="checkMenuAboutLink" finished-at="2021-05-14T14:48:05Z" duration-ms="2597" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- checkMenuAboutLink -->
-        <test-method signature="checkLHSHeaderText()[pri:0, instance:vbDumplingTestRunners.testHomePage@df6620a]" started-at="2021-05-14T10:48:29Z" name="checkLHSHeaderText" finished-at="2021-05-14T10:48:30Z" duration-ms="796" status="PASS">
+        <test-method signature="checkLHSHeaderText()[pri:0, instance:vbDumplingTestRunners.testHomePage@7674b62c]" started-at="2021-05-14T14:48:05Z" name="checkLHSHeaderText" finished-at="2021-05-14T14:48:06Z" duration-ms="596" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- checkLHSHeaderText -->
-        <test-method signature="checkMenuOrderLink()[pri:0, instance:vbDumplingTestRunners.testHomePage@df6620a]" started-at="2021-05-14T10:48:30Z" name="checkMenuOrderLink" finished-at="2021-05-14T10:48:32Z" duration-ms="2363" status="PASS">
+        <test-method signature="checkMenuOrderLink()[pri:0, instance:vbDumplingTestRunners.testHomePage@7674b62c]" started-at="2021-05-14T14:48:06Z" name="checkMenuOrderLink" finished-at="2021-05-14T14:48:08Z" duration-ms="2596" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- checkMenuOrderLink -->
-        <test-method signature="checkBodyOrderNowLink()[pri:0, instance:vbDumplingTestRunners.testHomePage@df6620a]" started-at="2021-05-14T10:48:32Z" name="checkBodyOrderNowLink" finished-at="2021-05-14T10:48:33Z" duration-ms="1158" status="PASS">
+        <test-method signature="checkBodyOrderNowLink()[pri:0, instance:vbDumplingTestRunners.testHomePage@7674b62c]" started-at="2021-05-14T14:48:08Z" name="checkBodyOrderNowLink" finished-at="2021-05-14T14:48:10Z" duration-ms="2159" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- checkBodyOrderNowLink -->
-        <test-method is-config="true" signature="testClose()[pri:0, instance:vbDumplingTestRunners.testHomePage@df6620a]" started-at="2021-05-14T10:48:33Z" name="testClose" finished-at="2021-05-14T10:48:34Z" duration-ms="689" status="PASS">
+        <test-method is-config="true" signature="testClose()[pri:0, instance:vbDumplingTestRunners.testHomePage@7674b62c]" started-at="2021-05-14T14:48:10Z" name="testClose" finished-at="2021-05-14T14:48:11Z" duration-ms="775" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testClose -->
       </class> <!-- vbDumplingTestRunners.testHomePage -->
+      <class name="vbDumplingTestRunners.testFaqPage">
+        <test-method is-config="true" signature="initDriver(java.lang.String, java.lang.String)[pri:0, instance:vbDumplingTestRunners.testFaqPage@19e7a160]" started-at="2021-05-14T14:48:19Z" name="initDriver" finished-at="2021-05-14T14:48:26Z" duration-ms="7281" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[https://vbdumplings.in/]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initDriver -->
+        <test-method signature="checkFaqPageLHSHeaderText()[pri:0, instance:vbDumplingTestRunners.testFaqPage@19e7a160]" started-at="2021-05-14T14:48:26Z" name="checkFaqPageLHSHeaderText" finished-at="2021-05-14T14:48:26Z" duration-ms="33" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkFaqPageLHSHeaderText -->
+        <test-method signature="checkFaqPageContentHeaderText()[pri:0, instance:vbDumplingTestRunners.testFaqPage@19e7a160]" started-at="2021-05-14T14:48:26Z" name="checkFaqPageContentHeaderText" finished-at="2021-05-14T14:48:26Z" duration-ms="41" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkFaqPageContentHeaderText -->
+        <test-method signature="checkFaqPageQuestions()[pri:0, instance:vbDumplingTestRunners.testFaqPage@19e7a160]" started-at="2021-05-14T14:48:26Z" name="checkFaqPageQuestions" finished-at="2021-05-14T14:48:27Z" duration-ms="174" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkFaqPageQuestions -->
+        <test-method signature="clickAllFaqPageQuestionsExpand()[pri:0, instance:vbDumplingTestRunners.testFaqPage@19e7a160]" started-at="2021-05-14T14:48:27Z" name="clickAllFaqPageQuestionsExpand" finished-at="2021-05-14T14:48:28Z" duration-ms="1384" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- clickAllFaqPageQuestionsExpand -->
+        <test-method signature="checkOrderFormLink()[pri:0, instance:vbDumplingTestRunners.testFaqPage@19e7a160]" started-at="2021-05-14T14:48:28Z" name="checkOrderFormLink" finished-at="2021-05-14T14:48:31Z" duration-ms="2607" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkOrderFormLink -->
+        <test-method signature="clickAllFaqPageQuestionsCollapse()[pri:0, instance:vbDumplingTestRunners.testFaqPage@19e7a160]" started-at="2021-05-14T14:48:31Z" name="clickAllFaqPageQuestionsCollapse" finished-at="2021-05-14T14:48:32Z" duration-ms="1402" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- clickAllFaqPageQuestionsCollapse -->
+        <test-method is-config="true" signature="afterClass()[pri:0, instance:vbDumplingTestRunners.testFaqPage@19e7a160]" started-at="2021-05-14T14:48:32Z" name="afterClass" finished-at="2021-05-14T14:48:33Z" duration-ms="666" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+      </class> <!-- vbDumplingTestRunners.testFaqPage -->
     </test> <!-- ChromeTest -->
   </suite> <!-- VBDumplings_Test -->
 </testng-results>

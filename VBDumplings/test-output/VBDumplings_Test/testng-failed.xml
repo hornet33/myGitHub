@@ -3,22 +3,16 @@
 <suite parallel="none" name="Failed suite [VBDumplings_Test]">
   <parameter name="vbdURL" value="https://vbdumplings.in/"/>
   <parameter name="browserType" value="chrome"/>
-  <test parallel="none" name="FirefoxTest(failed)">
-    <parameter name="browserType" value="firefox"/>
+  <test parallel="none" name="ChromeTest(failed)">
+    <parameter name="browserType" value="chrome"/>
     <classes>
-      <class name="vbDumplingTestRunners.testHomePage">
+      <class name="vbDumplingTestRunners.testFaqPage">
         <methods>
-          <include name="checkMenuOrderLink"/>
-          <include name="testClose"/>
-          <include name="testClose"/>
+          <include name="afterClass"/>
+          <include name="initDriver"/>
+          <include name="clickAllFaqPageQuestionsCollapse"/>
         </methods>
-      </class> <!-- vbDumplingTestRunners.testHomePage -->
-      <class name="vbDumplingTestRunners.testMenuPage">
-        <methods>
-          <include name="testClose"/>
-          <include name="testClose"/>
-        </methods>
-      </class> <!-- vbDumplingTestRunners.testMenuPage -->
+      </class> <!-- vbDumplingTestRunners.testFaqPage -->
     </classes>
-  </test> <!-- FirefoxTest(failed) -->
+  </test> <!-- ChromeTest(failed) -->
 </suite> <!-- Failed suite [VBDumplings_Test] -->
