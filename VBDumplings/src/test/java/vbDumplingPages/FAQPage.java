@@ -75,15 +75,15 @@ public class FAQPage {
 			//Change implicit wait to zero seconds temporarily
 			driver.manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS);
 			//Try to click the element
-			faqPageExpandedAnswerList.get(answerIndex).click();
-			//Change implicit wait back to 30 seconds
-			driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+			faqPageExpandedAnswerList.get(answerIndex).click();			
 			return(true);
 		}
-		catch(Exception e) {
+		catch(Exception e) {			
+			return(false);
+		}
+		finally {
 			//Change implicit wait back to 30 seconds
 			driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-			return(false);
 		}
 	}
 	
