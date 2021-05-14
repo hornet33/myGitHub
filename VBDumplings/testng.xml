@@ -9,6 +9,7 @@
 		<classes>
 			<class name="vbDumplingTestRunners.testHomePage"/>	
 			<class name="vbDumplingTestRunners.testMenuPage"/>
+			<class name="vbDumplingTestRunners.testFaqPage"/>
 		</classes>
 	</test> <!-- FirefoxTest -->
 	
@@ -16,7 +17,8 @@
 		<parameter name = "browserType" value = "chrome" />
 		<classes>
 			<class name="vbDumplingTestRunners.testHomePage"/>				
-			<class name="vbDumplingTestRunners.testMenuPage"/>
+			<class name="vbDumplingTestRunners.testMenuPage"/> 
+			<class name="vbDumplingTestRunners.testFaqPage"/>
 		</classes>
 	</test> <!-- ChromeTest -->
 	

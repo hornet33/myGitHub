@@ -15,8 +15,8 @@ public class MenuPage {
 	@FindBy(xpath = "//h1[@class='entry-title']") WebElement menuPageLHSHeader;
 	@FindBy(xpath = "(//h4)[1]") WebElement menuPageMenuCategoryOne;
 	@FindBy(xpath = "(//h4)[2]") WebElement menuPageMenuCategoryTwo;
-	@FindBy(xpath = "//div[starts-with(@class,'wp-block-column')]/p/strong") List<WebElement> menuPageMenuItemName;
-	@FindBy(xpath = "//div[starts-with(@class,'wp-block-column')]/p") List<WebElement> menuPageMenuItemFullText;
+	@FindBy(xpath = "//div[starts-with(@class,'wp-block-column')]/p/strong") List<WebElement> menuPageMenuItemNameList;
+	@FindBy(xpath = "//div[starts-with(@class,'wp-block-column')]/p") List<WebElement> menuPageMenuItemFullTextList;
 	
 	public MenuPage(WebDriver driver) {
 		this.driver = driver;
@@ -41,16 +41,16 @@ public class MenuPage {
 	
 	public ArrayList<String> getMenuPageMenuItemNames() {
 		ArrayList<String> menuItemNames = new ArrayList<String>(); 
-		for(WebElement e: menuPageMenuItemName) {
-			menuItemNames.add(e.getText());
+		for(WebElement menuPageItemName: menuPageMenuItemNameList) {
+			menuItemNames.add(menuPageItemName.getText());
 		}
 		return(menuItemNames);
 	}
 	
 	public ArrayList<String> getMenuPageMenuItemFullText(){
 		ArrayList<String> menuItemFullTexts = new ArrayList<String>(); 
-		for(WebElement e: menuPageMenuItemFullText) {
-			menuItemFullTexts.add(e.getText());
+		for(WebElement menuPageItemFullText: menuPageMenuItemFullTextList) {
+			menuItemFullTexts.add(menuPageItemFullText.getText());
 		}
 		return(menuItemFullTexts);
 	}

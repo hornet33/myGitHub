@@ -84,7 +84,12 @@ public class HomePage {
 		        break;
 		    }
 		}
-		Assert.assertEquals(orderPageHeader.getText(),expectedOrderPageHeader);
+		try {
+			Assert.assertEquals(orderPageHeader.getText(),expectedOrderPageHeader);
+		}
+		catch(AssertionError ae) {
+			System.out.println("[TEST RUN] OrderPage: Header Verification Failed (" + ae.getMessage() + ")");
+		}
 		driver.close();
 		driver.switchTo().window(originalWindow);
 	}

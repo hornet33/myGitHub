@@ -46,35 +46,54 @@ public class testMenuPage{
 	
 	@Test(priority=20)
 	public void checkLHSHeaderText() {
-		Assert.assertEquals(objMenuPage.getMenuPageLHSHeaderText().toUpperCase(), expectedLHSHeaderText.toUpperCase());
-		System.out.println("[TEST RUN] MenuPage: LHS Header Text Pass");
+		try {
+			Assert.assertEquals(objMenuPage.getMenuPageLHSHeaderText().toUpperCase(), expectedLHSHeaderText.toUpperCase());
+			System.out.println("[TEST RUN] MenuPage: LHS Header Text Pass");
+		}
+		catch(AssertionError ae) {
+			System.out.println("[TEST RUN] MenuPage: LHS Header Text Fail (" + ae.getMessage() + ")");
+			Assert.assertTrue(false);
+		}
 	}
 	
 	@Test(priority=21)
 	public void checkMenuCategoryOneText() {
-		Assert.assertEquals(objMenuPage.getMenuPageMenuCategoryOneText(), expectedMenuCategoryOneText);
-		System.out.println("[TEST RUN] MenuPage: Menu Category One Text Pass");
+		try {
+			Assert.assertEquals(objMenuPage.getMenuPageMenuCategoryOneText(), expectedMenuCategoryOneText);
+			System.out.println("[TEST RUN] MenuPage: Menu Category One Text Pass");
+		}
+		catch(AssertionError ae) {
+			System.out.println("[TEST RUN] MenuPage: Menu Category One Text Fail (" + ae.getMessage() + ")");
+			Assert.assertTrue(false);
+		}
 	}
 	
 	@Test(priority=21)
 	public void checkMenuCategoryTwoText() {
-		Assert.assertEquals(objMenuPage.getMenuPageMenuCategoryTwoText(), expectedMenuCategoryTwoText);
-		System.out.println("[TEST RUN] MenuPage: Menu Category Two Text Pass");
+		try {
+			Assert.assertEquals(objMenuPage.getMenuPageMenuCategoryTwoText(), expectedMenuCategoryTwoText);
+			System.out.println("[TEST RUN] MenuPage: Menu Category Two Text Pass");
+		}
+		catch(AssertionError ae) {
+			System.out.println("[TEST RUN] MenuPage: Menu Category Two Text Fail (" + ae.getMessage() + ")");
+			Assert.assertTrue(false);
+		}
 	}
 	
 	@Test(priority=22)
 	public void checkMenuItemNames() {
 		ArrayList<String> actualMenuItemNames = objMenuPage.getMenuPageMenuItemNames();
-		for(int i=0;i<expectedMenuItemNames.length;i++) {
-			System.out.println("[TEST RUN] Menu Item Name (Expected/Actual): '" + expectedMenuItemNames[i].trim() + "'/'" + actualMenuItemNames.get(i).trim() + "'");
-			if(expectedMenuItemNames[i].trim().equals(actualMenuItemNames.get(i).trim())) {
-				Assert.assertTrue(true);
+		try {
+			for(int i=0;i<expectedMenuItemNames.length;i++) {
+				System.out.println("[TEST RUN] Menu Item Name (Expected/Actual): '" + expectedMenuItemNames[i].trim() + "'/'" + actualMenuItemNames.get(i).trim() + "'");
+				Assert.assertEquals(expectedMenuItemNames[i].trim(),actualMenuItemNames.get(i).trim());
 			}
-			else {
-				Assert.assertFalse(false);
-			}
+			System.out.println("[TEST RUN] MenuPage: Menu Item Names Pass");
 		}
-		System.out.println("[TEST RUN] MenuPage: Menu Item Names Pass");
+		catch(AssertionError ae) {
+			System.out.println("[TEST RUN] MenuPage: Menu Item Names Fail (" + ae.getMessage() + ")");
+			Assert.assertTrue(false);
+		}
 	}
 	
 	@Test(priority=23)
@@ -82,14 +101,20 @@ public class testMenuPage{
 		ArrayList<String> actualMenuItemFullText = objMenuPage.getMenuPageMenuItemFullText();
 		int i = 0;
 		int priceIndexInFullText = 0;
-		for(String s: actualMenuItemFullText) {
-			priceIndexInFullText = s.indexOf("\n")+2;
-			System.out.println("[TEST RUN] Menu Prices (Expected/Actual): '" + expectedMenuItemPrices[i].trim() + "'/'" + 
-			s.substring(priceIndexInFullText).trim() + "'");
-			Assert.assertEquals(expectedMenuItemPrices[i].trim(), s.substring(priceIndexInFullText).trim());
-			i++;
+		try {
+			for(String s: actualMenuItemFullText) {
+				priceIndexInFullText = s.indexOf("\n")+2;
+				System.out.println("[TEST RUN] Menu Prices (Expected/Actual): '" + expectedMenuItemPrices[i].trim() + "'/'" + 
+						s.substring(priceIndexInFullText).trim() + "'");
+				Assert.assertEquals(expectedMenuItemPrices[i].trim(), s.substring(priceIndexInFullText).trim());
+				i++;
+			}
+			System.out.println("[TEST RUN] MenuPage: Menu Item Prices Pass");
 		}
-		System.out.println("[TEST RUN] MenuPage: Menu Item Prices Pass");
+		catch(AssertionError ae) {
+			System.out.println("[TEST RUN] MenuPage: Menu Item Prices Fail (" + ae.getMessage() + ")");
+			Assert.assertTrue(false);
+		}
 	}
 	
 	@AfterClass
