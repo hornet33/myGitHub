@@ -3,6 +3,7 @@ package vbDumplingPages;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -88,14 +89,14 @@ public class FAQPage {
 	}
 	
 	public boolean isElementVisible(WebElement webElement, int timeOut) {
-	    try {
-	    	WebDriverWait wait = new WebDriverWait(driver, timeOut);
-	    	wait.until(ExpectedConditions.visibilityOf(webElement));
-	    	return true;
-	    } 
-	    catch (org.openqa.selenium.NoSuchElementException e) {
-	    	return false;
-	    }
+		try {
+			WebDriverWait wait = new WebDriverWait(driver, timeOut);
+			wait.until(ExpectedConditions.visibilityOf(webElement));
+			return true;
+		} 
+		catch (NoSuchElementException e) {
+			return false;
+		}
 	}
 	
 	public void clickFaqPageOrderFormLink() {
