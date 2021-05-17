@@ -5,10 +5,12 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
+import vbDumplingCommonMethods.CommonMethods;
 
 public class HomePage {
 	
 	WebDriver driver;
+	CommonMethods objCommonMethods = new CommonMethods(driver);
 	
 	@FindBy(xpath = "//h1") WebElement homePageTitle;
 	@FindBy(xpath = "//h1/a") WebElement homePageLink;
@@ -29,47 +31,47 @@ public class HomePage {
 	}
 	
 	public String getHeaderText() {
-		return(homePageTitle.getText());
+		return(objCommonMethods.getWebElementText(homePageTitle));
 	}
 	
 	public String getLHSHeaderText() {
-		return(homeLHSHeader.getText());
+		return(objCommonMethods.getWebElementText(homeLHSHeader));
 	}
 	
 	public void clickHomePageLink() {
-		homePageLink.click();
+		objCommonMethods.clickWebElement(homePageLink);
 	}
 	
 	public String getDescriptionText() {
-		return(homePageDescription.getText());
+		return(objCommonMethods.getWebElementText(homePageDescription));
 	}
 	
 	public void clickMenuHomeLink() {
-		menuHomeLink.click();
+		objCommonMethods.clickWebElement(menuHomeLink);
 	}
 	
 	public void clickMenuMenuLink() {
-		menuMenuLink.click();
+		objCommonMethods.clickWebElement(menuMenuLink);
 	}
 	
 	public void clickMenuFAQLink() {
-		menuFAQLink.click();
+		objCommonMethods.clickWebElement(menuFAQLink);
 	}
 	
 	public void clickMenuTestimonialsLink() {
-		menuTestimonialsLink.click();
+		objCommonMethods.clickWebElement(menuTestimonialsLink);
 	}
 	
 	public void clickMenuOrderLink() {
-		menuOrderLink.click();
+		objCommonMethods.clickWebElement(menuOrderLink);
 	}
 	
 	public void clickMenuAboutLink() {
-		menuAboutLink.click();
+		objCommonMethods.clickWebElement(menuAboutLink);
 	}
 	
 	public void clickBodyOrderNowLink() {
-		bodyOrderNowLink.click();
+		objCommonMethods.clickWebElement(bodyOrderNowLink);
 	}
 	
 	public String getPageTitle() {
@@ -88,7 +90,7 @@ public class HomePage {
 			Assert.assertEquals(orderPageHeader.getText(),expectedOrderPageHeader);
 		}
 		catch(AssertionError ae) {
-			System.out.println("[TEST RUN] OrderPage: Header Verification Failed (" + ae.getMessage() + ")");
+			objCommonMethods.consoleLogger("OrderPage: Header Verification", "Fail", ae.getMessage());
 		}
 		driver.close();
 		driver.switchTo().window(originalWindow);

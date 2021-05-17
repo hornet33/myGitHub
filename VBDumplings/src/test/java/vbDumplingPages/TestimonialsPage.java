@@ -5,10 +5,12 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import vbDumplingCommonMethods.CommonMethods;
 
 public class TestimonialsPage {
 	
 	WebDriver driver;
+	CommonMethods objCommonMethods = new CommonMethods(driver);
 	
 	@FindBy(xpath = "//a[text()='Testimonials']") WebElement menuTestimonialsLink;
 	@FindBy(xpath = "//h1[@class='entry-title']") WebElement testimonialsPageLHSHeader;
@@ -34,10 +36,70 @@ public class TestimonialsPage {
 	}
 	
 	public void clickTestimonialsLink(){
-		menuTestimonialsLink.click();
+		objCommonMethods.clickWebElement(menuTestimonialsLink);
 	}
 	
 	public String getTestimonialsPageLHSHeaderText() {
-		return(testimonialsPageLHSHeader.getText());
+		return(objCommonMethods.getWebElementText(testimonialsPageLHSHeader));
+	}
+	
+	public String getTestimonialsPageCommentsHeaderText() {
+		return(objCommonMethods.getWebElementText(testimonialsPageCommentsHeader));
+	}
+	
+	public List<WebElement> getTestimonialsPageCommentsAsWebelements(){
+		return(testimonialsPageCommentsContent);
+	}
+	
+	public void setTestimonialsPageNewCommentText(String commentText) {
+		objCommonMethods.setWebElementText(testimonialsPageNewCommentTextarea,commentText);
+	}
+	
+	public void setTestimonialsPageNewCommentEmail(String commentEmail) {
+		objCommonMethods.setWebElementText(testimonialsPageNewCommentEmail, commentEmail);
+	}
+	
+	public void setTestimonialsPageNewCommentAuthor(String commentAuthor) {
+		objCommonMethods.setWebElementText(testimonialsPageNewCommentAuthor, commentAuthor);
+	}
+	
+	public void setTestimonialsPageNewCommentURL(String commentURL) {
+		objCommonMethods.setWebElementText(testimonialsPageNewCommentURL, commentURL);
+	}
+	
+	public void clickTestimonialsPageWordpressLink() {
+		objCommonMethods.clickWebElement(testimonialsPagePostAsWordpressLink);
+	}
+	
+	public void clickTestimonialsPageTwitterLink() {
+		objCommonMethods.clickWebElement(testimonialsPagePostAsTwitterLink);
+	}
+	
+	public void clickTestimonialsPageFacebookLink() {
+		objCommonMethods.clickWebElement(testimonialsPagePostAsFacebookLink);
+	}	
+	
+	public void clickTestimonialsPageNewCommentSubmitBtn() {
+		objCommonMethods.clickWebElement(testimonialsPageNewCommentSubmitButton);
+	}
+	
+	public void enableTestimonialsPageSubscribeCommentsChkbox() {
+		objCommonMethods.enableCheckbox(testimonialsPageSubscribeCommentsChkbox);
+	}
+	
+	public void enableTestimonialsPageSuscribePostsChkbox() {
+		objCommonMethods.enableCheckbox(testimonialsPageSubscribePostsChkbox);
+	}
+	
+	public String getTestimonialsPageNoMailErrorText() {
+		return(objCommonMethods.getWebElementText(testimonialsPageNoEmailError));
+	}
+	
+	public String getTestimonialsPageNoAuthorErrorText() {
+		return(objCommonMethods.getWebElementText(testimonialsPageNoAuthorError));
+	}
+	
+	public String getTestimonialsPageCommentPendingModerationText() {
+		return(objCommonMethods.getWebElementText(testimonialsPageCommentPendingModeration));
 	}
 }

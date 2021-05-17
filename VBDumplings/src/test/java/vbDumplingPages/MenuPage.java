@@ -6,10 +6,12 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import java.util.List;
 import java.util.ArrayList;
+import vbDumplingCommonMethods.CommonMethods;
 
 public class MenuPage {
 	
 	WebDriver driver;
+	CommonMethods objCommonMethods = new CommonMethods(driver);
 
 	@FindBy(xpath = "//a[text()='Menu']") WebElement menuMenuLink;
 	@FindBy(xpath = "//h1[@class='entry-title']") WebElement menuPageLHSHeader;
@@ -24,33 +26,33 @@ public class MenuPage {
 	}
 
 	public void clickMenuLink() {
-		menuMenuLink.click();
+		objCommonMethods.clickWebElement(menuMenuLink);
 	}
 	
-	public String getMenuPageLHSHeaderText() {
-		return(menuPageLHSHeader.getText());
+	public String getLHSHeaderText() {
+		return(objCommonMethods.getWebElementText(menuPageLHSHeader));
 	}
 	
-	public String getMenuPageMenuCategoryOneText() {
-		return(menuPageMenuCategoryOne.getText());
+	public String getMenuCategoryOneText() {
+		return(objCommonMethods.getWebElementText(menuPageMenuCategoryOne));
 	}
 	
-	public String getMenuPageMenuCategoryTwoText() {
-		return(menuPageMenuCategoryTwo.getText());
+	public String getMenuCategoryTwoText() {
+		return(objCommonMethods.getWebElementText(menuPageMenuCategoryTwo));
 	}
 	
-	public ArrayList<String> getMenuPageMenuItemNames() {
+	public ArrayList<String> getMenuItemNames() {
 		ArrayList<String> menuItemNames = new ArrayList<String>(); 
 		for(WebElement menuPageItemName: menuPageMenuItemNameList) {
-			menuItemNames.add(menuPageItemName.getText());
+			menuItemNames.add(objCommonMethods.getWebElementText(menuPageItemName));
 		}
 		return(menuItemNames);
 	}
 	
-	public ArrayList<String> getMenuPageMenuItemFullText(){
+	public ArrayList<String> getMenuItemFullText(){
 		ArrayList<String> menuItemFullTexts = new ArrayList<String>(); 
 		for(WebElement menuPageItemFullText: menuPageMenuItemFullTextList) {
-			menuItemFullTexts.add(menuPageItemFullText.getText());
+			menuItemFullTexts.add(objCommonMethods.getWebElementText(menuPageItemFullText));
 		}
 		return(menuItemFullTexts);
 	}

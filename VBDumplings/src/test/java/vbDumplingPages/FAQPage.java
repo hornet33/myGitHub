@@ -3,17 +3,16 @@ package vbDumplingPages;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
-import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
+import vbDumplingCommonMethods.CommonMethods;
 
 public class FAQPage {
 	
 	WebDriver driver;
+	CommonMethods objCommonMethods = new CommonMethods(driver);
 	
 	@FindBy(xpath = "//a[text()='FAQs']") WebElement menuFAQLink;
 	@FindBy(xpath = "//h1[@class='entry-title']") WebElement faqPageLHSHeader;
@@ -27,81 +26,70 @@ public class FAQPage {
 		PageFactory.initElements(driver, this);
 	}
 	
-	public String getFaqPageLHSHeaderText() {
-		return(faqPageLHSHeader.getText());
+	public String getLHSHeaderText() {
+		return(objCommonMethods.getWebElementText(faqPageLHSHeader));
 	}
 	
-	public String getFaqPageContentHeaderText() {
-		return(faqPageContentHeader.getText());
+	public String getContentHeaderText() {
+		return(objCommonMethods.getWebElementText(faqPageContentHeader));
 	}
 	
-	public ArrayList<String> getFaqPageQuestions(){
+	public ArrayList<String> getQuestions(){
 		ArrayList<String> faqPageQuestions = new ArrayList<String>(); 
 		for(WebElement faqPageQuestionSummary: faqPageQuestionSummaryList) {
-			faqPageQuestions.add(faqPageQuestionSummary.getText());
+			faqPageQuestions.add(objCommonMethods.getWebElementText(faqPageQuestionSummary));
 		}
 		return(faqPageQuestions);
 	}
 	
-	public ArrayList<String> getFaqPageExpandedAnswers(){
+	public ArrayList<String> getExpandedAnswers(){
 		ArrayList<String> faqPageExpandedAnswers = new ArrayList<String>();
 		for(WebElement faqPageExpandedAnswer: faqPageExpandedAnswerList) {
-			faqPageExpandedAnswers.add(faqPageExpandedAnswer.getText());
+			faqPageExpandedAnswers.add(objCommonMethods.getWebElementText(faqPageExpandedAnswer));
 		}
 		return(faqPageExpandedAnswers);
 	}
 	
-	public List<WebElement> getFaqPageQuestionsAsWebelements(){
+	public List<WebElement> getQuestionsAsWebelements(){
 		return(faqPageQuestionSummaryList);
 	}
 	
-	public List<WebElement> getFaqPageExpandedAnswersAsWebelements(){
+	public List<WebElement> getExpandedAnswersAsWebelements(){
 		return(faqPageExpandedAnswerList);
 	}
 	
-	public WebElement getFaqPageContentHeaderElement() {
+	public WebElement getContentHeaderElement() {
 		return(faqPageContentHeader);
 	}
 	
 	public void clickMenuFaqLink() {
-		menuFAQLink.click();
+		objCommonMethods.clickWebElement(menuFAQLink);
 	}
 	
-	public void clickFaqPageQuestion(int questionIndex) {
-		faqPageQuestionSummaryList.get(questionIndex).click();
+	public void clickQuestion(int questionIndex) {
+		objCommonMethods.clickWebElement(faqPageQuestionSummaryList.get(questionIndex));
 	}
 	
-	public boolean clickFaqPageExpandedAnswer(int answerIndex) {
+	public boolean clickExpandedAnswer(int answerIndex) {
 		try { 
 			//Change implicit wait to zero seconds temporarily
 			driver.manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS);
 			//Try to click the element
-			faqPageExpandedAnswerList.get(answerIndex).click();			
+			objCommonMethods.clickWebElement(faqPageExpandedAnswerList.get(answerIndex));	
+			//If able to click, return true
 			return(true);
 		}
-		catch(Exception e) {			
+		catch(Exception e) {	
+			//Not able to click element, return false
 			return(false);
 		}
 		finally {
-			//Change implicit wait back to 30 seconds
+			//Change implicit wait back to 30 seconds before exiting the method
 			driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		}
 	}
 	
-	public boolean isElementVisible(WebElement webElement, int timeOut) {
-		try {
-			WebDriverWait wait = new WebDriverWait(driver, timeOut);
-			wait.until(ExpectedConditions.visibilityOf(webElement));
-			return true;
-		} 
-		catch (NoSuchElementException e) {
-			return false;
-		}
-	}
-	
-	public void clickFaqPageOrderFormLink() {
-		if(isElementVisible(faqPageOrderFormLink,2)) {
-			faqPageOrderFormLink.click();
-		}
+	public void clickOrderFormLink() {
+		objCommonMethods.clickWebElement(faqPageOrderFormLink);		
 	}
 }
