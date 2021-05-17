@@ -6,7 +6,7 @@ T E C H - S T A C K
 <hr/>
 Programming IDE: Eclipse<br/>
 Automation Tool: Selenium Webdriver (Java) <br/>
-Backend Data Validation: Google Sheets<br/>
+Backend Data Repository: Google Sheets<br/>
 Testing Framework: POM, TestNG<br/>
 Version Control: GitHub<br/>
 Build Tool: Apache Maven<br/>
