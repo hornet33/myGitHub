@@ -1,48 +1,49 @@
 # mySeleniumJava
 2021.04 - My first GitHub repository, will be used mostly for learning and experimenting where I try to automate https://vbdumplings.in web-application.
 
-==========================================================================================================
-T E C H   S T A C K
-==========================================================================================================
-Programming IDE: Eclipse
-Automation Tool: Selenium Webdriver (Java) 
-Backend Data Validation: Google Sheets
-Testing Framework: POM, TestNG
-Version Control: GitHub
-Build Tool: Apache Maven
-Integration/Deployment Tool: Jenkins
+<hr/>
+T E C H - S T A C K
+<hr/>
+Programming IDE: Eclipse<br/>
+Automation Tool: Selenium Webdriver (Java) <br/>
+Backend Data Validation: Google Sheets<br/>
+Testing Framework: POM, TestNG<br/>
+Version Control: GitHub<br/>
+Build Tool: Apache Maven<br/>
+Integration/Deployment Tool: Jenkins<br/>
 
-==========================================================================================================
-C O N F I G   A N D   B U I L D   M A N A G E M E N T
-==========================================================================================================
-[DONE] Install and configure JDK 11
-[DONE] Install and configure Eclipse IDE
-[DONE] Install and configure Selenium Webdriver
-[DONE] Install and configure TestNG
-[DONE] Install and configure Apache Maven 
-[DONE] Integrate TestNG with Maven
-[DONE] Install and configure Jenkins 
-[DONE] Integrate Maven with Jenkins
-[DONE] Install and configure Git 
-[DONE] Integrate Git with Jenkins
-[DONE] Install GitHub plugin for Jenkins
-[DONE] Install and configure Apache Tomcat 
-[DONE] Configure GitHub for Eclipse
-[DONE] Configure GitHub for Maven project in Jenkins
-[DONE] Test Selenium Webdriver -> TestNG -> Maven -> GitHub -> Jenkins run 
+<hr/>
+C O N F I G - A N D - B U I L D - M A N A G E M E N T
+<hr/>
+[DONE] Install and configure JDK 11<br/>
+[DONE] Install and configure Eclipse IDE<br/>
+[DONE] Install and configure Selenium Webdriver<br/>
+[DONE] Install and configure TestNG<br/>
+[DONE] Install and configure Apache Maven <br/>
+[DONE] Integrate TestNG with Maven<br/>
+[DONE] Install and configure Jenkins <br/>
+[DONE] Integrate Maven with Jenkins<br/>
+[DONE] Install and configure Git <br/>
+[DONE] Integrate Git with Jenkins<br/>
+[DONE] Install GitHub plugin for Jenkins<br/>
+[DONE] Install and configure Apache Tomcat <br/>
+[DONE] Configure GitHub for Eclipse<br/>
+[DONE] Configure GitHub for Maven project in Jenkins<br/>
+[DONE] Test Selenium Webdriver -> TestNG -> Maven -> GitHub -> Jenkins run <br/>
 
-==========================================================================================================
-A U T O M A T E   U S I N G   S E L E N I U M   P O M 
-==========================================================================================================
-[IN PROGRESS] Create POM classes using PageFactory for all pages including "Orders" page
-[IN PROGRESS] TestNG classes for VB Dumplings (Home/Menu/Testimonials/FAQs/About pages)
-[TO DO] TestNG class for new tab "Orders" page only after the other pages are done
-[IN PROGRESS] All UI valdations to be done including "Orders" page 
-[IN PROGRESS] Validate webapp UI on Chrome, Firefox, & Edge Chromium browsers
-[TO DO] Validate automated order email receipt (Automation Testing email = rahulautomationemail2021@gmail.com) 
-	- any browser 
-	- use Gmail HTML "https://mail.google.com/mail/?ui=html&zy=h"
-	- After validation delete the email
-[TO DO] Validate Google Sheets entry after an order is placed (Automation Testing email = rahulautomationemail2021@gmail.com) 
-	- any browser
-	- After validation delete the row in Google Sheet
+<hr/>
+A U T O M A T E - U S I N G - S E L E N I U M - P O M 
+<hr/>
+[IN PROGRESS] Create POM classes using PageFactory for all pages including "Orders" page<br/>
+[IN PROGRESS] TestNG classes for VB Dumplings (Home/Menu/Testimonials/FAQs/About pages)<br/>
+[TO DO] TestNG class for new tab "Orders" page only after the other pages are done<br/>
+[IN PROGRESS] All UI valdations to be done including "Orders" page <br/>
+[IN PROGRESS] Validate webapp UI on Chrome, Firefox, & Edge Chromium browsers<br/>
+[TO DO] Validate automated order email receipt (Automation Testing email = rahulautomationemail2021@gmail.com) <br/>
+	<li> On any browser - Chrome/Firefox/Edge </li>
+	<li> Use Gmail HTML "https://mail.google.com/mail/?ui=html&zy=h"</li>
+	<li> After validation delete the email </li>
+	</li>
+[TO DO] Validate Google Sheets entry after an order is placed (Automation Testing email = rahulautomationemail2021@gmail.com) <br/>
+	<li> On any browser - Chrome/Firefox/Edge </li>
+	<li> After validation delete the row in Google Sheet </li>
