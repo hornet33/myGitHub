@@ -32,4 +32,8 @@ public class TestimonialsPage {
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
 	}
+	
+	public void clickTestimonialsLink(){
+		menuTestimonialsLink.click();
+	}
 }
