@@ -39,67 +39,67 @@ public class TestimonialsPage {
 		objCommonMethods.clickWebElement(menuTestimonialsLink);
 	}
 	
-	public String getTestimonialsPageLHSHeaderText() {
+	public String getLHSHeaderText() {
 		return(objCommonMethods.getWebElementText(testimonialsPageLHSHeader));
 	}
 	
-	public String getTestimonialsPageCommentsHeaderText() {
+	public String getCommentsHeaderText() {
 		return(objCommonMethods.getWebElementText(testimonialsPageCommentsHeader));
 	}
 	
-	public List<WebElement> getTestimonialsPageCommentsAsWebelements(){
+	public List<WebElement> getCommentsAsWebelements(){
 		return(testimonialsPageCommentsContent);
 	}
 	
-	public void setTestimonialsPageNewCommentText(String commentText) {
+	public void setNewCommentText(String commentText) {
 		objCommonMethods.setWebElementText(testimonialsPageNewCommentTextarea,commentText);
 	}
 	
-	public void setTestimonialsPageNewCommentEmail(String commentEmail) {
+	public void setNewCommentEmail(String commentEmail) {
 		objCommonMethods.setWebElementText(testimonialsPageNewCommentEmail, commentEmail);
 	}
 	
-	public void setTestimonialsPageNewCommentAuthor(String commentAuthor) {
+	public void setNewCommentAuthor(String commentAuthor) {
 		objCommonMethods.setWebElementText(testimonialsPageNewCommentAuthor, commentAuthor);
 	}
 	
-	public void setTestimonialsPageNewCommentURL(String commentURL) {
+	public void setNewCommentURL(String commentURL) {
 		objCommonMethods.setWebElementText(testimonialsPageNewCommentURL, commentURL);
 	}
 	
-	public void clickTestimonialsPageWordpressLink() {
+	public void clickWordpressLink() {
 		objCommonMethods.clickWebElement(testimonialsPagePostAsWordpressLink);
 	}
 	
-	public void clickTestimonialsPageTwitterLink() {
+	public void clickTwitterLink() {
 		objCommonMethods.clickWebElement(testimonialsPagePostAsTwitterLink);
 	}
 	
-	public void clickTestimonialsPageFacebookLink() {
+	public void clickFacebookLink() {
 		objCommonMethods.clickWebElement(testimonialsPagePostAsFacebookLink);
 	}	
 	
-	public void clickTestimonialsPageNewCommentSubmitBtn() {
+	public void clickNewCommentSubmitBtn() {
 		objCommonMethods.clickWebElement(testimonialsPageNewCommentSubmitButton);
 	}
 	
-	public void enableTestimonialsPageSubscribeCommentsChkbox() {
+	public void enableSubscribeCommentsChkbox() {
 		objCommonMethods.enableCheckbox(testimonialsPageSubscribeCommentsChkbox);
 	}
 	
-	public void enableTestimonialsPageSuscribePostsChkbox() {
+	public void enableSuscribePostsChkbox() {
 		objCommonMethods.enableCheckbox(testimonialsPageSubscribePostsChkbox);
 	}
 	
-	public String getTestimonialsPageNoMailErrorText() {
+	public String getNoMailErrorText() {
 		return(objCommonMethods.getWebElementText(testimonialsPageNoEmailError));
 	}
 	
-	public String getTestimonialsPageNoAuthorErrorText() {
+	public String getNoAuthorErrorText() {
 		return(objCommonMethods.getWebElementText(testimonialsPageNoAuthorError));
 	}
 	
-	public String getTestimonialsPageCommentPendingModerationText() {
+	public String getCommentPendingModerationText() {
 		return(objCommonMethods.getWebElementText(testimonialsPageCommentPendingModeration));
 	}
 }
