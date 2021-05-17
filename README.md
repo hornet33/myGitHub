@@ -38,7 +38,7 @@ A U T O M A T E   U S I N G   S E L E N I U M   P O M
 [IN PROGRESS] TestNG classes for VB Dumplings (Home/Menu/Testimonials/FAQs/About pages)
 [TO DO] TestNG class for new tab "Orders" page only after the other pages are done
 [IN PROGRESS] All UI valdations to be done including "Orders" page 
-IN PROGRESS Validate webapp UI on Chrome, Firefox, & Edge Chromium browsers
+[IN PROGRESS] Validate webapp UI on Chrome, Firefox, & Edge Chromium browsers
 [TO DO] Validate automated order email receipt (Automation Testing email = rahulautomationemail2021@gmail.com) 
 	- any browser 
 	- use Gmail HTML "https://mail.google.com/mail/?ui=html&zy=h"
