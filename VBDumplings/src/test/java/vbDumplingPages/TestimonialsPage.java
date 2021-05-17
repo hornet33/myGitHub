@@ -36,4 +36,8 @@ public class TestimonialsPage {
 	public void clickTestimonialsLink(){
 		menuTestimonialsLink.click();
 	}
+	
+	public String getTestimonialsPageLHSHeaderText() {
+		return(testimonialsPageLHSHeader.getText());
+	}
 }
