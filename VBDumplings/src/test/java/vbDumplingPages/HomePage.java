@@ -89,7 +89,10 @@ public class HomePage {
 		    }
 		}
 		
-		actualOrderPageHeader = orderPageHeader.getText();
+		try { Thread.sleep(3000); }
+		catch(InterruptedException ie) {}
+		
+		actualOrderPageHeader = objCommonMethods.getWebElementText(orderPageHeader);
 		if (actualOrderPageHeader.equals(expectedOrderPageHeader)) {
 			driver.close();
 			driver.switchTo().window(originalWindow);
