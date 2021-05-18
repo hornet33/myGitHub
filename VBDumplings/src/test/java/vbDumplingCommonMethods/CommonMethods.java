@@ -75,17 +75,16 @@ public class CommonMethods {
 			checkboxToDisable.click();
 		}
 	}
-
 	
 	//Method to print to the console for start or end of a test
 	//Returns N/A		
 	public void consoleLogger(String logText, boolean isTestStart, boolean isTestEnd) {
 		String outputText = "[TEST RUN] ----------------------------- ";
 		if(isTestStart) {
-			outputText += "Start - " + logText + "-----------------------------";
+			outputText += "S T A R T   -   " + logText + " -----------------------------";
 		}
 		else if(isTestEnd) {
-			outputText += "End - " + logText + "-----------------------------";
+			outputText += "E N D   -   " + logText + " -----------------------------";
 		}
 		System.out.println(outputText);
 	}
@@ -96,9 +95,15 @@ public class CommonMethods {
 		System.out.println("[TEST RUN] " + logText);
 	}
 	
-	//Method to print to the console for validation tests with pass/fail result
+	//Method to print to the console for just plain text with pass/fail result, without additional text
+	//Returns N/A		
+	public void consoleLogger(String logText, String actionResultText) {
+		System.out.println("[TEST RUN] " + logText + " - " + actionResultText);	
+	}
+	
+	//Method to print to the console for validation tests with pass/fail result with additional text
 	//Returns N/A		
 	public void consoleLogger(String logText,String actionResultText,String additionalInfoText) {
-		System.out.println("[TEST RUN] " + logText + " - " + actionResultText + " (" + additionalInfoText + ")");		
+		System.out.println("[TEST RUN] " + logText + " - " + actionResultText + " (" + additionalInfoText + ")");
 	}
 }
