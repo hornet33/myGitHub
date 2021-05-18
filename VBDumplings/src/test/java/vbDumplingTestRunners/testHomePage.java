@@ -23,34 +23,37 @@ public class testHomePage{
 	WebDriver driver;
 	HomePage objHomePage;
 	CommonMethods objCommonMethods;
+	String consoleTestName;
+	String consolePageName = "H O M E   P A G E";
 	
 	@BeforeClass
 	@Parameters({"browserType","vbdURL"})
 	public void initDriver(String browserType, String vbdURL) {
 		//Create a new driver instance for the browserType specified in testng.xml
 		initializeDriver objDriver = new initializeDriver();
-		driver = objDriver.testSetup(browserType) ;
+		driver = objDriver.testSetup(browserType) ;		
+
+		//Initialize CommonMethods class
+		objCommonMethods = new CommonMethods(driver);
+		objCommonMethods.consoleLogger(consolePageName, true, false);
+		objCommonMethods.consoleLogger("WebDriver Initialized ('" + browserType + "')");
 		
 		//Launch AUT 
 		driver.get(vbdURL);	
 		
 		//Initialize HomePage POM class
 		objHomePage = new HomePage(driver);
-		
-		//Initialize CommonMethods class
-		objCommonMethods = new CommonMethods(driver);
-		objCommonMethods.consoleLogger("Home Page", true, false);
-		objCommonMethods.consoleLogger("WebDriver Initialized ('" + browserType + "')");
 	}
 	
 	@Test(priority=0)
 	public void checkTitleText() {
+		consoleTestName = "Title Text";
 		try {
 			Assert.assertEquals(objHomePage.getHeaderText().toUpperCase(),expectedTitleText.toUpperCase());
-			objCommonMethods.consoleLogger("Title Text", "Pass");
+			objCommonMethods.consoleLogger(consoleTestName, "Pass");
 		}
 		catch(AssertionError ae) {
-			objCommonMethods.consoleLogger("Title Text", "Fail", ae.getMessage());
+			objCommonMethods.consoleLogger(consoleTestName, "Fail", ae.getMessage());
 			//Fail the test
 			Assert.assertTrue(false);
 		}
@@ -58,12 +61,13 @@ public class testHomePage{
 	
 	@Test(priority=1)
 	public void checkDescriptionText() {
+		consoleTestName = "Title Description";
 		try {
 			Assert.assertEquals(objHomePage.getDescriptionText(),expectedDescriptionText);
-			objCommonMethods.consoleLogger("Title Description", "Pass");
+			objCommonMethods.consoleLogger(consoleTestName, "Pass");
 		}
 		catch(AssertionError ae) {
-			objCommonMethods.consoleLogger("Title Description", "Fail", ae.getMessage());
+			objCommonMethods.consoleLogger(consoleTestName, "Fail", ae.getMessage());
 			//Fail the test
 			Assert.assertTrue(false);
 		}
@@ -71,13 +75,14 @@ public class testHomePage{
 	
 	@Test(priority=3)
 	public void checkHomePageLink() {
+		consoleTestName = "Title 'Home' Page link";
 		try {
 			objHomePage.clickHomePageLink();
 			Assert.assertEquals(objHomePage.getPageTitle(), expectedHomePageTitle);
-			objCommonMethods.consoleLogger("Title 'Home' Page link", "Pass");
+			objCommonMethods.consoleLogger(consoleTestName, "Pass");
 		}
 		catch(AssertionError ae) {
-			objCommonMethods.consoleLogger("Title 'Home' Page link", "Fail", ae.getMessage());
+			objCommonMethods.consoleLogger(consoleTestName, "Fail", ae.getMessage());
 			//Fail the test
 			Assert.assertTrue(false);
 		}
@@ -85,13 +90,14 @@ public class testHomePage{
 	
 	@Test(priority=4)
 	public void checkMenuHomeLink() {
+		consoleTestName = "Menu 'Home' Page link";
 		try {
 			objHomePage.clickMenuHomeLink();
 			Assert.assertEquals(objHomePage.getPageTitle(), expectedHomePageTitle);
-			objCommonMethods.consoleLogger("Menu 'Home' Page link", "Pass");
+			objCommonMethods.consoleLogger(consoleTestName, "Pass");
 		}
 		catch(AssertionError ae) {
-			objCommonMethods.consoleLogger("Menu 'Home' Page link", "Fail", ae.getMessage());
+			objCommonMethods.consoleLogger(consoleTestName, "Fail", ae.getMessage());
 			//Fail the test
 			Assert.assertTrue(false);
 		}
@@ -99,13 +105,14 @@ public class testHomePage{
 	
 	@Test(priority=5)
 	public void checkMenuMenuLink() {
+		consoleTestName = "Menu 'Menu' Page link";	
 		try {
 			objHomePage.clickMenuMenuLink();
 			Assert.assertEquals(objHomePage.getPageTitle(), expectedMenuPageTitle);
-			objCommonMethods.consoleLogger("Menu 'Menu' Page link", "Pass");
+			objCommonMethods.consoleLogger(consoleTestName, "Pass");
 		}
 		catch(AssertionError ae) {
-			objCommonMethods.consoleLogger("Menu 'Menu' Page link", "Fail", ae.getMessage());
+			objCommonMethods.consoleLogger(consoleTestName, "Fail", ae.getMessage());
 			//Fail the test
 			Assert.assertTrue(false);
 		}
@@ -113,13 +120,14 @@ public class testHomePage{
 	
 	@Test(priority=6)
 	public void checkMenuFAQLink() {
+		consoleTestName = "Menu 'FAQs' Link";
 		try {
 			objHomePage.clickMenuFAQLink();
 			Assert.assertEquals(objHomePage.getPageTitle(), expectedFAQPageTitle);
-			objCommonMethods.consoleLogger("Menu 'FAQs' Link","Pass");
+			objCommonMethods.consoleLogger(consoleTestName, "Pass");
 		}
 		catch(AssertionError ae) {
-			objCommonMethods.consoleLogger("Menu 'FAQs' Link","Fail",ae.getMessage());
+			objCommonMethods.consoleLogger(consoleTestName, "Fail", ae.getMessage());
 			//Fail the test
 			Assert.assertTrue(false);
 		}
@@ -127,13 +135,14 @@ public class testHomePage{
 	
 	@Test(priority=7)
 	public void checkMenuTestimonialsLink() {
+		consoleTestName = "Menu 'Testimonials' Link";
 		try {
 			objHomePage.clickMenuTestimonialsLink();
 			Assert.assertEquals(objHomePage.getPageTitle(), expectedTestimonialsPageTitle);
-			objCommonMethods.consoleLogger("Menu 'Testimonials' Link","Pass");
+			objCommonMethods.consoleLogger(consoleTestName, "Pass");
 		}
 		catch(AssertionError ae) {
-			objCommonMethods.consoleLogger("Menu 'Testimonials' Link","Fail",ae.getMessage());
+			objCommonMethods.consoleLogger(consoleTestName, "Fail", ae.getMessage());
 			//Fail the test
 			Assert.assertTrue(false);
 		}
@@ -141,13 +150,14 @@ public class testHomePage{
 	
 	@Test(priority=8)
 	public void checkMenuAboutLink() {
+		consoleTestName = "Menu 'About' Link";
 		try {
 			objHomePage.clickMenuAboutLink();
 			Assert.assertEquals(objHomePage.getPageTitle(), expectedAboutPageTitle);
-			objCommonMethods.consoleLogger("Menu 'About' Link","Pass");
+			objCommonMethods.consoleLogger(consoleTestName, "Pass");
 		}
 		catch(AssertionError ae) {
-			objCommonMethods.consoleLogger("Menu 'About' Link","Fail",ae.getMessage());
+			objCommonMethods.consoleLogger(consoleTestName, "Fail", ae.getMessage());
 			//Fail the test
 			Assert.assertTrue(false);
 		}
@@ -155,13 +165,14 @@ public class testHomePage{
 	
 	@Test(priority=9)
 	public void checkLHSHeaderText() {
+		consoleTestName = "LHS Header Text";
 		try {
 			objHomePage.clickMenuHomeLink();
 			Assert.assertEquals(objHomePage.getLHSHeaderText().toUpperCase(),expectedLHSHeaderText.toUpperCase());
-			objCommonMethods.consoleLogger("LHS Header Text","Pass");
+			objCommonMethods.consoleLogger(consoleTestName, "Pass");
 		}
 		catch(AssertionError ae) {
-			objCommonMethods.consoleLogger("LHS Header Text","Fail",ae.getMessage());
+			objCommonMethods.consoleLogger(consoleTestName, "Fail", ae.getMessage());
 			//Fail the test
 			Assert.assertTrue(false);
 		}
@@ -169,25 +180,27 @@ public class testHomePage{
 	
 	@Test(priority=10)
 	public void checkMenuOrderLink() {
-			//Store the ID of the original window
-			String originalWindow = driver.getWindowHandle();	
-			objHomePage.clickMenuOrderLink();		
-			objHomePage.verifyOrderPageHeader(originalWindow, expectedOrderPageHeader);
-			objCommonMethods.consoleLogger("Menu 'Order' Link","Pass");
+		consoleTestName = "Menu 'Order' Link";
+		//Store the ID of the original window
+		String originalWindow = driver.getWindowHandle();	
+		objHomePage.clickMenuOrderLink();		
+		objHomePage.verifyOrderPageHeader(originalWindow, expectedOrderPageHeader);
+		objCommonMethods.consoleLogger(consoleTestName,"Pass");
 	}
 	
 	@Test(priority=11)
 	public void checkBodyOrderNowLink() {
+		consoleTestName = "Body 'order now' Link";
 		//Store the ID of the original window
 		String originalWindow = driver.getWindowHandle();	
 		objHomePage.clickBodyOrderNowLink();		
 		objHomePage.verifyOrderPageHeader(originalWindow, expectedOrderPageHeader);
-		objCommonMethods.consoleLogger("Body 'order now' Link","Pass");
+		objCommonMethods.consoleLogger(consoleTestName,"Pass");
 	}
 	
 	@AfterClass
 	public void testClose() {
 		driver.quit();
-		objCommonMethods.consoleLogger("Home Page", false, true);
+		objCommonMethods.consoleLogger(consolePageName, false, true);
 	}
 }

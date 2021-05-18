@@ -26,9 +26,7 @@ public class initializeDriver {
 		
 		//Implicit wait of 30 seconds
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-		driver.manage().window().maximize();
-		
-		System.out.println("[TEST RUN] WebDriver Initialized ('" + browserType + "')");
+		driver.manage().window().maximize();		
 		
 		//Return driver instance
 		return(driver);

@@ -7,17 +7,18 @@ import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 import java.util.ArrayList;
 import java.util.List;
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
+import vbDumplingCommonMethods.CommonMethods;
 
 public class testFaqPage {
 
 	WebDriver driver;
 	FAQPage objFaqPage;
 	HomePage objHomePage;
+	CommonMethods objCommonMethods = new CommonMethods(driver);
 	
 	final String expectedLHSHeaderText = "FAQS";
 	final String expectedContentHeaderText = "Frequently Asked Questions (FAQ)";
@@ -60,7 +61,7 @@ public class testFaqPage {
 	@Test(priority=30)
 	public void checkFaqPageLHSHeaderText() {
 		try { 
-			Assert.assertEquals(objFaqPage.getFaqPageLHSHeaderText().toUpperCase(), expectedLHSHeaderText.toUpperCase());
+			Assert.assertEquals(objFaqPage.getLHSHeaderText().toUpperCase(), expectedLHSHeaderText.toUpperCase());
 			System.out.println("[TEST RUN] FaqPage: LHS Header Text Pass");
 		}
 		catch(AssertionError ae) {
@@ -72,7 +73,7 @@ public class testFaqPage {
 	@Test(priority=31)
 	public void checkFaqPageContentHeaderText() {
 		try {
-			Assert.assertEquals(objFaqPage.getFaqPageContentHeaderText().toUpperCase(), expectedContentHeaderText.toUpperCase());
+			Assert.assertEquals(objFaqPage.getContentHeaderText().toUpperCase(), expectedContentHeaderText.toUpperCase());
 			System.out.println("[TEST RUN] FaqPage: Content Header Text Pass");
 		}
 		catch(AssertionError ae) {
@@ -83,7 +84,7 @@ public class testFaqPage {
 	
 	@Test(priority=32)
 	public void checkFaqPageQuestions() {
-		ArrayList<String> actualFaqPageQuestionList = objFaqPage.getFaqPageQuestions();
+		ArrayList<String> actualFaqPageQuestionList = objFaqPage.getQuestions();
 		int i = 0;
 		try {
 			for(String actualFaqPageQuestion: actualFaqPageQuestionList) {
@@ -101,16 +102,16 @@ public class testFaqPage {
 	
 	@Test(priority=33)
 	public void clickAllFaqPageQuestionsExpand() {
-		ArrayList<String> actualFaqPageQuestionList = objFaqPage.getFaqPageQuestions();
-		List<WebElement> faqPageExpandedAnswersWebelements = objFaqPage.getFaqPageExpandedAnswersAsWebelements();
+		ArrayList<String> actualFaqPageQuestionList = objFaqPage.getQuestions();
+		List<WebElement> faqPageExpandedAnswersWebelements = objFaqPage.getExpandedAnswersAsWebelements();
 		int questionIndex = 0;
 		try {
 			for(String actualFaqPageQuestion: actualFaqPageQuestionList) {
 				System.out.println("[TEST RUN] FaqPage: Clicking on question '" + actualFaqPageQuestion + "', index '" + questionIndex + "'");
 				//Click on the FAQ page question to expand the answer body
-				objFaqPage.clickFaqPageQuestion(questionIndex);
+				objFaqPage.clickQuestion(questionIndex);
 				//Verify that the expanded answer body is displayed
-				if(objFaqPage.isElementVisible(faqPageExpandedAnswersWebelements.get(questionIndex), 2)) {
+				if(objCommonMethods.isElementVisible(faqPageExpandedAnswersWebelements.get(questionIndex), 2)) {
 					//Pass the test
 					Assert.assertTrue(true);					
 				}
@@ -132,30 +133,28 @@ public class testFaqPage {
 		//Check if any of the answers has the "Order Form" link displayed
 		//Store the ID of the original window
 		String originalWindow = driver.getWindowHandle();	
-		objFaqPage.clickFaqPageOrderFormLink();
+		objFaqPage.clickOrderFormLink();
 		objHomePage.verifyOrderPageHeader(originalWindow, expectedOrderPageHeader);
 		System.out.println("[TEST RUN] FaqPage: Body 'Order Form' Link Pass");		
 	}
 	
 	@Test(priority=35)
 	public void clickAllFaqPageQuestionsCollapse() {
-		ArrayList<String> actualFaqPageQuestionList = objFaqPage.getFaqPageQuestions();
-		List<WebElement> faqPageExpandedAnswersWebelements = objFaqPage.getFaqPageExpandedAnswersAsWebelements();
-		JavascriptExecutor js = (JavascriptExecutor) driver;
-		WebElement faqPageContentHeader = objFaqPage.getFaqPageContentHeaderElement();
+		ArrayList<String> actualFaqPageQuestionList = objFaqPage.getQuestions();		
+		WebElement faqPageContentHeader = objFaqPage.getContentHeaderElement();
 		
 		//Since all questions are expanded, the first question is not in view
 		//Scrolling up until the first FAQ comes into view
-		js.executeScript("arguments[0].scrollIntoView();", faqPageContentHeader);
+		objCommonMethods.scrollUntilElementInView(faqPageContentHeader);
 		
 		int questionIndex = 0;
 		try {
 			for(String actualFaqPageQuestion: actualFaqPageQuestionList) {
 				System.out.println("[TEST RUN] FaqPage: Clicking on question '" + actualFaqPageQuestion + "', index '" + questionIndex + "'");
 				//Click on the FAQ page question to expand the answer body
-				objFaqPage.clickFaqPageQuestion(questionIndex);
+				objFaqPage.clickQuestion(questionIndex);
 				//Verify that the expanded answer body is NOT displayed since clicking on an expanded question will collapse it
-				if(!objFaqPage.clickFaqPageExpandedAnswer(questionIndex)) {
+				if(!objFaqPage.clickExpandedAnswer(questionIndex)) {
 					//Pass the test
 					Assert.assertTrue(true);					
 				}
