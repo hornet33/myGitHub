@@ -188,11 +188,15 @@ public class testHomePage{
 	@Test(priority=10)
 	public void checkBodyOrderNowLink() {
 		consoleTestName = "Body 'order now' Link";
+		
 		//Navigate to home page
 		objHomePage.clickMenuHomeLink();
+		
 		//Store the ID of the original window
 		String originalWindow = driver.getWindowHandle();	
+		
 		objHomePage.clickBodyOrderNowLink();		
+		
 		if(objHomePage.verifyOrderPageHeader(originalWindow, expectedOrderPageHeader)) {
 			Assert.assertTrue(true);
 			objCommonMethods.consoleLogger(consoleTestName, "Pass");

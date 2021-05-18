@@ -23,7 +23,7 @@ public class HomePage {
 	@FindBy(xpath = "//a[text()='About']") WebElement menuAboutLink;
 	@FindBy(xpath = "//a[text()='order now']") WebElement bodyOrderNowLink;
 	@FindBy(xpath = "//h2[@class='entry-title']") WebElement homeLHSHeader;
-	@FindBy(xpath = "//h3[@id='ff-title-root']") WebElement orderPageHeader;
+	@FindBy(xpath = "//h3") WebElement orderPageHeader;
 	
 	public HomePage(WebDriver driver) {
 		this.driver = driver;
@@ -81,6 +81,7 @@ public class HomePage {
 	
 	public boolean verifyOrderPageHeader(String originalWindow,String expectedOrderPageHeader) {
 		String actualOrderPageHeader;
+		
 		//Loop through until we find a new window handle
 		for (String windowHandle : driver.getWindowHandles()) {
 			if(!originalWindow.contentEquals(windowHandle)) {
@@ -90,14 +91,15 @@ public class HomePage {
 		}
 		
 		actualOrderPageHeader = orderPageHeader.getText();
-		driver.close();
-		driver.switchTo().window(originalWindow);
-		
 		if (actualOrderPageHeader.equals(expectedOrderPageHeader)) {
+			driver.close();
+			driver.switchTo().window(originalWindow);
 			return true;
 		}
 		else {
+			driver.close();
+			driver.switchTo().window(originalWindow);
 			return false;
-		}						
+		}
 	}
 }
