@@ -7,6 +7,7 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 import vbDumplingPages.HomePage;
+import vbDumplingCommonMethods.CommonMethods;
 
 public class testHomePage{
 
@@ -21,12 +22,11 @@ public class testHomePage{
 	final String expectedOrderPageHeader = "VB Dumplings";
 	WebDriver driver;
 	HomePage objHomePage;
+	CommonMethods objCommonMethods;
 	
 	@BeforeClass
 	@Parameters({"browserType","vbdURL"})
 	public void initDriver(String browserType, String vbdURL) {
-		System.out.println("[TEST RUN] ----------------------------- Start of testHomePage -----------------------------");
-		
 		//Create a new driver instance for the browserType specified in testng.xml
 		initializeDriver objDriver = new initializeDriver();
 		driver = objDriver.testSetup(browserType) ;
@@ -36,16 +36,22 @@ public class testHomePage{
 		
 		//Initialize HomePage POM class
 		objHomePage = new HomePage(driver);
+		
+		//Initialize CommonMethods class
+		objCommonMethods = new CommonMethods(driver);
+		objCommonMethods.consoleLogger("Home Page", true, false);
+		objCommonMethods.consoleLogger("WebDriver Initialized ('" + browserType + "')");
 	}
 	
 	@Test(priority=0)
 	public void checkTitleText() {
 		try {
 			Assert.assertEquals(objHomePage.getHeaderText().toUpperCase(),expectedTitleText.toUpperCase());
-			System.out.println("[TEST RUN] HomePage: Title Text Pass");
+			objCommonMethods.consoleLogger("Title Text", "Pass");
 		}
 		catch(AssertionError ae) {
-			System.out.println("[TEST RUN] HomePage: Title Text Fail (" + ae.getMessage() + ")");
+			objCommonMethods.consoleLogger("Title Text", "Fail", ae.getMessage());
+			//Fail the test
 			Assert.assertTrue(false);
 		}
 	}
@@ -54,10 +60,11 @@ public class testHomePage{
 	public void checkDescriptionText() {
 		try {
 			Assert.assertEquals(objHomePage.getDescriptionText(),expectedDescriptionText);
-			System.out.println("[TEST RUN] HomePage: Title Description Text Pass");
+			objCommonMethods.consoleLogger("Title Description", "Pass");
 		}
 		catch(AssertionError ae) {
-			System.out.println("[TEST RUN] HomePage: itle Description Text Fail (" + ae.getMessage() + ")");
+			objCommonMethods.consoleLogger("Title Description", "Fail", ae.getMessage());
+			//Fail the test
 			Assert.assertTrue(false);
 		}
 	}
@@ -67,10 +74,11 @@ public class testHomePage{
 		try {
 			objHomePage.clickHomePageLink();
 			Assert.assertEquals(objHomePage.getPageTitle(), expectedHomePageTitle);
-			System.out.println("[TEST RUN] HomePage: Title 'Home' Page Link Pass");
+			objCommonMethods.consoleLogger("Title 'Home' Page link", "Pass");
 		}
 		catch(AssertionError ae) {
-			System.out.println("[TEST RUN] HomePage: Title 'Home' Page Link Fail (" + ae.getMessage() + ")");
+			objCommonMethods.consoleLogger("Title 'Home' Page link", "Fail", ae.getMessage());
+			//Fail the test
 			Assert.assertTrue(false);
 		}
 	}
@@ -80,10 +88,11 @@ public class testHomePage{
 		try {
 			objHomePage.clickMenuHomeLink();
 			Assert.assertEquals(objHomePage.getPageTitle(), expectedHomePageTitle);
-			System.out.println("[TEST RUN] HomePage: Menu 'Home' Page Link Pass");
+			objCommonMethods.consoleLogger("Menu 'Home' Page link", "Pass");
 		}
 		catch(AssertionError ae) {
-			System.out.println("[TEST RUN] HomePage: Menu 'Home' Page Link Fail (" + ae.getMessage() + ")");
+			objCommonMethods.consoleLogger("Menu 'Home' Page link", "Fail", ae.getMessage());
+			//Fail the test
 			Assert.assertTrue(false);
 		}
 	}
@@ -93,10 +102,11 @@ public class testHomePage{
 		try {
 			objHomePage.clickMenuMenuLink();
 			Assert.assertEquals(objHomePage.getPageTitle(), expectedMenuPageTitle);
-			System.out.println("[TEST RUN] HomePage: Menu 'Menu' Link Pass");
+			objCommonMethods.consoleLogger("Menu 'Menu' Page link", "Pass");
 		}
 		catch(AssertionError ae) {
-			System.out.println("[TEST RUN] HomePage: Menu 'Menu' Link Fail (" + ae.getMessage() + ")");
+			objCommonMethods.consoleLogger("Menu 'Menu' Page link", "Fail", ae.getMessage());
+			//Fail the test
 			Assert.assertTrue(false);
 		}
 	}
@@ -106,10 +116,11 @@ public class testHomePage{
 		try {
 			objHomePage.clickMenuFAQLink();
 			Assert.assertEquals(objHomePage.getPageTitle(), expectedFAQPageTitle);
-			System.out.println("[TEST RUN] HomePage: Menu 'FAQs' Link Pass");
+			objCommonMethods.consoleLogger("Menu 'FAQs' Link","Pass");
 		}
 		catch(AssertionError ae) {
-			System.out.println("[TEST RUN] HomePage: Menu 'FAQs' Link Fail (" + ae.getMessage() + ")");
+			objCommonMethods.consoleLogger("Menu 'FAQs' Link","Fail",ae.getMessage());
+			//Fail the test
 			Assert.assertTrue(false);
 		}
 	}
@@ -119,10 +130,11 @@ public class testHomePage{
 		try {
 			objHomePage.clickMenuTestimonialsLink();
 			Assert.assertEquals(objHomePage.getPageTitle(), expectedTestimonialsPageTitle);
-			System.out.println("[TEST RUN] HomePage: Menu 'Testimonials' Link Pass");
+			objCommonMethods.consoleLogger("Menu 'Testimonials' Link","Pass");
 		}
 		catch(AssertionError ae) {
-			System.out.println("[TEST RUN] HomePage: Menu 'Testimonials' Link Fail (" + ae.getMessage() + ")");
+			objCommonMethods.consoleLogger("Menu 'Testimonials' Link","Fail",ae.getMessage());
+			//Fail the test
 			Assert.assertTrue(false);
 		}
 	}
@@ -132,10 +144,11 @@ public class testHomePage{
 		try {
 			objHomePage.clickMenuAboutLink();
 			Assert.assertEquals(objHomePage.getPageTitle(), expectedAboutPageTitle);
-			System.out.println("[TEST RUN] HomePage: Menu 'About' Link Pass");
+			objCommonMethods.consoleLogger("Menu 'About' Link","Pass");
 		}
 		catch(AssertionError ae) {
-			System.out.println("[TEST RUN] HomePage: Menu 'About' Link Fail (" + ae.getMessage() + ")");
+			objCommonMethods.consoleLogger("Menu 'About' Link","Fail",ae.getMessage());
+			//Fail the test
 			Assert.assertTrue(false);
 		}
 	}
@@ -145,10 +158,11 @@ public class testHomePage{
 		try {
 			objHomePage.clickMenuHomeLink();
 			Assert.assertEquals(objHomePage.getLHSHeaderText().toUpperCase(),expectedLHSHeaderText.toUpperCase());
-			System.out.println("[TEST RUN] HomePage: LHS Header Text Pass");
+			objCommonMethods.consoleLogger("LHS Header Text","Pass");
 		}
 		catch(AssertionError ae) {
-			System.out.println("[TEST RUN] HomePage: LHS Header Text Fail (" + ae.getMessage() + ")");
+			objCommonMethods.consoleLogger("LHS Header Text","Fail",ae.getMessage());
+			//Fail the test
 			Assert.assertTrue(false);
 		}
 	}
@@ -159,7 +173,7 @@ public class testHomePage{
 			String originalWindow = driver.getWindowHandle();	
 			objHomePage.clickMenuOrderLink();		
 			objHomePage.verifyOrderPageHeader(originalWindow, expectedOrderPageHeader);
-			System.out.println("[TEST RUN] HomePage: Menu 'Order' Link Pass");
+			objCommonMethods.consoleLogger("Menu 'Order' Link","Pass");
 	}
 	
 	@Test(priority=11)
@@ -168,12 +182,12 @@ public class testHomePage{
 		String originalWindow = driver.getWindowHandle();	
 		objHomePage.clickBodyOrderNowLink();		
 		objHomePage.verifyOrderPageHeader(originalWindow, expectedOrderPageHeader);
-		System.out.println("[TEST RUN] HomePage: Body 'order now' Link Pass");
+		objCommonMethods.consoleLogger("Body 'order now' Link","Pass");
 	}
 	
 	@AfterClass
 	public void testClose() {
 		driver.quit();
-		System.out.println("[TEST RUN] ----------------------------- End of testHomePage -----------------------------");
+		objCommonMethods.consoleLogger("Home Page", false, true);
 	}
 }
