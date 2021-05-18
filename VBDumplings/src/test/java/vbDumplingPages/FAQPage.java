@@ -12,7 +12,7 @@ import vbDumplingCommonMethods.CommonMethods;
 public class FAQPage {
 	
 	WebDriver driver;
-	CommonMethods objCommonMethods = new CommonMethods(driver);
+	CommonMethods objCommonMethods;
 	
 	@FindBy(xpath = "//a[text()='FAQs']") WebElement menuFAQLink;
 	@FindBy(xpath = "//h1[@class='entry-title']") WebElement faqPageLHSHeader;
@@ -23,6 +23,7 @@ public class FAQPage {
 	
 	public FAQPage(WebDriver driver) {
 		this.driver = driver;
+		objCommonMethods =  new CommonMethods(driver);
 		PageFactory.initElements(driver, this);
 	}
 	

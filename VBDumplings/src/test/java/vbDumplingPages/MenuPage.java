@@ -11,7 +11,7 @@ import vbDumplingCommonMethods.CommonMethods;
 public class MenuPage {
 	
 	WebDriver driver;
-	CommonMethods objCommonMethods = new CommonMethods(driver);
+	CommonMethods objCommonMethods;
 
 	@FindBy(xpath = "//a[text()='Menu']") WebElement menuMenuLink;
 	@FindBy(xpath = "//h1[@class='entry-title']") WebElement menuPageLHSHeader;
@@ -22,6 +22,7 @@ public class MenuPage {
 	
 	public MenuPage(WebDriver driver) {
 		this.driver = driver;
+		objCommonMethods =  new CommonMethods(driver);
 		PageFactory.initElements(driver, this);
 	}
 

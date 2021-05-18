@@ -10,7 +10,7 @@ import vbDumplingCommonMethods.CommonMethods;
 public class HomePage {
 	
 	WebDriver driver;
-	CommonMethods objCommonMethods = new CommonMethods(driver);
+	CommonMethods objCommonMethods;
 	
 	@FindBy(xpath = "//h1") WebElement homePageTitle;
 	@FindBy(xpath = "//h1/a") WebElement homePageLink;
@@ -27,6 +27,7 @@ public class HomePage {
 	
 	public HomePage(WebDriver driver) {
 		this.driver = driver;
+		objCommonMethods = new CommonMethods(driver);
 		PageFactory.initElements(driver, this);
 	}
 	
