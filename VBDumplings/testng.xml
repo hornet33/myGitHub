@@ -17,18 +17,19 @@
 		<parameter name = "browserType" value = "chrome" />
 		<classes>
 			<class name="vbDumplingTestRunners.testHomePage"/>				
-			<class name="vbDumplingTestRunners.testMenuPage"/> 
+			<class name="vbDumplingTestRunners.testMenuPage"/>
 			<class name="vbDumplingTestRunners.testFaqPage"/>
 		</classes>
 	</test> <!-- ChromeTest -->
 	
-	<!-- <test name="EdgeTest">
+	<test name="EdgeTest">
 		<parameter name = "browserType" value = "msedge" />
 		<classes>
-			<class name="vbDumplingTestRunners.testHomePage"/>	
-			<class name="vbDumplingTestRunners.testMenuPage"/>	
+			<class name="vbDumplingTestRunners.testHomePage"/>				
+			<class name="vbDumplingTestRunners.testMenuPage"/>
+			<class name="vbDumplingTestRunners.testFaqPage"/>
 		</classes>
-	</test> --> <!-- EdgeTest -->
+	</test> <!-- EdgeTest -->
 	
 	<!--<groups>
 			<run>

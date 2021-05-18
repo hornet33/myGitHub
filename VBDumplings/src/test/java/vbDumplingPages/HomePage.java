@@ -79,7 +79,8 @@ public class HomePage {
 		return(driver.getTitle());
 	}
 	
-	public void verifyOrderPageHeader(String originalWindow,String expectedOrderPageHeader) {
+	public boolean verifyOrderPageHeader(String originalWindow,String expectedOrderPageHeader) {
+		String actualOrderPageHeader;
 		//Loop through until we find a new window handle
 		for (String windowHandle : driver.getWindowHandles()) {
 			if(!originalWindow.contentEquals(windowHandle)) {
@@ -87,13 +88,16 @@ public class HomePage {
 		        break;
 		    }
 		}
-		try {
-			Assert.assertEquals(orderPageHeader.getText(),expectedOrderPageHeader);
-		}
-		catch(AssertionError ae) {
-			objCommonMethods.consoleLogger("OrderPage: Header Verification", "Fail", ae.getMessage());
-		}
+		
+		actualOrderPageHeader = orderPageHeader.getText();
 		driver.close();
 		driver.switchTo().window(originalWindow);
+		
+		if (actualOrderPageHeader.equals(expectedOrderPageHeader)) {
+			return true;
+		}
+		else {
+			return false;
+		}						
 	}
 }

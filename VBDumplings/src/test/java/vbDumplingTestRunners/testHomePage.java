@@ -54,8 +54,7 @@ public class testHomePage{
 		}
 		catch(AssertionError ae) {
 			objCommonMethods.consoleLogger(consoleTestName, "Fail", ae.getMessage());
-			//Fail the test
-			Assert.assertTrue(false);
+			Assert.fail(ae.getMessage());
 		}
 	}
 	
@@ -68,12 +67,11 @@ public class testHomePage{
 		}
 		catch(AssertionError ae) {
 			objCommonMethods.consoleLogger(consoleTestName, "Fail", ae.getMessage());
-			//Fail the test
-			Assert.assertTrue(false);
+			Assert.fail(ae.getMessage());
 		}
 	}
 	
-	@Test(priority=3)
+	@Test(priority=2)
 	public void checkHomePageLink() {
 		consoleTestName = "Title 'Home' Page link";
 		try {
@@ -83,8 +81,21 @@ public class testHomePage{
 		}
 		catch(AssertionError ae) {
 			objCommonMethods.consoleLogger(consoleTestName, "Fail", ae.getMessage());
-			//Fail the test
-			Assert.assertTrue(false);
+			Assert.fail(ae.getMessage());
+		}
+	}
+	
+	@Test(priority=3)
+	public void checkLHSHeaderText() {
+		consoleTestName = "LHS Header Text";
+		try {
+			objHomePage.clickMenuHomeLink();
+			Assert.assertEquals(objHomePage.getLHSHeaderText().toUpperCase(),expectedLHSHeaderText.toUpperCase());
+			objCommonMethods.consoleLogger(consoleTestName, "Pass");
+		}
+		catch(AssertionError ae) {
+			objCommonMethods.consoleLogger(consoleTestName, "Fail", ae.getMessage());
+			Assert.fail(ae.getMessage());
 		}
 	}
 	
@@ -98,8 +109,7 @@ public class testHomePage{
 		}
 		catch(AssertionError ae) {
 			objCommonMethods.consoleLogger(consoleTestName, "Fail", ae.getMessage());
-			//Fail the test
-			Assert.assertTrue(false);
+			Assert.fail(ae.getMessage());
 		}
 	}
 	
@@ -113,8 +123,7 @@ public class testHomePage{
 		}
 		catch(AssertionError ae) {
 			objCommonMethods.consoleLogger(consoleTestName, "Fail", ae.getMessage());
-			//Fail the test
-			Assert.assertTrue(false);
+			Assert.fail(ae.getMessage());
 		}
 	}
 	
@@ -128,8 +137,7 @@ public class testHomePage{
 		}
 		catch(AssertionError ae) {
 			objCommonMethods.consoleLogger(consoleTestName, "Fail", ae.getMessage());
-			//Fail the test
-			Assert.assertTrue(false);
+			Assert.fail(ae.getMessage());
 		}
 	}
 	
@@ -143,12 +151,27 @@ public class testHomePage{
 		}
 		catch(AssertionError ae) {
 			objCommonMethods.consoleLogger(consoleTestName, "Fail", ae.getMessage());
-			//Fail the test
-			Assert.assertTrue(false);
+			Assert.fail(ae.getMessage());
 		}
 	}
 	
 	@Test(priority=8)
+	public void checkMenuOrderLink() {
+		consoleTestName = "Menu 'Order' Link";
+		//Store the ID of the original window
+		String originalWindow = driver.getWindowHandle();	
+		objHomePage.clickMenuOrderLink();		
+		if(objHomePage.verifyOrderPageHeader(originalWindow, expectedOrderPageHeader)) {
+			Assert.assertTrue(true);
+			objCommonMethods.consoleLogger(consoleTestName, "Pass");
+		}
+		else {
+			objCommonMethods.consoleLogger(consoleTestName, "Fail", "Order page header did not match '"+expectedOrderPageHeader+"'");
+			Assert.fail("Order page header did not match '" + expectedOrderPageHeader + "'");
+		}
+	}
+	
+	@Test(priority=9)
 	public void checkMenuAboutLink() {
 		consoleTestName = "Menu 'About' Link";
 		try {
@@ -158,44 +181,26 @@ public class testHomePage{
 		}
 		catch(AssertionError ae) {
 			objCommonMethods.consoleLogger(consoleTestName, "Fail", ae.getMessage());
-			//Fail the test
-			Assert.assertTrue(false);
-		}
-	}
-	
-	@Test(priority=9)
-	public void checkLHSHeaderText() {
-		consoleTestName = "LHS Header Text";
-		try {
-			objHomePage.clickMenuHomeLink();
-			Assert.assertEquals(objHomePage.getLHSHeaderText().toUpperCase(),expectedLHSHeaderText.toUpperCase());
-			objCommonMethods.consoleLogger(consoleTestName, "Pass");
-		}
-		catch(AssertionError ae) {
-			objCommonMethods.consoleLogger(consoleTestName, "Fail", ae.getMessage());
-			//Fail the test
-			Assert.assertTrue(false);
+			Assert.fail(ae.getMessage());
 		}
 	}
 	
 	@Test(priority=10)
-	public void checkMenuOrderLink() {
-		consoleTestName = "Menu 'Order' Link";
-		//Store the ID of the original window
-		String originalWindow = driver.getWindowHandle();	
-		objHomePage.clickMenuOrderLink();		
-		objHomePage.verifyOrderPageHeader(originalWindow, expectedOrderPageHeader);
-		objCommonMethods.consoleLogger(consoleTestName,"Pass");
-	}
-	
-	@Test(priority=11)
 	public void checkBodyOrderNowLink() {
 		consoleTestName = "Body 'order now' Link";
+		//Navigate to home page
+		objHomePage.clickMenuHomeLink();
 		//Store the ID of the original window
 		String originalWindow = driver.getWindowHandle();	
 		objHomePage.clickBodyOrderNowLink();		
-		objHomePage.verifyOrderPageHeader(originalWindow, expectedOrderPageHeader);
-		objCommonMethods.consoleLogger(consoleTestName,"Pass");
+		if(objHomePage.verifyOrderPageHeader(originalWindow, expectedOrderPageHeader)) {
+			Assert.assertTrue(true);
+			objCommonMethods.consoleLogger(consoleTestName, "Pass");
+		}
+		else {
+			objCommonMethods.consoleLogger(consoleTestName, "Fail", "Order page header did not match '"+expectedOrderPageHeader+"'");
+			Assert.fail("Order page header did not match '" + expectedOrderPageHeader + "'");			
+		}
 	}
 	
 	@AfterClass

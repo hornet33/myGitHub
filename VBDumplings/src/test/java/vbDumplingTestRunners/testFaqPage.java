@@ -18,7 +18,9 @@ public class testFaqPage {
 	WebDriver driver;
 	FAQPage objFaqPage;
 	HomePage objHomePage;
-	CommonMethods objCommonMethods = new CommonMethods(driver);
+	CommonMethods objCommonMethods;
+	String consoleTestName;
+	String consolePageName = "F A Q S   P A G E";
 	
 	final String expectedLHSHeaderText = "FAQS";
 	final String expectedContentHeaderText = "Frequently Asked Questions (FAQ)";
@@ -39,11 +41,14 @@ public class testFaqPage {
 	@BeforeClass
 	@Parameters({"browserType","vbdURL"})
 	public void initDriver(String browserType, String vbdURL) {
-		System.out.println("[TEST RUN] ----------------------------- Start of testFaqPage -----------------------------");
-
 		//Create a new driver instance for the browserType specified in testng.xml
 		initializeDriver objDriver = new initializeDriver();
 		driver = objDriver.testSetup(browserType) ;
+
+		//Initialize CommonMethods class
+		objCommonMethods = new CommonMethods(driver);
+		objCommonMethods.consoleLogger(consolePageName, true, false);
+		objCommonMethods.consoleLogger("WebDriver Initialized ('" + browserType + "')");
 
 		//Launch AUT 
 		driver.get(vbdURL);	
@@ -60,54 +65,58 @@ public class testFaqPage {
 	
 	@Test(priority=30)
 	public void checkFaqPageLHSHeaderText() {
+		consoleTestName = "LHS Header Text";
 		try { 
 			Assert.assertEquals(objFaqPage.getLHSHeaderText().toUpperCase(), expectedLHSHeaderText.toUpperCase());
-			System.out.println("[TEST RUN] FaqPage: LHS Header Text Pass");
+			objCommonMethods.consoleLogger(consoleTestName, "Pass");
 		}
 		catch(AssertionError ae) {
-			System.out.println("[TEST RUN] FaqPage: LHS Header Text Fail (" + ae.getMessage() + ")");
-			Assert.assertTrue(false);
+			objCommonMethods.consoleLogger(consoleTestName, "Fail", ae.getMessage());
+			Assert.fail(ae.getMessage());
 		}
 	}
 	
 	@Test(priority=31)
 	public void checkFaqPageContentHeaderText() {
+		consoleTestName = "Content Header Text";
 		try {
 			Assert.assertEquals(objFaqPage.getContentHeaderText().toUpperCase(), expectedContentHeaderText.toUpperCase());
-			System.out.println("[TEST RUN] FaqPage: Content Header Text Pass");
+			objCommonMethods.consoleLogger(consoleTestName, "Pass");
 		}
 		catch(AssertionError ae) {
-			System.out.println("[TEST RUN] FaqPage: Content Header Text Fail (" + ae.getMessage() + ")");
-			Assert.assertTrue(false);
+			objCommonMethods.consoleLogger(consoleTestName, "Fail", ae.getMessage());
+			Assert.fail(ae.getMessage());
 		}
 	}
 	
 	@Test(priority=32)
 	public void checkFaqPageQuestions() {
+		consoleTestName = "Question List";
 		ArrayList<String> actualFaqPageQuestionList = objFaqPage.getQuestions();
 		int i = 0;
 		try {
 			for(String actualFaqPageQuestion: actualFaqPageQuestionList) {
-				System.out.println("[TEST RUN] FAQs (Expected/Actual): '" + expectedQuestionList[i].trim() + "'/'" + actualFaqPageQuestion.trim() + "'");
+				objCommonMethods.consoleLogger("FAQs (Expected/Actual): '" + expectedQuestionList[i].trim() + "'/'" + actualFaqPageQuestion.trim() + "'");
 				Assert.assertEquals(expectedQuestionList[i].trim(), actualFaqPageQuestion.trim());
 				i++;
 			}
-			System.out.println("[TEST RUN] FaqPage: Question List Pass");
+			objCommonMethods.consoleLogger(consoleTestName, "Pass");
 		}
 		catch(AssertionError ae) {
-			System.out.println("[TEST RUN] FaqPage: Question List Fail (" + ae.getMessage() + ")");
-			Assert.assertTrue(false);
+			objCommonMethods.consoleLogger(consoleTestName, "Fail", ae.getMessage());
+			Assert.fail(ae.getMessage());
 		}
 	}
 	
 	@Test(priority=33)
 	public void clickAllFaqPageQuestionsExpand() {
+		consoleTestName = "Question Click Expand Tests";
 		ArrayList<String> actualFaqPageQuestionList = objFaqPage.getQuestions();
 		List<WebElement> faqPageExpandedAnswersWebelements = objFaqPage.getExpandedAnswersAsWebelements();
 		int questionIndex = 0;
 		try {
 			for(String actualFaqPageQuestion: actualFaqPageQuestionList) {
-				System.out.println("[TEST RUN] FaqPage: Clicking on question '" + actualFaqPageQuestion + "', index '" + questionIndex + "'");
+				objCommonMethods.consoleLogger("Clicking on question '" + actualFaqPageQuestion + "', index '" + questionIndex + "'");
 				//Click on the FAQ page question to expand the answer body
 				objFaqPage.clickQuestion(questionIndex);
 				//Verify that the expanded answer body is displayed
@@ -117,29 +126,37 @@ public class testFaqPage {
 				}
 				else {
 					//Fail the test
-					Assert.assertTrue(false);
+					Assert.fail("Question '" + actualFaqPageQuestion + "' should be visible but is not");
 				}
 				questionIndex++;
 			}
-			System.out.println("[TEST RUN] FaqPage: Question Click Expand Tests Pass");
+			objCommonMethods.consoleLogger(consoleTestName, "Pass");
 		}
 		catch(AssertionError ae) {
-			System.out.println("[TEST RUN] FaqPage: Question Click Expand Tests Fail (" + ae.getMessage() + ")");
+			objCommonMethods.consoleLogger(consoleTestName, "Fail", ae.getMessage());
 		}
 	}
 	
 	@Test(priority=34)
 	public void checkOrderFormLink() {
+		consoleTestName = "Body 'Order Form' Link";
 		//Check if any of the answers has the "Order Form" link displayed
 		//Store the ID of the original window
 		String originalWindow = driver.getWindowHandle();	
-		objFaqPage.clickOrderFormLink();
-		objHomePage.verifyOrderPageHeader(originalWindow, expectedOrderPageHeader);
-		System.out.println("[TEST RUN] FaqPage: Body 'Order Form' Link Pass");		
+		objFaqPage.clickOrderFormLink();		
+		if(objHomePage.verifyOrderPageHeader(originalWindow, expectedOrderPageHeader)) {
+			Assert.assertTrue(true);
+			objCommonMethods.consoleLogger(consoleTestName, "Pass");
+		}
+		else {
+			objCommonMethods.consoleLogger(consoleTestName, "Fail", "Order page header did not match '"+expectedOrderPageHeader+"'");
+			Assert.fail("Order page header did not match '"+expectedOrderPageHeader+"'");
+		}
 	}
 	
 	@Test(priority=35)
 	public void clickAllFaqPageQuestionsCollapse() {
+		consoleTestName = "Question Click Collapse Tests";
 		ArrayList<String> actualFaqPageQuestionList = objFaqPage.getQuestions();		
 		WebElement faqPageContentHeader = objFaqPage.getContentHeaderElement();
 		
@@ -156,24 +173,24 @@ public class testFaqPage {
 				//Verify that the expanded answer body is NOT displayed since clicking on an expanded question will collapse it
 				if(!objFaqPage.clickExpandedAnswer(questionIndex)) {
 					//Pass the test
-					Assert.assertTrue(true);					
+					Assert.assertTrue(true);
 				}
 				else {
 					//Fail the test
-					Assert.assertTrue(false);
+					Assert.fail("Question '" + actualFaqPageQuestion + "' should NOT be visible");
 				}
 				questionIndex++;
 			}
-			System.out.println("[TEST RUN] FaqPage: Question Click Collapse Tests Pass");
+			objCommonMethods.consoleLogger(consoleTestName, "Pass");
 		}
 		catch(AssertionError ae) {
-			System.out.println("[TEST RUN] FaqPage: Question Click Collapse Tests Fail (" + ae.getMessage() + ")");
+			objCommonMethods.consoleLogger(consoleTestName, "Fail", ae.getMessage());
 		}
 	}
 	
 	@AfterClass
 	public void afterClass() {
 		driver.quit();
-		System.out.println("[TEST RUN] ----------------------------- End of testFaqPage -----------------------------");
+		objCommonMethods.consoleLogger(consolePageName, false, true);
 	}
 }

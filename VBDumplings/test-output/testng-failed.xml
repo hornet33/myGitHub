@@ -2,17 +2,53 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite parallel="none" name="Failed suite [VBDumplings_Test]">
   <parameter name="vbdURL" value="https://vbdumplings.in/"/>
-  <parameter name="browserType" value="chrome"/>
+  <parameter name="browserType" value="msedge"/>
+  <test parallel="none" name="FirefoxTest(failed)">
+    <parameter name="browserType" value="firefox"/>
+    <classes>
+      <class name="vbDumplingTestRunners.testHomePage">
+        <methods>
+          <include name="checkMenuOrderLink"/>
+          <include name="testClose"/>
+          <include name="testClose"/>
+          <include name="testClose"/>
+          <include name="initDriver"/>
+          <include name="initDriver"/>
+          <include name="initDriver"/>
+        </methods>
+      </class> <!-- vbDumplingTestRunners.testHomePage -->
+    </classes>
+  </test> <!-- FirefoxTest(failed) -->
   <test parallel="none" name="ChromeTest(failed)">
     <parameter name="browserType" value="chrome"/>
     <classes>
-      <class name="vbDumplingTestRunners.testFaqPage">
+      <class name="vbDumplingTestRunners.testHomePage">
         <methods>
-          <include name="afterClass"/>
+          <include name="testClose"/>
+          <include name="testClose"/>
+          <include name="testClose"/>
+          <include name="checkBodyOrderNowLink"/>
           <include name="initDriver"/>
-          <include name="clickAllFaqPageQuestionsCollapse"/>
+          <include name="initDriver"/>
+          <include name="initDriver"/>
         </methods>
-      </class> <!-- vbDumplingTestRunners.testFaqPage -->
+      </class> <!-- vbDumplingTestRunners.testHomePage -->
     </classes>
   </test> <!-- ChromeTest(failed) -->
+  <test parallel="none" name="EdgeTest(failed)">
+    <parameter name="browserType" value="msedge"/>
+    <classes>
+      <class name="vbDumplingTestRunners.testHomePage">
+        <methods>
+          <include name="testClose"/>
+          <include name="testClose"/>
+          <include name="testClose"/>
+          <include name="checkBodyOrderNowLink"/>
+          <include name="initDriver"/>
+          <include name="initDriver"/>
+          <include name="initDriver"/>
+        </methods>
+      </class> <!-- vbDumplingTestRunners.testHomePage -->
+    </classes>
+  </test> <!-- EdgeTest(failed) -->
 </suite> <!-- Failed suite [VBDumplings_Test] -->

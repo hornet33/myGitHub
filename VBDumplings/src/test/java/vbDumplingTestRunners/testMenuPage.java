@@ -61,7 +61,7 @@ public class testMenuPage{
 		}
 		catch(AssertionError ae) {
 			objCommonMethods.consoleLogger(consoleTestName, "Fail", ae.getMessage());
-			Assert.assertTrue(false);
+			Assert.fail(ae.getMessage());
 		}
 	}
 	
@@ -74,7 +74,7 @@ public class testMenuPage{
 		}
 		catch(AssertionError ae) {
 			objCommonMethods.consoleLogger(consoleTestName, "Fail", ae.getMessage());
-			Assert.assertTrue(false);
+			Assert.fail(ae.getMessage());
 		}
 	}
 	
@@ -87,7 +87,7 @@ public class testMenuPage{
 		}
 		catch(AssertionError ae) {
 			objCommonMethods.consoleLogger(consoleTestName, "Fail", ae.getMessage());
-			Assert.assertTrue(false);
+			Assert.fail(ae.getMessage());
 		}
 	}
 	
@@ -104,7 +104,7 @@ public class testMenuPage{
 		}
 		catch(AssertionError ae) {
 			objCommonMethods.consoleLogger(consoleTestName, "Fail", ae.getMessage());
-			Assert.assertTrue(false);
+			Assert.fail(ae.getMessage());
 		}
 	}
 	
@@ -126,7 +126,7 @@ public class testMenuPage{
 		}
 		catch(AssertionError ae) {
 			objCommonMethods.consoleLogger(consoleTestName, "Fail", ae.getMessage());
-			Assert.assertTrue(false);
+			Assert.fail(ae.getMessage());
 		}
 	}
 	
