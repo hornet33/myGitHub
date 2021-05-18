@@ -8,6 +8,7 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 import vbDumplingPages.MenuPage;
+import vbDumplingCommonMethods.CommonMethods;
 
 public class testMenuPage{
 
@@ -24,15 +25,21 @@ public class testMenuPage{
 		};
 	WebDriver driver;
 	MenuPage objMenuPage;
+	CommonMethods objCommonMethods;
+	String consoleTestName;
+	String consolePageName = "M E N U   P A G E";
 
 	@BeforeClass
 	@Parameters({"browserType","vbdURL"})
 	public void initDriver(String browserType, String vbdURL) {
-		System.out.println("[TEST RUN] ----------------------------- Start of testMenuPage -----------------------------");
-		
 		//Create a new driver instance for the browserType specified in testng.xml
 		initializeDriver objDriver = new initializeDriver();
-		driver = objDriver.testSetup(browserType) ;
+		driver = objDriver.testSetup(browserType) ;		
+
+		//Initialize CommonMethods class
+		objCommonMethods = new CommonMethods(driver);
+		objCommonMethods.consoleLogger(consolePageName, true, false);
+		objCommonMethods.consoleLogger("WebDriver Initialized ('" + browserType + "')");
 		
 		//Launch AUT 
 		driver.get(vbdURL);	
@@ -42,77 +49,83 @@ public class testMenuPage{
 				
 		//Navigate to Menu Page
 		objMenuPage.clickMenuLink();
+		
 	}
 	
 	@Test(priority=20)
 	public void checkLHSHeaderText() {
+		consoleTestName = "LHS Header Text";
 		try {
-			Assert.assertEquals(objMenuPage.getMenuPageLHSHeaderText().toUpperCase(), expectedLHSHeaderText.toUpperCase());
-			System.out.println("[TEST RUN] MenuPage: LHS Header Text Pass");
+			Assert.assertEquals(objMenuPage.getLHSHeaderText().toUpperCase(), expectedLHSHeaderText.toUpperCase());
+			objCommonMethods.consoleLogger(consoleTestName, "Pass");
 		}
 		catch(AssertionError ae) {
-			System.out.println("[TEST RUN] MenuPage: LHS Header Text Fail (" + ae.getMessage() + ")");
+			objCommonMethods.consoleLogger(consoleTestName, "Fail", ae.getMessage());
 			Assert.assertTrue(false);
 		}
 	}
 	
 	@Test(priority=21)
 	public void checkMenuCategoryOneText() {
+		consoleTestName = "Menu Category One Text";
 		try {
-			Assert.assertEquals(objMenuPage.getMenuPageMenuCategoryOneText(), expectedMenuCategoryOneText);
-			System.out.println("[TEST RUN] MenuPage: Menu Category One Text Pass");
+			Assert.assertEquals(objMenuPage.getMenuCategoryOneText(), expectedMenuCategoryOneText);
+			objCommonMethods.consoleLogger(consoleTestName, "Pass");
 		}
 		catch(AssertionError ae) {
-			System.out.println("[TEST RUN] MenuPage: Menu Category One Text Fail (" + ae.getMessage() + ")");
+			objCommonMethods.consoleLogger(consoleTestName, "Fail", ae.getMessage());
 			Assert.assertTrue(false);
 		}
 	}
 	
 	@Test(priority=21)
 	public void checkMenuCategoryTwoText() {
+		consoleTestName = "Menu Category Two Text";
 		try {
-			Assert.assertEquals(objMenuPage.getMenuPageMenuCategoryTwoText(), expectedMenuCategoryTwoText);
-			System.out.println("[TEST RUN] MenuPage: Menu Category Two Text Pass");
+			Assert.assertEquals(objMenuPage.getMenuCategoryTwoText(), expectedMenuCategoryTwoText);
+			objCommonMethods.consoleLogger(consoleTestName, "Pass");
 		}
 		catch(AssertionError ae) {
-			System.out.println("[TEST RUN] MenuPage: Menu Category Two Text Fail (" + ae.getMessage() + ")");
+			objCommonMethods.consoleLogger(consoleTestName, "Fail", ae.getMessage());
 			Assert.assertTrue(false);
 		}
 	}
 	
 	@Test(priority=22)
 	public void checkMenuItemNames() {
-		ArrayList<String> actualMenuItemNames = objMenuPage.getMenuPageMenuItemNames();
+		consoleTestName = "Menu Item Names";
+		ArrayList<String> actualMenuItemNames = objMenuPage.getMenuItemNames();
 		try {
 			for(int i=0;i<expectedMenuItemNames.length;i++) {
-				System.out.println("[TEST RUN] Menu Item Name (Expected/Actual): '" + expectedMenuItemNames[i].trim() + "'/'" + actualMenuItemNames.get(i).trim() + "'");
+				objCommonMethods.consoleLogger("Menu Item Name (Expected/Actual): '" + expectedMenuItemNames[i].trim() + "'/'" + actualMenuItemNames.get(i).trim() + "'");
 				Assert.assertEquals(expectedMenuItemNames[i].trim(),actualMenuItemNames.get(i).trim());
 			}
-			System.out.println("[TEST RUN] MenuPage: Menu Item Names Pass");
+			objCommonMethods.consoleLogger(consoleTestName, "Pass");
 		}
 		catch(AssertionError ae) {
-			System.out.println("[TEST RUN] MenuPage: Menu Item Names Fail (" + ae.getMessage() + ")");
+			objCommonMethods.consoleLogger(consoleTestName, "Fail", ae.getMessage());
 			Assert.assertTrue(false);
 		}
 	}
 	
 	@Test(priority=23)
 	public void checkMenuItemPrices() {
-		ArrayList<String> actualMenuItemFullText = objMenuPage.getMenuPageMenuItemFullText();
+		consoleTestName = "Menu Item Prices";
+		ArrayList<String> actualMenuItemFullText = objMenuPage.getMenuItemFullText();
 		int i = 0;
 		int priceIndexInFullText = 0;
 		try {
 			for(String s: actualMenuItemFullText) {
 				priceIndexInFullText = s.indexOf("\n")+2;
-				System.out.println("[TEST RUN] Menu Prices (Expected/Actual): '" + expectedMenuItemPrices[i].trim() + "'/'" + 
+				objCommonMethods.consoleLogger("Menu Prices (Expected/Actual): '" + expectedMenuItemPrices[i].trim() + "'/'" + 
 						s.substring(priceIndexInFullText).trim() + "'");
 				Assert.assertEquals(expectedMenuItemPrices[i].trim(), s.substring(priceIndexInFullText).trim());
 				i++;
 			}
-			System.out.println("[TEST RUN] MenuPage: Menu Item Prices Pass");
+			objCommonMethods.consoleLogger(consoleTestName, "Pass");
 		}
 		catch(AssertionError ae) {
-			System.out.println("[TEST RUN] MenuPage: Menu Item Prices Fail (" + ae.getMessage() + ")");
+			objCommonMethods.consoleLogger(consoleTestName, "Fail", ae.getMessage());
 			Assert.assertTrue(false);
 		}
 	}
@@ -120,6 +133,6 @@ public class testMenuPage{
 	@AfterClass
 	public void testClose() {
 		driver.quit();
-		System.out.println("[TEST RUN] ----------------------------- End of testMenuPage -----------------------------");
+		objCommonMethods.consoleLogger(consolePageName, false, true);
 	}
 }
