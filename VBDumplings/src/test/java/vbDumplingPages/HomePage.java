@@ -4,7 +4,6 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import org.testng.Assert;
 import vbDumplingCommonMethods.CommonMethods;
 
 public class HomePage {
@@ -90,14 +89,15 @@ public class HomePage {
 		}
 		
 		actualOrderPageHeader = orderPageHeader.getText();
-		driver.close();
-		driver.switchTo().window(originalWindow);
-		
 		if (actualOrderPageHeader.equals(expectedOrderPageHeader)) {
+			driver.close();
+			driver.switchTo().window(originalWindow);
 			return true;
 		}
 		else {
+			driver.close();
+			driver.switchTo().window(originalWindow);
 			return false;
-		}						
+		}			
 	}
 }
