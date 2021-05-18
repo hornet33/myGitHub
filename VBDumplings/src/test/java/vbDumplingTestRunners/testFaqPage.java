@@ -189,7 +189,7 @@ public class testFaqPage {
 	}
 	
 	@AfterClass
-	public void afterClass() {
+	public void testClose() {
 		driver.quit();
 		objCommonMethods.consoleLogger(consolePageName, false, true);
 	}
