@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results total="2" passed="2" failed="0" skipped="0">
+<testng-results total="12" passed="12" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2021-05-18T13:23:02Z" name="VBDumplings_Test" finished-at="2021-05-18T13:23:23Z" duration-ms="20741">
+  <suite started-at="2021-05-20T09:22:55Z" name="VBDumplings_Test" finished-at="2021-05-20T09:24:02Z" duration-ms="66884">
     <groups>
     </groups>
-    <test started-at="2021-05-18T13:23:02Z" name="ChromeTest" finished-at="2021-05-18T13:23:23Z" duration-ms="20741">
+    <test started-at="2021-05-20T09:22:55Z" name="ChromeTest" finished-at="2021-05-20T09:24:02Z" duration-ms="66884">
       <class name="vbDumplingTestRunners.testTestimonialsPage">
-        <test-method is-config="true" signature="initDriver(java.lang.String, java.lang.String)[pri:0, instance:vbDumplingTestRunners.testTestimonialsPage@3fc79729]" started-at="2021-05-18T18:53:02Z" name="initDriver" finished-at="2021-05-18T18:53:22Z" duration-ms="19819" status="PASS">
+        <test-method is-config="true" signature="initDriver(java.lang.String, java.lang.String)[pri:0, instance:vbDumplingTestRunners.testTestimonialsPage@518caac3]" started-at="2021-05-20T14:52:55Z" name="initDriver" finished-at="2021-05-20T14:53:26Z" duration-ms="31272" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -23,15 +23,55 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initDriver -->
-        <test-method signature="checkLHSHeaderText()[pri:0, instance:vbDumplingTestRunners.testTestimonialsPage@3fc79729]" started-at="2021-05-18T18:53:22Z" name="checkLHSHeaderText" finished-at="2021-05-18T18:53:22Z" duration-ms="121" status="PASS">
+        <test-method signature="checkLHSHeaderText()[pri:0, instance:vbDumplingTestRunners.testTestimonialsPage@518caac3]" started-at="2021-05-20T14:53:26Z" name="checkLHSHeaderText" finished-at="2021-05-20T14:53:27Z" duration-ms="111" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- checkLHSHeaderText -->
-        <test-method signature="checkCommentsTitle()[pri:0, instance:vbDumplingTestRunners.testTestimonialsPage@3fc79729]" started-at="2021-05-18T18:53:22Z" name="checkCommentsTitle" finished-at="2021-05-18T18:53:23Z" duration-ms="128" status="PASS">
+        <test-method signature="checkCommentsTitle()[pri:0, instance:vbDumplingTestRunners.testTestimonialsPage@518caac3]" started-at="2021-05-20T14:53:27Z" name="checkCommentsTitle" finished-at="2021-05-20T14:53:27Z" duration-ms="123" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- checkCommentsTitle -->
-        <test-method is-config="true" signature="testClose()[pri:0, instance:vbDumplingTestRunners.testTestimonialsPage@3fc79729]" started-at="2021-05-18T18:53:23Z" name="testClose" finished-at="2021-05-18T18:53:23Z" duration-ms="654" status="PASS">
+        <test-method signature="checkNewCommentErrorAllEmpty()[pri:0, instance:vbDumplingTestRunners.testTestimonialsPage@518caac3]" started-at="2021-05-20T14:53:27Z" name="checkNewCommentErrorAllEmpty" finished-at="2021-05-20T14:53:28Z" duration-ms="1303" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkNewCommentErrorAllEmpty -->
+        <test-method signature="checkNewCommentErrorEmailEmpty()[pri:0, instance:vbDumplingTestRunners.testTestimonialsPage@518caac3]" started-at="2021-05-20T14:53:28Z" name="checkNewCommentErrorEmailEmpty" finished-at="2021-05-20T14:53:29Z" duration-ms="1009" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkNewCommentErrorEmailEmpty -->
+        <test-method signature="checkNewCommentErrorAuthorEmpty()[pri:0, instance:vbDumplingTestRunners.testTestimonialsPage@518caac3]" started-at="2021-05-20T14:53:29Z" name="checkNewCommentErrorAuthorEmpty" finished-at="2021-05-20T14:53:30Z" duration-ms="1325" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkNewCommentErrorAuthorEmpty -->
+        <test-method signature="checkNewCommentSuccessNoNotificationsSelected()[pri:0, instance:vbDumplingTestRunners.testTestimonialsPage@518caac3]" started-at="2021-05-20T14:53:30Z" name="checkNewCommentSuccessNoNotificationsSelected" finished-at="2021-05-20T14:53:38Z" duration-ms="8105" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkNewCommentSuccessNoNotificationsSelected -->
+        <test-method signature="checkNewCommentErrorDuplicateComment()[pri:0, instance:vbDumplingTestRunners.testTestimonialsPage@518caac3]" started-at="2021-05-20T14:53:38Z" name="checkNewCommentErrorDuplicateComment" finished-at="2021-05-20T14:53:45Z" duration-ms="6113" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkNewCommentErrorDuplicateComment -->
+        <test-method signature="checkNewCommentSuccessSubscribeCommentsSelected()[pri:0, instance:vbDumplingTestRunners.testTestimonialsPage@518caac3]" started-at="2021-05-20T14:53:45Z" name="checkNewCommentSuccessSubscribeCommentsSelected" finished-at="2021-05-20T14:53:53Z" duration-ms="8918" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkNewCommentSuccessSubscribeCommentsSelected -->
+        <test-method signature="checkNewCommentSuccessSubscribePostsSelected()[pri:0, instance:vbDumplingTestRunners.testTestimonialsPage@518caac3]" started-at="2021-05-20T14:53:53Z" name="checkNewCommentSuccessSubscribePostsSelected" finished-at="2021-05-20T14:54:01Z" duration-ms="7912" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkNewCommentSuccessSubscribePostsSelected -->
+        <test-method signature="checkNewCommentFacebookLink()[pri:0, instance:vbDumplingTestRunners.testTestimonialsPage@518caac3]" started-at="2021-05-20T14:54:01Z" name="checkNewCommentFacebookLink" finished-at="2021-05-20T14:54:01Z" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkNewCommentFacebookLink -->
+        <test-method signature="checkNewCommentWordpressLink()[pri:0, instance:vbDumplingTestRunners.testTestimonialsPage@518caac3]" started-at="2021-05-20T14:54:01Z" name="checkNewCommentWordpressLink" finished-at="2021-05-20T14:54:01Z" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkNewCommentWordpressLink -->
+        <test-method signature="checkNewCommentTwitterLink()[pri:0, instance:vbDumplingTestRunners.testTestimonialsPage@518caac3]" started-at="2021-05-20T14:54:01Z" name="checkNewCommentTwitterLink" finished-at="2021-05-20T14:54:01Z" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkNewCommentTwitterLink -->
+        <test-method is-config="true" signature="testClose()[pri:0, instance:vbDumplingTestRunners.testTestimonialsPage@518caac3]" started-at="2021-05-20T14:54:01Z" name="testClose" finished-at="2021-05-20T14:54:02Z" duration-ms="657" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testClose -->

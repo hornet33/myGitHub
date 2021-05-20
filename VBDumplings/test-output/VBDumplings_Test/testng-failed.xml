@@ -2,50 +2,19 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite parallel="none" name="Failed suite [VBDumplings_Test]">
   <parameter name="vbdURL" value="https://vbdumplings.in/"/>
-  <parameter name="browserType" value="msedge"/>
-  <test parallel="none" name="EdgeTest(failed)">
-    <parameter name="browserType" value="msedge"/>
+  <parameter name="browserType" value="chrome"/>
+  <test parallel="none" name="ChromeTest(failed)">
+    <parameter name="browserType" value="chrome"/>
     <classes>
-      <class name="vbDumplingTestRunners.testHomePage">
+      <class name="vbDumplingTestRunners.testTestimonialsPage">
         <methods>
-          <include name="checkMenuAboutLink"/>
-          <include name="checkHomePageLink"/>
-          <include name="checkMenuOrderLink"/>
-          <include name="checkLHSHeaderText"/>
-          <include name="checkMenuTestimonialsLink"/>
+          <include name="checkNewCommentErrorAllEmpty"/>
+          <include name="checkNewCommentErrorAuthorEmpty"/>
+          <include name="checkNewCommentErrorEmailEmpty"/>
           <include name="testClose"/>
-          <include name="testClose"/>
-          <include name="checkDescriptionText"/>
-          <include name="checkMenuMenuLink"/>
-          <include name="checkTitleText"/>
-          <include name="checkMenuHomeLink"/>
-          <include name="checkMenuFAQLink"/>
-          <include name="checkBodyOrderNowLink"/>
-          <include name="initDriver"/>
-          <include name="initDriver"/>
           <include name="initDriver"/>
         </methods>
-      </class> <!-- vbDumplingTestRunners.testHomePage -->
-      <class name="vbDumplingTestRunners.testFaqPage">
-        <methods>
-          <include name="afterClass"/>
-          <include name="afterClass"/>
-          <include name="afterClass"/>
-          <include name="initDriver"/>
-          <include name="initDriver"/>
-          <include name="initDriver"/>
-        </methods>
-      </class> <!-- vbDumplingTestRunners.testFaqPage -->
-      <class name="vbDumplingTestRunners.testMenuPage">
-        <methods>
-          <include name="initDriver"/>
-          <include name="initDriver"/>
-          <include name="initDriver"/>
-          <include name="testClose"/>
-          <include name="testClose"/>
-          <include name="testClose"/>
-        </methods>
-      </class> <!-- vbDumplingTestRunners.testMenuPage -->
+      </class> <!-- vbDumplingTestRunners.testTestimonialsPage -->
     </classes>
-  </test> <!-- EdgeTest(failed) -->
+  </test> <!-- ChromeTest(failed) -->
 </suite> <!-- Failed suite [VBDumplings_Test] -->
