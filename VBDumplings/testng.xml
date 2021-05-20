@@ -4,7 +4,7 @@
 	<!-- <parameter name = "driverPath" value = "C:\\Users\\Rahul Pradhan\\OneDrive\\Documents\\Selenium\\Drivers\\" /> -->
 	<parameter name = "vbdURL" value = "https://vbdumplings.in/" />
 	
-	<!-- <test name="FirefoxTest">
+	<test name="FirefoxTest">
 		<parameter name = "browserType" value = "firefox" />
 		<classes>
 			<class name="vbDumplingTestRunners.testHomePage"/>	
@@ -12,14 +12,14 @@
 			<class name="vbDumplingTestRunners.testFaqPage"/>
 			<class name="vbDumplingTestRunners.testTestimonialsPage"/>
 		</classes>
-	</test> --> <!-- FirefoxTest -->
+	</test> <!-- FirefoxTest -->
 	
 	<test name="ChromeTest">
 		<parameter name = "browserType" value = "chrome" />
 		<classes>
-			<!-- <class name="vbDumplingTestRunners.testHomePage"/>				
+			<class name="vbDumplingTestRunners.testHomePage"/>				
 			<class name="vbDumplingTestRunners.testMenuPage"/>
-			<class name="vbDumplingTestRunners.testFaqPage"/> -->
+			<class name="vbDumplingTestRunners.testFaqPage"/>
 			<class name="vbDumplingTestRunners.testTestimonialsPage"/>
 		</classes>
 	</test> <!-- ChromeTest -->

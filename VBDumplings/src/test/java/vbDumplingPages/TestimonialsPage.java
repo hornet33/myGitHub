@@ -29,6 +29,8 @@ public class TestimonialsPage {
 	@FindBy(xpath = "//input[@id='subscribe']") WebElement testimonialsPageSubscribeCommentsChkbox;
 	@FindBy(xpath = "//input[@id='subscribe_blog']") WebElement testimonialsPageSubscribePostsChkbox;
 	@FindBy(xpath = "//em[@class='comment-awaiting-moderation']") WebElement testimonialsPageCommentPendingModeration;
+	@FindBy(xpath = "//div[@class='wp-die-message']/p") WebElement testimonialsPageDuplicateCommentError;
+	@FindBy(xpath = "//a[contains(text(),'Back')]") WebElement testimonialsPageDuplicateCommentBackLink;
 	
 	public TestimonialsPage(WebDriver driver) {
 		this.driver = driver;
@@ -38,6 +40,10 @@ public class TestimonialsPage {
 	
 	public void clickTestimonialsLink(){
 		objCommonMethods.clickWebElement(menuTestimonialsLink);
+	}
+	
+	public String getPageTitle() {
+		return(driver.getTitle());
 	}
 	
 	public String getLHSHeaderText() {
@@ -52,20 +58,44 @@ public class TestimonialsPage {
 		return(testimonialsPageCommentsContent);
 	}
 	
+	public String getDuplicateCommentErrorText() {
+		return(objCommonMethods.getWebElementText(testimonialsPageDuplicateCommentError));
+	}
+	
 	public void setNewCommentText(String commentText) {
+		clearNewCommentText();
 		objCommonMethods.setWebElementText(testimonialsPageNewCommentTextarea,commentText);
 	}
 	
 	public void setNewCommentEmail(String commentEmail) {
+		clearNewCommentEmail();
 		objCommonMethods.setWebElementText(testimonialsPageNewCommentEmail, commentEmail);
 	}
 	
 	public void setNewCommentAuthor(String commentAuthor) {
+		clearNewCommentAuthor();
 		objCommonMethods.setWebElementText(testimonialsPageNewCommentAuthor, commentAuthor);
 	}
 	
 	public void setNewCommentURL(String commentURL) {
+		clearNewCommentURL();
 		objCommonMethods.setWebElementText(testimonialsPageNewCommentURL, commentURL);
+	}
+	
+	public void clearNewCommentText() {
+		objCommonMethods.clearWebElementText(testimonialsPageNewCommentTextarea);
+	}
+	
+	public void clearNewCommentEmail() {
+		objCommonMethods.clearWebElementText(testimonialsPageNewCommentEmail);
+	}
+	
+	public void clearNewCommentAuthor() {
+		objCommonMethods.clearWebElementText(testimonialsPageNewCommentAuthor);
+	}
+	
+	public void clearNewCommentURL() {
+		objCommonMethods.clearWebElementText(testimonialsPageNewCommentURL);
 	}
 	
 	public void clickWordpressLink() {
@@ -84,12 +114,24 @@ public class TestimonialsPage {
 		objCommonMethods.clickWebElement(testimonialsPageNewCommentSubmitButton);
 	}
 	
+	public void clickDuplicateCommentBackLink() {
+		objCommonMethods.clickWebElement(testimonialsPageDuplicateCommentBackLink);
+	}
+	
 	public void enableSubscribeCommentsChkbox() {
 		objCommonMethods.enableCheckbox(testimonialsPageSubscribeCommentsChkbox);
 	}
 	
-	public void enableSuscribePostsChkbox() {
+	public void disableSubscribeCommentsChkbox() {
+		objCommonMethods.disableCheckbox(testimonialsPageSubscribeCommentsChkbox);
+	}
+	
+	public void enableSubscribePostsChkbox() {
 		objCommonMethods.enableCheckbox(testimonialsPageSubscribePostsChkbox);
+	}
+	
+	public void disableSubscribePostsChkbox() {
+		objCommonMethods.disableCheckbox(testimonialsPageSubscribePostsChkbox);
 	}
 	
 	public String getNoMailErrorText() {

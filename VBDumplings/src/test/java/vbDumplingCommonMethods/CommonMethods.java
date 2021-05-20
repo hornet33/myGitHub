@@ -1,5 +1,6 @@
 package vbDumplingCommonMethods;
 
+import java.util.concurrent.ThreadLocalRandom;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
@@ -44,6 +45,14 @@ public class CommonMethods {
 		}
 	}
 	
+	//Method to clear the text on a WebElement if it is visible 
+	//Returns N/A
+	public void clearWebElementText(WebElement textInputElement) {
+		if(isElementVisible(textInputElement,2)) {
+			textInputElement.clear();
+		}
+	}
+	
 	//Method to get the text from a WebElement if it is visible 
 	//Returns the text of the WebElement if found, else ""	
 	public String getWebElementText(WebElement element){
@@ -51,6 +60,13 @@ public class CommonMethods {
 			return(element.getText());
 		}
 		else return("");
+	}
+	
+	//Method to add a random number (int) to a String
+	//Return the string after the random int is appended
+	public String appendRandomIntToString(String inputString) {
+		inputString = inputString + "( #" + ThreadLocalRandom.current().nextInt() + " )";
+		return(inputString);
 	}
 	
 	//Method to scroll the view-port until the specified WebElement is visible 
