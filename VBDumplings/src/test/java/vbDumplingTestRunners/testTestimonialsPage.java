@@ -164,7 +164,7 @@ public class testTestimonialsPage {
 		objTestimonialsPage.disableSubscribeCommentsChkbox();
 		objTestimonialsPage.disableSubscribePostsChkbox();
 		objTestimonialsPage.clickNewCommentSubmitBtn();
-		try { Thread.sleep(3000); }
+		try { Thread.sleep(1000); }
 		catch(Exception e) {}
 		Integer totalCommentsCount = Integer.valueOf(objTestimonialsPage.getCommentsAsWebelements().size());
 		String actualPendingModerationText = objTestimonialsPage.getCommentPendingModerationText();
@@ -194,7 +194,7 @@ public class testTestimonialsPage {
 		objTestimonialsPage.disableSubscribeCommentsChkbox();
 		objTestimonialsPage.disableSubscribePostsChkbox();
 		objTestimonialsPage.clickNewCommentSubmitBtn();
-		try { Thread.sleep(3000); }
+		try { Thread.sleep(1000); }
 		catch(Exception e) {}
 		if(objTestimonialsPage.getDuplicateCommentErrorText().trim().equals(expectedDuplicateCommentErrorText)
 			&& objTestimonialsPage.getPageTitle().trim().equals(expectedCommentSubmissionFailTitle)
@@ -224,7 +224,7 @@ public class testTestimonialsPage {
 		objTestimonialsPage.enableSubscribeCommentsChkbox();
 		objTestimonialsPage.disableSubscribePostsChkbox();
 		objTestimonialsPage.clickNewCommentSubmitBtn();
-		try { Thread.sleep(3000); }
+		try { Thread.sleep(1000); }
 		catch(Exception e) {}
 		Integer totalCommentsCount = Integer.valueOf(objTestimonialsPage.getCommentsAsWebelements().size());
 		String actualPendingModerationText = objTestimonialsPage.getCommentPendingModerationText();
@@ -255,7 +255,7 @@ public class testTestimonialsPage {
 		objTestimonialsPage.disableSubscribeCommentsChkbox();
 		objTestimonialsPage.enableSubscribePostsChkbox();
 		objTestimonialsPage.clickNewCommentSubmitBtn();
-		try { Thread.sleep(3000); }
+		try { Thread.sleep(1000); }
 		catch(Exception e) {}
 		Integer totalCommentsCount = Integer.valueOf(objTestimonialsPage.getCommentsAsWebelements().size());
 		String actualPendingModerationText = objTestimonialsPage.getCommentPendingModerationText();

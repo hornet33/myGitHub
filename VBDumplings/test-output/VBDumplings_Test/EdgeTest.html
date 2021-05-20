@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>EdgeTest</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>11/0/11</td>
+<td>Tests passed/Failed/Skipped:</td><td>34/0/0</td>
 </tr><tr>
-<td>Started on:</td><td>Tue May 18 18:00:45 IST 2021</td>
+<td>Started on:</td><td>Thu May 20 19:27:34 IST 2021</td>
 </tr>
-<tr><td>Total time:</td><td>144 seconds (144178 ms)</td>
+<tr><td>Total time:</td><td>198 seconds (198731 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,159 +67,6 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
-<table width='100%' border='1' class='invocation-failed'>
-<tr><td colspan='4' align='center'><b>FAILED CONFIGURATIONS</b></td></tr>
-<tr><td><b>Test method</b></td>
-<td width="30%"><b>Exception</b></td>
-<td width="10%"><b>Time (seconds)</b></td>
-<td><b>Instance</b></td>
-</tr>
-<tr>
-<td title='vbDumplingTestRunners.testHomePage.initDriver()'><b>initDriver</b><br>Test class: vbDumplingTestRunners.testHomePage<br>Parameters: msedge, https://vbdumplings.in/</td>
-<td><div><pre>org.openqa.selenium.WebDriverException: unknown error: MSEdge failed to start: exited normally.
-  (unknown error: DevToolsActivePort file doesn&apos;t exist)
-  (The process started from msedge location C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe is no longer running, so MSEdgeDriver is assuming that MSEdge has crashed.)
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;RAHUL-LAPTOP&apos;, ip: &apos;192.168.0.105&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.10&apos;
-Driver info: driver.version: initializeDriver
-remote stacktrace: Backtrace:
-	Ordinal0 [0x00007FF6F84D5CB2+4676786]
-	Ordinal0 [0x00007FF6F817D677+1169015]
-	Ordinal0 [0x00007FF6F81A4346+1327942]
-	Ordinal0 [0x00007FF6F819BE29+1293865]
-	Ordinal0 [0x00007FF6F81D373B+1521467]
-	Ordinal0 [0x00007FF6F81CF2BF+1503935]
-	Ordinal0 [0x00007FF6F81A8061+1343585]
-	Ordinal0 [0x00007FF6F81A918B+1347979]
-	Ordinal0 [0x00007FF6F8250121+2031905]
-	Ordinal0 [0x00007FF6F821C73E+1820478]
-	Ordinal0 [0x00007FF6F83F3224+3748388]
-	Ordinal0 [0x00007FF6F821D10E+1822990]
-	Ordinal0 [0x00007FF6F84E8874+4753524]
-	Ordinal0 [0x00007FF6F84E8174+4751732]
-	Ordinal0 [0x00007FF6F84E7FBA+4751290]
-	Ordinal0 [0x00007FF6F84BFFD8+4587480]
-	BaseThreadInitThunk [0x00007FFEE4257034+20]
-	RtlUserThreadStart [0x00007FFEE54DD0D1+33]
-
-	at org.openqa.selenium.remote.W3CHandshakeResponse.lambda$errorHandler$0(W3CHandshakeResponse.java:62)
-	at org.openqa.selenium.remote.HandshakeResponse.lambda$getResponseFunction$0(HandshakeResponse.java:30)
-	at org.openqa.selenium.remote.ProtocolHandshake.lambda$createSession$0(ProtocolHandshake.java:126)
-	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195)
-	at java.base/java.util.Spliterators$ArraySpliterator.tryAdvance(Spliterators.java:958)
-	at java.base/java.util.stream.ReferencePipeline.forEachWithCancel(ReferencePipeline.java:127)
-	at java.base/java.util.stream.AbstractPipeline.copyIntoWithCancel(AbstractPipeline.java:502)
-	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:488)
-	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474)
-	at java.base/java.util.stream.FindOps$FindOp.evaluateSequential(FindOps.java:150)
-	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
-	at java.base/java.util.stream.ReferencePipeline.findFirst(ReferencePipeline.java:543)
-	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:128)
-	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:74)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:136)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:213)
-	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:131)
-	at org.openqa.selenium.edge.EdgeDriver.&lt;init&gt;(EdgeDriver.java:141)
-	at org.openqa.selenium.edge.EdgeDriver.&lt;init&gt;(EdgeDriver.java:96)
-	at vbDumplingTestRunners.initializeDriver.testSetup(initializeDriver.java:24)
-	at vbDumplingTestRunners.testHomePage.initDriver(testHomePage.java:34)
-... Removed 28 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2074201534", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace2074201534'><pre>org.openqa.selenium.WebDriverException: unknown error: MSEdge failed to start: exited normally.
-  (unknown error: DevToolsActivePort file doesn&apos;t exist)
-  (The process started from msedge location C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe is no longer running, so MSEdgeDriver is assuming that MSEdge has crashed.)
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;RAHUL-LAPTOP&apos;, ip: &apos;192.168.0.105&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.10&apos;
-Driver info: driver.version: initializeDriver
-remote stacktrace: Backtrace:
-	Ordinal0 [0x00007FF6F84D5CB2+4676786]
-	Ordinal0 [0x00007FF6F817D677+1169015]
-	Ordinal0 [0x00007FF6F81A4346+1327942]
-	Ordinal0 [0x00007FF6F819BE29+1293865]
-	Ordinal0 [0x00007FF6F81D373B+1521467]
-	Ordinal0 [0x00007FF6F81CF2BF+1503935]
-	Ordinal0 [0x00007FF6F81A8061+1343585]
-	Ordinal0 [0x00007FF6F81A918B+1347979]
-	Ordinal0 [0x00007FF6F8250121+2031905]
-	Ordinal0 [0x00007FF6F821C73E+1820478]
-	Ordinal0 [0x00007FF6F83F3224+3748388]
-	Ordinal0 [0x00007FF6F821D10E+1822990]
-	Ordinal0 [0x00007FF6F84E8874+4753524]
-	Ordinal0 [0x00007FF6F84E8174+4751732]
-	Ordinal0 [0x00007FF6F84E7FBA+4751290]
-	Ordinal0 [0x00007FF6F84BFFD8+4587480]
-	BaseThreadInitThunk [0x00007FFEE4257034+20]
-	RtlUserThreadStart [0x00007FFEE54DD0D1+33]
-
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
-	at org.openqa.selenium.remote.W3CHandshakeResponse.lambda$errorHandler$0(W3CHandshakeResponse.java:62)
-	at org.openqa.selenium.remote.HandshakeResponse.lambda$getResponseFunction$0(HandshakeResponse.java:30)
-	at org.openqa.selenium.remote.ProtocolHandshake.lambda$createSession$0(ProtocolHandshake.java:126)
-	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195)
-	at java.base/java.util.Spliterators$ArraySpliterator.tryAdvance(Spliterators.java:958)
-	at java.base/java.util.stream.ReferencePipeline.forEachWithCancel(ReferencePipeline.java:127)
-	at java.base/java.util.stream.AbstractPipeline.copyIntoWithCancel(AbstractPipeline.java:502)
-	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:488)
-	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474)
-	at java.base/java.util.stream.FindOps$FindOp.evaluateSequential(FindOps.java:150)
-	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
-	at java.base/java.util.stream.ReferencePipeline.findFirst(ReferencePipeline.java:543)
-	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:128)
-	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:74)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:136)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:213)
-	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:131)
-	at org.openqa.selenium.edge.EdgeDriver.&lt;init&gt;(EdgeDriver.java:141)
-	at org.openqa.selenium.edge.EdgeDriver.&lt;init&gt;(EdgeDriver.java:96)
-	at vbDumplingTestRunners.initializeDriver.testSetup(initializeDriver.java:24)
-	at vbDumplingTestRunners.testHomePage.initDriver(testHomePage.java:34)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
-	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:564)
-	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:213)
-	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:138)
-	at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:175)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:107)
-	at org.testng.TestRunner.privateRun(TestRunner.java:767)
-	at org.testng.TestRunner.run(TestRunner.java:617)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
-	at org.testng.TestNG.run(TestNG.java:1031)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</pre></div></td>
-<td>0</td>
-<td>vbDumplingTestRunners.testHomePage@6aa61224</td></tr>
-</table><p>
-<table width='100%' border='1' class='invocation-skipped'>
-<tr><td colspan='4' align='center'><b>SKIPPED CONFIGURATIONS</b></td></tr>
-<tr><td><b>Test method</b></td>
-<td width="30%"><b>Exception</b></td>
-<td width="10%"><b>Time (seconds)</b></td>
-<td><b>Instance</b></td>
-</tr>
-<tr>
-<td title='vbDumplingTestRunners.testHomePage.testClose()'><b>testClose</b><br>Test class: vbDumplingTestRunners.testHomePage</td>
-<td></td>
-<td>0</td>
-<td>vbDumplingTestRunners.testHomePage@6aa61224</td></tr>
-</table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
@@ -228,123 +75,175 @@ remote stacktrace: Backtrace:
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='vbDumplingTestRunners.testFaqPage.checkFaqPageContentHeaderText()'><b>checkFaqPageContentHeaderText</b><br>Test class: vbDumplingTestRunners.testFaqPage</td>
-<td></td>
-<td>0</td>
-<td>vbDumplingTestRunners.testFaqPage@30bce90b</td></tr>
-<tr>
-<td title='vbDumplingTestRunners.testFaqPage.checkFaqPageLHSHeaderText()'><b>checkFaqPageLHSHeaderText</b><br>Test class: vbDumplingTestRunners.testFaqPage</td>
-<td></td>
-<td>0</td>
-<td>vbDumplingTestRunners.testFaqPage@30bce90b</td></tr>
-<tr>
-<td title='vbDumplingTestRunners.testFaqPage.checkFaqPageQuestions()'><b>checkFaqPageQuestions</b><br>Test class: vbDumplingTestRunners.testFaqPage</td>
-<td></td>
-<td>0</td>
-<td>vbDumplingTestRunners.testFaqPage@30bce90b</td></tr>
-<tr>
-<td title='vbDumplingTestRunners.testMenuPage.checkLHSHeaderText()'><b>checkLHSHeaderText</b><br>Test class: vbDumplingTestRunners.testMenuPage</td>
-<td></td>
-<td>0</td>
-<td>vbDumplingTestRunners.testMenuPage@3e6f3f28</td></tr>
-<tr>
-<td title='vbDumplingTestRunners.testMenuPage.checkMenuCategoryOneText()'><b>checkMenuCategoryOneText</b><br>Test class: vbDumplingTestRunners.testMenuPage</td>
-<td></td>
-<td>0</td>
-<td>vbDumplingTestRunners.testMenuPage@3e6f3f28</td></tr>
-<tr>
-<td title='vbDumplingTestRunners.testMenuPage.checkMenuCategoryTwoText()'><b>checkMenuCategoryTwoText</b><br>Test class: vbDumplingTestRunners.testMenuPage</td>
-<td></td>
-<td>0</td>
-<td>vbDumplingTestRunners.testMenuPage@3e6f3f28</td></tr>
-<tr>
-<td title='vbDumplingTestRunners.testMenuPage.checkMenuItemNames()'><b>checkMenuItemNames</b><br>Test class: vbDumplingTestRunners.testMenuPage</td>
-<td></td>
-<td>0</td>
-<td>vbDumplingTestRunners.testMenuPage@3e6f3f28</td></tr>
-<tr>
-<td title='vbDumplingTestRunners.testMenuPage.checkMenuItemPrices()'><b>checkMenuItemPrices</b><br>Test class: vbDumplingTestRunners.testMenuPage</td>
-<td></td>
-<td>0</td>
-<td>vbDumplingTestRunners.testMenuPage@3e6f3f28</td></tr>
-<tr>
-<td title='vbDumplingTestRunners.testFaqPage.checkOrderFormLink()'><b>checkOrderFormLink</b><br>Test class: vbDumplingTestRunners.testFaqPage</td>
-<td></td>
-<td>3</td>
-<td>vbDumplingTestRunners.testFaqPage@30bce90b</td></tr>
-<tr>
-<td title='vbDumplingTestRunners.testFaqPage.clickAllFaqPageQuestionsCollapse()'><b>clickAllFaqPageQuestionsCollapse</b><br>Test class: vbDumplingTestRunners.testFaqPage</td>
-<td></td>
-<td>1</td>
-<td>vbDumplingTestRunners.testFaqPage@30bce90b</td></tr>
-<tr>
-<td title='vbDumplingTestRunners.testFaqPage.clickAllFaqPageQuestionsExpand()'><b>clickAllFaqPageQuestionsExpand</b><br>Test class: vbDumplingTestRunners.testFaqPage</td>
-<td></td>
-<td>1</td>
-<td>vbDumplingTestRunners.testFaqPage@30bce90b</td></tr>
-</table><p>
-<table width='100%' border='1' class='invocation-skipped'>
-<tr><td colspan='4' align='center'><b>SKIPPED TESTS</b></td></tr>
-<tr><td><b>Test method</b></td>
-<td width="30%"><b>Exception</b></td>
-<td width="10%"><b>Time (seconds)</b></td>
-<td><b>Instance</b></td>
-</tr>
-<tr>
 <td title='vbDumplingTestRunners.testHomePage.checkBodyOrderNowLink()'><b>checkBodyOrderNowLink</b><br>Test class: vbDumplingTestRunners.testHomePage</td>
 <td></td>
+<td>4</td>
+<td>vbDumplingTestRunners.testHomePage@46271dd6</td></tr>
+<tr>
+<td title='vbDumplingTestRunners.testTestimonialsPage.checkCommentsTitle()'><b>checkCommentsTitle</b><br>Test class: vbDumplingTestRunners.testTestimonialsPage</td>
+<td></td>
 <td>0</td>
-<td>vbDumplingTestRunners.testHomePage@6aa61224</td></tr>
+<td>vbDumplingTestRunners.testTestimonialsPage@b83a9be</td></tr>
 <tr>
 <td title='vbDumplingTestRunners.testHomePage.checkDescriptionText()'><b>checkDescriptionText</b><br>Test class: vbDumplingTestRunners.testHomePage</td>
 <td></td>
 <td>0</td>
-<td>vbDumplingTestRunners.testHomePage@6aa61224</td></tr>
+<td>vbDumplingTestRunners.testHomePage@46271dd6</td></tr>
+<tr>
+<td title='vbDumplingTestRunners.testFaqPage.checkFaqPageContentHeaderText()'><b>checkFaqPageContentHeaderText</b><br>Test class: vbDumplingTestRunners.testFaqPage</td>
+<td></td>
+<td>0</td>
+<td>vbDumplingTestRunners.testFaqPage@27adc16e</td></tr>
+<tr>
+<td title='vbDumplingTestRunners.testFaqPage.checkFaqPageLHSHeaderText()'><b>checkFaqPageLHSHeaderText</b><br>Test class: vbDumplingTestRunners.testFaqPage</td>
+<td></td>
+<td>0</td>
+<td>vbDumplingTestRunners.testFaqPage@27adc16e</td></tr>
+<tr>
+<td title='vbDumplingTestRunners.testFaqPage.checkFaqPageQuestions()'><b>checkFaqPageQuestions</b><br>Test class: vbDumplingTestRunners.testFaqPage</td>
+<td></td>
+<td>0</td>
+<td>vbDumplingTestRunners.testFaqPage@27adc16e</td></tr>
 <tr>
 <td title='vbDumplingTestRunners.testHomePage.checkHomePageLink()'><b>checkHomePageLink</b><br>Test class: vbDumplingTestRunners.testHomePage</td>
 <td></td>
-<td>0</td>
-<td>vbDumplingTestRunners.testHomePage@6aa61224</td></tr>
+<td>2</td>
+<td>vbDumplingTestRunners.testHomePage@46271dd6</td></tr>
 <tr>
 <td title='vbDumplingTestRunners.testHomePage.checkLHSHeaderText()'><b>checkLHSHeaderText</b><br>Test class: vbDumplingTestRunners.testHomePage</td>
 <td></td>
+<td>2</td>
+<td>vbDumplingTestRunners.testHomePage@46271dd6</td></tr>
+<tr>
+<td title='vbDumplingTestRunners.testMenuPage.checkLHSHeaderText()'><b>checkLHSHeaderText</b><br>Test class: vbDumplingTestRunners.testMenuPage</td>
+<td></td>
 <td>0</td>
-<td>vbDumplingTestRunners.testHomePage@6aa61224</td></tr>
+<td>vbDumplingTestRunners.testMenuPage@2609b277</td></tr>
+<tr>
+<td title='vbDumplingTestRunners.testTestimonialsPage.checkLHSHeaderText()'><b>checkLHSHeaderText</b><br>Test class: vbDumplingTestRunners.testTestimonialsPage</td>
+<td></td>
+<td>0</td>
+<td>vbDumplingTestRunners.testTestimonialsPage@b83a9be</td></tr>
 <tr>
 <td title='vbDumplingTestRunners.testHomePage.checkMenuAboutLink()'><b>checkMenuAboutLink</b><br>Test class: vbDumplingTestRunners.testHomePage</td>
 <td></td>
+<td>1</td>
+<td>vbDumplingTestRunners.testHomePage@46271dd6</td></tr>
+<tr>
+<td title='vbDumplingTestRunners.testMenuPage.checkMenuCategoryOneText()'><b>checkMenuCategoryOneText</b><br>Test class: vbDumplingTestRunners.testMenuPage</td>
+<td></td>
 <td>0</td>
-<td>vbDumplingTestRunners.testHomePage@6aa61224</td></tr>
+<td>vbDumplingTestRunners.testMenuPage@2609b277</td></tr>
+<tr>
+<td title='vbDumplingTestRunners.testMenuPage.checkMenuCategoryTwoText()'><b>checkMenuCategoryTwoText</b><br>Test class: vbDumplingTestRunners.testMenuPage</td>
+<td></td>
+<td>0</td>
+<td>vbDumplingTestRunners.testMenuPage@2609b277</td></tr>
 <tr>
 <td title='vbDumplingTestRunners.testHomePage.checkMenuFAQLink()'><b>checkMenuFAQLink</b><br>Test class: vbDumplingTestRunners.testHomePage</td>
 <td></td>
-<td>0</td>
-<td>vbDumplingTestRunners.testHomePage@6aa61224</td></tr>
+<td>1</td>
+<td>vbDumplingTestRunners.testHomePage@46271dd6</td></tr>
 <tr>
 <td title='vbDumplingTestRunners.testHomePage.checkMenuHomeLink()'><b>checkMenuHomeLink</b><br>Test class: vbDumplingTestRunners.testHomePage</td>
 <td></td>
+<td>1</td>
+<td>vbDumplingTestRunners.testHomePage@46271dd6</td></tr>
+<tr>
+<td title='vbDumplingTestRunners.testMenuPage.checkMenuItemNames()'><b>checkMenuItemNames</b><br>Test class: vbDumplingTestRunners.testMenuPage</td>
+<td></td>
 <td>0</td>
-<td>vbDumplingTestRunners.testHomePage@6aa61224</td></tr>
+<td>vbDumplingTestRunners.testMenuPage@2609b277</td></tr>
+<tr>
+<td title='vbDumplingTestRunners.testMenuPage.checkMenuItemPrices()'><b>checkMenuItemPrices</b><br>Test class: vbDumplingTestRunners.testMenuPage</td>
+<td></td>
+<td>0</td>
+<td>vbDumplingTestRunners.testMenuPage@2609b277</td></tr>
 <tr>
 <td title='vbDumplingTestRunners.testHomePage.checkMenuMenuLink()'><b>checkMenuMenuLink</b><br>Test class: vbDumplingTestRunners.testHomePage</td>
 <td></td>
-<td>0</td>
-<td>vbDumplingTestRunners.testHomePage@6aa61224</td></tr>
+<td>2</td>
+<td>vbDumplingTestRunners.testHomePage@46271dd6</td></tr>
 <tr>
 <td title='vbDumplingTestRunners.testHomePage.checkMenuOrderLink()'><b>checkMenuOrderLink</b><br>Test class: vbDumplingTestRunners.testHomePage</td>
 <td></td>
-<td>0</td>
-<td>vbDumplingTestRunners.testHomePage@6aa61224</td></tr>
+<td>20</td>
+<td>vbDumplingTestRunners.testHomePage@46271dd6</td></tr>
 <tr>
 <td title='vbDumplingTestRunners.testHomePage.checkMenuTestimonialsLink()'><b>checkMenuTestimonialsLink</b><br>Test class: vbDumplingTestRunners.testHomePage</td>
 <td></td>
+<td>2</td>
+<td>vbDumplingTestRunners.testHomePage@46271dd6</td></tr>
+<tr>
+<td title='vbDumplingTestRunners.testTestimonialsPage.checkNewCommentErrorAllEmpty()'><b>checkNewCommentErrorAllEmpty</b><br>Test class: vbDumplingTestRunners.testTestimonialsPage</td>
+<td></td>
+<td>1</td>
+<td>vbDumplingTestRunners.testTestimonialsPage@b83a9be</td></tr>
+<tr>
+<td title='vbDumplingTestRunners.testTestimonialsPage.checkNewCommentErrorAuthorEmpty()'><b>checkNewCommentErrorAuthorEmpty</b><br>Test class: vbDumplingTestRunners.testTestimonialsPage</td>
+<td></td>
+<td>1</td>
+<td>vbDumplingTestRunners.testTestimonialsPage@b83a9be</td></tr>
+<tr>
+<td title='vbDumplingTestRunners.testTestimonialsPage.checkNewCommentErrorDuplicateComment()'><b>checkNewCommentErrorDuplicateComment</b><br>Test class: vbDumplingTestRunners.testTestimonialsPage</td>
+<td></td>
+<td>5</td>
+<td>vbDumplingTestRunners.testTestimonialsPage@b83a9be</td></tr>
+<tr>
+<td title='vbDumplingTestRunners.testTestimonialsPage.checkNewCommentErrorEmailEmpty()'><b>checkNewCommentErrorEmailEmpty</b><br>Test class: vbDumplingTestRunners.testTestimonialsPage</td>
+<td></td>
 <td>0</td>
-<td>vbDumplingTestRunners.testHomePage@6aa61224</td></tr>
+<td>vbDumplingTestRunners.testTestimonialsPage@b83a9be</td></tr>
+<tr>
+<td title='vbDumplingTestRunners.testTestimonialsPage.checkNewCommentFacebookLink()'><b>checkNewCommentFacebookLink</b><br>Test class: vbDumplingTestRunners.testTestimonialsPage</td>
+<td></td>
+<td>0</td>
+<td>vbDumplingTestRunners.testTestimonialsPage@b83a9be</td></tr>
+<tr>
+<td title='vbDumplingTestRunners.testTestimonialsPage.checkNewCommentSuccessNoNotificationsSelected()'><b>checkNewCommentSuccessNoNotificationsSelected</b><br>Test class: vbDumplingTestRunners.testTestimonialsPage</td>
+<td></td>
+<td>11</td>
+<td>vbDumplingTestRunners.testTestimonialsPage@b83a9be</td></tr>
+<tr>
+<td title='vbDumplingTestRunners.testTestimonialsPage.checkNewCommentSuccessSubscribeCommentsSelected()'><b>checkNewCommentSuccessSubscribeCommentsSelected</b><br>Test class: vbDumplingTestRunners.testTestimonialsPage</td>
+<td></td>
+<td>37</td>
+<td>vbDumplingTestRunners.testTestimonialsPage@b83a9be</td></tr>
+<tr>
+<td title='vbDumplingTestRunners.testTestimonialsPage.checkNewCommentSuccessSubscribePostsSelected()'><b>checkNewCommentSuccessSubscribePostsSelected</b><br>Test class: vbDumplingTestRunners.testTestimonialsPage</td>
+<td></td>
+<td>12</td>
+<td>vbDumplingTestRunners.testTestimonialsPage@b83a9be</td></tr>
+<tr>
+<td title='vbDumplingTestRunners.testTestimonialsPage.checkNewCommentTwitterLink()'><b>checkNewCommentTwitterLink</b><br>Test class: vbDumplingTestRunners.testTestimonialsPage</td>
+<td></td>
+<td>0</td>
+<td>vbDumplingTestRunners.testTestimonialsPage@b83a9be</td></tr>
+<tr>
+<td title='vbDumplingTestRunners.testTestimonialsPage.checkNewCommentWordpressLink()'><b>checkNewCommentWordpressLink</b><br>Test class: vbDumplingTestRunners.testTestimonialsPage</td>
+<td></td>
+<td>0</td>
+<td>vbDumplingTestRunners.testTestimonialsPage@b83a9be</td></tr>
+<tr>
+<td title='vbDumplingTestRunners.testFaqPage.checkOrderFormLink()'><b>checkOrderFormLink</b><br>Test class: vbDumplingTestRunners.testFaqPage</td>
+<td></td>
+<td>3</td>
+<td>vbDumplingTestRunners.testFaqPage@27adc16e</td></tr>
 <tr>
 <td title='vbDumplingTestRunners.testHomePage.checkTitleText()'><b>checkTitleText</b><br>Test class: vbDumplingTestRunners.testHomePage</td>
 <td></td>
 <td>0</td>
-<td>vbDumplingTestRunners.testHomePage@6aa61224</td></tr>
+<td>vbDumplingTestRunners.testHomePage@46271dd6</td></tr>
+<tr>
+<td title='vbDumplingTestRunners.testFaqPage.clickAllFaqPageQuestionsCollapse()'><b>clickAllFaqPageQuestionsCollapse</b><br>Test class: vbDumplingTestRunners.testFaqPage</td>
+<td></td>
+<td>1</td>
+<td>vbDumplingTestRunners.testFaqPage@27adc16e</td></tr>
+<tr>
+<td title='vbDumplingTestRunners.testFaqPage.clickAllFaqPageQuestionsExpand()'><b>clickAllFaqPageQuestionsExpand</b><br>Test class: vbDumplingTestRunners.testFaqPage</td>
+<td></td>
+<td>1</td>
+<td>vbDumplingTestRunners.testFaqPage@27adc16e</td></tr>
 </table><p>
 </body>
 </html>
