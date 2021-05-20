@@ -76,18 +76,18 @@ public class CommonMethods {
 		js.executeScript("arguments[0].scrollIntoView();", element);
 	}
 	
-	//Method to enable a check-box WebElement if it is visible and not enabled already
+	//Method to enable a check-box WebElement if it is visible and is not selected already
 	//Returns N/A	
 	public void enableCheckbox(WebElement checkboxToEnable) {
-		if(isElementVisible(checkboxToEnable,2) && !checkboxToEnable.isEnabled()) {
+		if(isElementVisible(checkboxToEnable,2) && !checkboxToEnable.isSelected()) {
 			checkboxToEnable.click();
 		}
 	}
 	
-	//Method to disable a check-box WebElement if it is visible and not disabled already
+	//Method to disable a check-box WebElement if it is visible and is selected already
 	//Returns N/A		
 	public void disableCheckbox(WebElement checkboxToDisable) {
-		if(isElementVisible(checkboxToDisable,2) && checkboxToDisable.isEnabled()) {
+		if(isElementVisible(checkboxToDisable,2) && checkboxToDisable.isSelected()) {
 			checkboxToDisable.click();
 		}
 	}
