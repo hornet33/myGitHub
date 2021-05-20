@@ -24,7 +24,7 @@
 		</classes>
 	</test> <!-- ChromeTest -->
 	
-	<!-- <test name="EdgeTest">
+	<test name="EdgeTest">
 		<parameter name = "browserType" value = "msedge" />
 		<classes>
 			<class name="vbDumplingTestRunners.testHomePage"/>				
@@ -32,7 +32,7 @@
 			<class name="vbDumplingTestRunners.testFaqPage"/>
 			<class name="vbDumplingTestRunners.testTestimonialsPage"/>
 		</classes>
-	</test> --> <!-- EdgeTest -->
+	</test> <!-- EdgeTest -->
 	
 	<!--<groups>
 			<run>
