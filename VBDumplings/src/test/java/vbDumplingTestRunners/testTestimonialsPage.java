@@ -169,7 +169,7 @@ public class testTestimonialsPage {
 		Integer totalCommentsCount = Integer.valueOf(objTestimonialsPage.getCommentsAsWebelements().size());
 		String actualPendingModerationText = objTestimonialsPage.getCommentPendingModerationText();
 		//New comment for pending moderation should be added to the bottom of the initial comments list
-		if(actualPendingModerationText.trim().equals(actualPendingModerationText.trim()) 
+		if(actualPendingModerationText.trim().equals(expectedPendingModerationText.trim()) 
 			&& Integer.valueOf(initialCommentsCount+1).equals(totalCommentsCount)
 		) {
 			Assert.assertTrue(true);
@@ -229,7 +229,7 @@ public class testTestimonialsPage {
 		Integer totalCommentsCount = Integer.valueOf(objTestimonialsPage.getCommentsAsWebelements().size());
 		String actualPendingModerationText = objTestimonialsPage.getCommentPendingModerationText();
 		//New comment for pending moderation should be added to the bottom of the initial comments list
-		if(actualPendingModerationText.trim().equals(actualPendingModerationText.trim()) 
+		if(actualPendingModerationText.trim().equals(expectedPendingModerationText.trim()) 
 			&& Integer.valueOf(initialCommentsCount+1).equals(totalCommentsCount)
 		) {
 			Assert.assertTrue(true);
@@ -260,7 +260,7 @@ public class testTestimonialsPage {
 		Integer totalCommentsCount = Integer.valueOf(objTestimonialsPage.getCommentsAsWebelements().size());
 		String actualPendingModerationText = objTestimonialsPage.getCommentPendingModerationText();
 		//New comment for pending moderation should be added to the bottom of the initial comments list
-		if(actualPendingModerationText.trim().equals(actualPendingModerationText.trim()) 
+		if(actualPendingModerationText.trim().equals(expectedPendingModerationText.trim()) 
 			&& Integer.valueOf(initialCommentsCount+1).equals(totalCommentsCount)
 		) {
 			Assert.assertTrue(true);
