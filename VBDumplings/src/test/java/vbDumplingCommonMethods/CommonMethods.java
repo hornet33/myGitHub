@@ -75,6 +75,37 @@ public class CommonMethods {
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("arguments[0].scrollIntoView();", element);
 	}
+
+	//Method to switch to a newly opened tab/window that is not the same as the original window handle
+	//Returns N/A	
+	public void switchToNewTab(String originalWindow) {
+		//Loop through until we find a new window handle
+		for (String windowHandle : driver.getWindowHandles()) {
+			if(!originalWindow.contentEquals(windowHandle)) {
+		        driver.switchTo().window(windowHandle);
+		        break;
+		    }
+		}
+	}
+	
+	//Method to close a newly opened tab/window and switch back to the original window handle
+	//Returns N/A	
+	public void closeNewTab(String originalWindow) {
+		driver.close();
+		driver.switchTo().window(originalWindow);
+	}
+	
+	//Method to switch to a newly opened tab/window that is not the same as the original window handle and belongs to a specific window handle
+	//Returns N/A	
+	public void switchToNewTab(String originalWindow, String newWindowHandle) {
+		//Loop through until we find a new window handle
+		for (String windowHandle : driver.getWindowHandles()) {
+			if(!originalWindow.contentEquals(windowHandle) && newWindowHandle.contentEquals(windowHandle)) {
+		        driver.switchTo().window(windowHandle);
+		        break;
+		    }
+		}
+	}
 	
 	//Method to enable a check-box WebElement if it is visible and is not selected already
 	//Returns N/A	

@@ -81,26 +81,18 @@ public class HomePage {
 	public boolean verifyOrderPageHeader(String originalWindow,String expectedOrderPageHeader) {
 		String actualOrderPageHeader;
 		
-		//Loop through until we find a new window handle
-		for (String windowHandle : driver.getWindowHandles()) {
-			if(!originalWindow.contentEquals(windowHandle)) {
-		        driver.switchTo().window(windowHandle);
-		        break;
-		    }
-		}
+		objCommonMethods.switchToNewTab(originalWindow);
 		
-		try { Thread.sleep(3000); }
+		try { Thread.sleep(2000); }
 		catch(InterruptedException ie) {}
 		
 		actualOrderPageHeader = objCommonMethods.getWebElementText(orderPageHeader);
 		if (actualOrderPageHeader.equals(expectedOrderPageHeader)) {
-			driver.close();
-			driver.switchTo().window(originalWindow);
+			objCommonMethods.closeNewTab(originalWindow);
 			return true;
 		}
 		else {
-			driver.close();
-			driver.switchTo().window(originalWindow);
+			objCommonMethods.closeNewTab(originalWindow);
 			return false;
 		}
 	}

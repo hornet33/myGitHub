@@ -31,6 +31,11 @@ public class TestimonialsPage {
 	@FindBy(xpath = "//em[@class='comment-awaiting-moderation']") WebElement testimonialsPageCommentPendingModeration;
 	@FindBy(xpath = "//div[@class='wp-die-message']/p") WebElement testimonialsPageDuplicateCommentError;
 	@FindBy(xpath = "//a[contains(text(),'Back')]") WebElement testimonialsPageDuplicateCommentBackLink;
+	@FindBy(xpath = "//div[@class='comment-form-service']/p") WebElement testimonialsPageExternalConnectionInfo;
+	@FindBy(xpath = "//div[@class='comment-form-posting-as-cancel']/a") WebElement testimonialsPageExternalConnectionCancelLink;
+	@FindBy(xpath = "//input[@id='username_or_email']") WebElement twitterPopupUsername;
+	@FindBy(xpath = "//input[@id='usernameOrEmail']	") WebElement wordpressPopupUsername;
+	@FindBy(xpath = "//input[@id='email']") WebElement facebookPopupEmail;
 	
 	public TestimonialsPage(WebDriver driver) {
 		this.driver = driver;
@@ -60,6 +65,10 @@ public class TestimonialsPage {
 	
 	public String getDuplicateCommentErrorText() {
 		return(objCommonMethods.getWebElementText(testimonialsPageDuplicateCommentError));
+	}
+	
+	public String getExternalConnectionInfoText() {
+		return(objCommonMethods.getWebElementText(testimonialsPageExternalConnectionInfo));
 	}
 	
 	public void setNewCommentText(String commentText) {
@@ -118,6 +127,10 @@ public class TestimonialsPage {
 		objCommonMethods.clickWebElement(testimonialsPageDuplicateCommentBackLink);
 	}
 	
+	public void clickExternalConnectionCancelLink() {
+		objCommonMethods.clickWebElement(testimonialsPageExternalConnectionCancelLink);
+	}
+	
 	public void enableSubscribeCommentsChkbox() {
 		objCommonMethods.enableCheckbox(testimonialsPageSubscribeCommentsChkbox);
 	}
@@ -144,5 +157,39 @@ public class TestimonialsPage {
 	
 	public String getCommentPendingModerationText() {
 		return(objCommonMethods.getWebElementText(testimonialsPageCommentPendingModeration));
+	}
+	
+	public boolean checkExternalConnectionUsernamePresent(String originalWindow, String externalConnection) {
+		WebElement elementToCheck = null;
+		
+		objCommonMethods.switchToNewTab(originalWindow);		
+		try { Thread.sleep(1000); }
+		catch(Exception e) {}
+		
+		switch(externalConnection) {
+			case "Wordpress":
+				elementToCheck = wordpressPopupUsername;
+				break;
+			case "Twitter":
+				elementToCheck = twitterPopupUsername;
+				break;
+			case "Facebook":			
+				elementToCheck = facebookPopupEmail;
+				break;
+		}			
+		try { 
+			if(objCommonMethods.isElementVisible(elementToCheck, 3)) {
+				objCommonMethods.closeNewTab(originalWindow);
+				return true;
+			}
+			else {
+				objCommonMethods.closeNewTab(originalWindow);
+				return false;
+			}
+		}
+		catch(Exception e) {
+			objCommonMethods.closeNewTab(originalWindow);
+			return false;
+		}
 	}
 }

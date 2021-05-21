@@ -28,6 +28,9 @@ public class testTestimonialsPage {
 	final String expectedPendingModerationText = "Your comment is awaiting moderation. This is a preview; your comment will be visible after it has been approved.";
 	final String expectedDuplicateCommentErrorText = "Duplicate comment detected; it looks as though you’ve already said that!";
 	final String expectedCommentSubmissionFailTitle = "Comment Submission Failure";
+	final String expectedWordpressConnectionText = "Connecting to WordPress.com";
+	final String expectedTwitterConnectionText = "Connecting to Twitter";
+	final String expectedFacebookConnectionText = "Connecting to Facebook";
 	
 	@BeforeClass
 	@Parameters({"browserType","vbdURL"})
@@ -275,20 +278,154 @@ public class testTestimonialsPage {
 			Assert.fail(errorMsg);
 		}				
 	}
-	
-	@Test(priority=47)
-	public void checkNewCommentWordpressLink() {
 		
+	@Test(priority=47)
+	public void checkWordpressLink() {
+		consoleTestName = "External Connection - Wordpress";
+		
+		//Store the ID of the original window
+		String originalWindow = driver.getWindowHandle();
+		
+		//Need to set some text in text area first
+		sampleCommentText = objCommonMethods.appendRandomIntToString("This is a test comment using Selenium Webdriver!");
+		objCommonMethods.consoleLogger(consoleTestName, sampleCommentText);
+		objTestimonialsPage.setNewCommentText(sampleCommentText);
+		
+		//Click on external connection link
+		objTestimonialsPage.clickWordpressLink();
+
+		//Switch to old window to verify fields are disabled and external connection message is displayed
+		driver.switchTo().window(originalWindow);
+		
+		if(objTestimonialsPage.getExternalConnectionInfoText().equals(expectedWordpressConnectionText)) {
+			//Verify elements in new popup
+			if(objTestimonialsPage.checkExternalConnectionUsernamePresent(originalWindow, "Wordpress")) {
+				Assert.assertTrue(true);
+				objCommonMethods.consoleLogger(consoleTestName, "Pass");
+			}
+			else {
+				String errorMsg = "Element was expected, but was not found";
+				objCommonMethods.consoleLogger(consoleTestName, "Fail", errorMsg);
+				Assert.fail(errorMsg);
+			}	
+		}
+		else {
+			String errorMsg = "Expected text '" + expectedWordpressConnectionText + "' not found";
+			objCommonMethods.consoleLogger(consoleTestName, "Fail", errorMsg);
+			Assert.fail(errorMsg);
+		}	
 	}
 	
 	@Test(priority=47)
-	public void checkNewCommentTwitterLink() {
+	public void checkTwitterLink() {
+		consoleTestName = "External Connection - Twitter";
 		
+		//Store the ID of the original window
+		String originalWindow = driver.getWindowHandle();
+		
+		//Need to set some text in text area first
+		sampleCommentText = objCommonMethods.appendRandomIntToString("This is a test comment using Selenium Webdriver!");
+		objCommonMethods.consoleLogger(consoleTestName, sampleCommentText);
+		objTestimonialsPage.setNewCommentText(sampleCommentText);
+		
+		//Click on external connection link
+		objTestimonialsPage.clickTwitterLink();;
+
+		//Switch to old window to verify fields are disabled and external connection message is displayed
+		driver.switchTo().window(originalWindow);
+		
+		if(objTestimonialsPage.getExternalConnectionInfoText().equals(expectedTwitterConnectionText)) {
+			//Verify elements in new popup
+			if(objTestimonialsPage.checkExternalConnectionUsernamePresent(originalWindow, "Twitter")) {
+				Assert.assertTrue(true);
+				objCommonMethods.consoleLogger(consoleTestName, "Pass");
+			}
+			else {
+				String errorMsg = "Element was expected, but was not found";
+				objCommonMethods.consoleLogger(consoleTestName, "Fail", errorMsg);
+				Assert.fail(errorMsg);
+			}	
+		}
+		else {
+			String errorMsg = "Expected text '" + expectedTwitterConnectionText + "' not found";
+			objCommonMethods.consoleLogger(consoleTestName, "Fail", errorMsg);
+			Assert.fail(errorMsg);
+		}					
 	}
 	
 	@Test(priority=47)
-	public void checkNewCommentFacebookLink() {
+	public void checkFacebookLink() {
+		consoleTestName = "External Connection - Facebook";
 		
+		//Store the ID of the original window
+		String originalWindow = driver.getWindowHandle();
+		
+		//Need to set some text in text area first
+		sampleCommentText = objCommonMethods.appendRandomIntToString("This is a test comment using Selenium Webdriver!");
+		objCommonMethods.consoleLogger(consoleTestName, sampleCommentText);
+		objTestimonialsPage.setNewCommentText(sampleCommentText);
+		
+		//Click on external connection link
+		objTestimonialsPage.clickFacebookLink();
+
+		//Switch to old window to verify fields are disabled and external connection message is displayed
+		driver.switchTo().window(originalWindow);
+		
+		if(objTestimonialsPage.getExternalConnectionInfoText().equals(expectedFacebookConnectionText)) {
+			//Verify elements in new popup
+			if(objTestimonialsPage.checkExternalConnectionUsernamePresent(originalWindow, "Facebook")) {
+				Assert.assertTrue(true);
+				objCommonMethods.consoleLogger(consoleTestName, "Pass");
+			}
+			else {
+				String errorMsg = "Element was expected, but was not found";
+				objCommonMethods.consoleLogger(consoleTestName, "Fail", errorMsg);
+				Assert.fail(errorMsg);
+			}	
+		}
+		else {
+			String errorMsg = "Expected text '" + expectedFacebookConnectionText + "' not found";
+			objCommonMethods.consoleLogger(consoleTestName, "Fail", errorMsg);
+			Assert.fail(errorMsg);
+		}								
+	}
+	
+	@Test(priority=48)
+	public void checkExternalConnectionCancelLink() {
+		consoleTestName = "External Connection - Cancel Link";
+		
+		//Store the ID of the original window
+		String originalWindow = driver.getWindowHandle();
+		objCommonMethods.consoleLogger(consoleTestName,"Original Window Handle", originalWindow);
+		
+		//Need to set some text in text area first
+		sampleCommentText = objCommonMethods.appendRandomIntToString("This is a test comment using Selenium Webdriver!");
+		objCommonMethods.consoleLogger(consoleTestName, sampleCommentText);
+		objTestimonialsPage.setNewCommentText(sampleCommentText);
+		
+		//Click on external connection link
+		objTestimonialsPage.clickFacebookLink();
+		objCommonMethods.switchToNewTab(originalWindow);
+		String newWindowHandle = driver.getWindowHandle();
+		objCommonMethods.consoleLogger(consoleTestName,"New Window Handle", newWindowHandle);
+
+		//Switch to old window to verify fields are disabled and external connection message is displayed
+		driver.switchTo().window(originalWindow);
+		
+		if(objTestimonialsPage.getExternalConnectionInfoText().equals(expectedFacebookConnectionText)) {
+			//Click on the cancel link
+			objTestimonialsPage.clickExternalConnectionCancelLink();
+			
+			for(String windowHandle: driver.getWindowHandles()) {
+				if(newWindowHandle.contentEquals(windowHandle)) {
+					String errorMsg = "Expected windowHandle '" + windowHandle + "' not closed";
+					objCommonMethods.consoleLogger(consoleTestName, "Fail", errorMsg);
+					Assert.fail(errorMsg);
+				}
+			}
+			Assert.assertTrue(true);
+			objCommonMethods.consoleLogger(consoleTestName, "Pass");
+		}
 	}
 	
 	@AfterClass
