@@ -9,7 +9,7 @@
 		<classes>
 			<class name="vbDumplingTestRunners.testHomePage"/>				
 			<class name="vbDumplingTestRunners.testMenuPage"/>
-			<class name="vbDumplingTestRunners.testFaqPage"/>
+			<class name="vbDumplingTestRunners.testFaqPage"/> 
 			<class name="vbDumplingTestRunners.testTestimonialsPage"/>
 		</classes>
 	</test> <!-- EdgeTest -->
@@ -19,7 +19,7 @@
 		<classes>
 			<class name="vbDumplingTestRunners.testHomePage"/>	
 			<class name="vbDumplingTestRunners.testMenuPage"/>
-			<class name="vbDumplingTestRunners.testFaqPage"/>
+			<class name="vbDumplingTestRunners.testFaqPage"/> 
 			<class name="vbDumplingTestRunners.testTestimonialsPage"/>
 		</classes>
 	</test> <!-- FirefoxTest -->

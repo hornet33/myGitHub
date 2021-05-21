@@ -171,6 +171,7 @@ public class testTestimonialsPage {
 		//New comment for pending moderation should be added to the bottom of the initial comments list
 		if(actualPendingModerationText.trim().equals(expectedPendingModerationText.trim()) 
 			&& Integer.valueOf(initialCommentsCount+1).equals(totalCommentsCount)
+			&& objTestimonialsPage.getCommentsAsWebelements().get(totalCommentsCount-1).getText().equals(sampleCommentText)
 		) {
 			Assert.assertTrue(true);
 			objCommonMethods.consoleLogger(consoleTestName, "Pass");
@@ -231,6 +232,7 @@ public class testTestimonialsPage {
 		//New comment for pending moderation should be added to the bottom of the initial comments list
 		if(actualPendingModerationText.trim().equals(expectedPendingModerationText.trim()) 
 			&& Integer.valueOf(initialCommentsCount+1).equals(totalCommentsCount)
+			&& objTestimonialsPage.getCommentsAsWebelements().get(totalCommentsCount-1).getText().equals(sampleCommentText)
 		) {
 			Assert.assertTrue(true);
 			objCommonMethods.consoleLogger(consoleTestName, "Pass");
@@ -262,6 +264,7 @@ public class testTestimonialsPage {
 		//New comment for pending moderation should be added to the bottom of the initial comments list
 		if(actualPendingModerationText.trim().equals(expectedPendingModerationText.trim()) 
 			&& Integer.valueOf(initialCommentsCount+1).equals(totalCommentsCount)
+			&& objTestimonialsPage.getCommentsAsWebelements().get(totalCommentsCount-1).getText().equals(sampleCommentText)
 		) {
 			Assert.assertTrue(true);
 			objCommonMethods.consoleLogger(consoleTestName, "Pass");
