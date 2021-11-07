@@ -6,31 +6,13 @@
   <test parallel="none" name="EdgeTest(failed)">
     <parameter name="browserType" value="msedge"/>
     <classes>
-      <class name="vbDumplingTestRunners.testHomePage">
-        <methods>
-          <include name="testClose"/>
-          <include name="checkBodyOrderNowLink"/>
-          <include name="initDriver"/>
-        </methods>
-      </class> <!-- vbDumplingTestRunners.testHomePage -->
-      <class name="vbDumplingTestRunners.testFaqPage">
-        <methods>
-          <include name="testClose"/>
-          <include name="initDriver"/>
-        </methods>
-      </class> <!-- vbDumplingTestRunners.testFaqPage -->
       <class name="vbDumplingTestRunners.testTestimonialsPage">
         <methods>
+          <include name="checkExternalConnectionCancelLink"/>
           <include name="testClose"/>
           <include name="initDriver"/>
         </methods>
       </class> <!-- vbDumplingTestRunners.testTestimonialsPage -->
-      <class name="vbDumplingTestRunners.testMenuPage">
-        <methods>
-          <include name="initDriver"/>
-          <include name="testClose"/>
-        </methods>
-      </class> <!-- vbDumplingTestRunners.testMenuPage -->
     </classes>
   </test> <!-- EdgeTest(failed) -->
 </suite> <!-- Failed suite [VBDumplings_Test] -->

@@ -14,24 +14,22 @@ public class initializeDriver {
 		if (browserType.equalsIgnoreCase("chrome")) {			
 			WebDriverManager.chromedriver().setup();
 			driver = new ChromeDriver();
+			//Implicit wait of 30 seconds for Chrome and Firefox
+			driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		}
 		else if (browserType.equalsIgnoreCase("firefox")) {
 			WebDriverManager.firefoxdriver().setup();
 			driver = new FirefoxDriver();
+			//Implicit wait of 30 seconds for Chrome and Firefox
+			driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		}
 		else if (browserType.equalsIgnoreCase("msedge")) {
 			WebDriverManager.edgedriver().setup();
 			driver = new EdgeDriver();
-		}
-		
-		if(browserType.equalsIgnoreCase("msedge")) {
 			//Implicit wait of 60 seconds for MS Edge
 			driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
 		}
-		else {
-			//Implicit wait of 30 seconds for Chrome and Firefox
-			driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-		}
+		
 		driver.manage().window().maximize();		
 		
 		//Return driver instance
