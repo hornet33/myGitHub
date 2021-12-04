@@ -4,7 +4,7 @@
 	<!-- <parameter name = "driverPath" value = "C:\\Users\\Rahul Pradhan\\OneDrive\\Documents\\Selenium\\Drivers\\" /> -->
 	<parameter name = "vbdURL" value = "https://vbdumplings.in/" />
 
-	 <test name="EdgeTest">
+	 <!--<test name="EdgeTest">
 		<parameter name = "browserType" value = "msedge" />
 		<classes>
 			<class name="vbDumplingTestRunners.testHomePage"/>				
@@ -12,7 +12,7 @@
 			<class name="vbDumplingTestRunners.testFaqPage"/> 
 			<class name="vbDumplingTestRunners.testTestimonialsPage"/>
 		</classes>
-	</test>  <!-- EdgeTest -->
+	</test>-->  <!-- EdgeTest -->
 		
 	<!--<test name="FirefoxTest">
 		<parameter name = "browserType" value = "firefox" />
