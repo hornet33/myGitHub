@@ -43,7 +43,7 @@ public class MenuPage {
 	}
 	
 	public ArrayList<String> getMenuItemNames() {
-		ArrayList<String> menuItemNames = new ArrayList<String>(); 
+		ArrayList<String> menuItemNames = new ArrayList<>();
 		for(WebElement menuPageItemName: menuPageMenuItemNameList) {
 			menuItemNames.add(objCommonMethods.getWebElementText(menuPageItemName));
 		}
@@ -51,7 +51,7 @@ public class MenuPage {
 	}
 	
 	public ArrayList<String> getMenuItemFullText(){
-		ArrayList<String> menuItemFullTexts = new ArrayList<String>(); 
+		ArrayList<String> menuItemFullTexts = new ArrayList<>();
 		for(WebElement menuPageItemFullText: menuPageMenuItemFullTextList) {
 			menuItemFullTexts.add(objCommonMethods.getWebElementText(menuPageItemFullText));
 		}
