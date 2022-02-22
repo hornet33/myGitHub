@@ -16,7 +16,7 @@ public class CommonMethods {
 		this.driver = driver;
 	}
 	
-	//Method to check if a WebElement is visible within the specified 'timeOut' seconds
+	//Method to check if a WebElement is visible within the specified 'timeOut' seconds using Explicit Wait
 	//Returns true if visible, else returns false
 	public boolean isElementVisible(WebElement webElement, int timeOut) {
 		try {
@@ -28,8 +28,8 @@ public class CommonMethods {
 			return false;
 		}
 	}
-	
-	//Method to click on a WebElement if it is visible 
+
+	//Method to click on a WebElement if it is visible
 	//Returns N/A	
 	public void clickWebElement(WebElement elementToClick) {
 		if(isElementVisible(elementToClick,2)) {
