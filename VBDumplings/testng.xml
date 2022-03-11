@@ -14,7 +14,7 @@
 		</classes>
 	</test>-->  <!-- EdgeTest -->
 		
-	<!--<test name="FirefoxTest">
+	<test name="FirefoxTest">
 		<parameter name = "browserType" value = "firefox" />
 		<classes>
 			<class name="vbDumplingTestRunners.testHomePage"/>	
@@ -22,7 +22,7 @@
 			<class name="vbDumplingTestRunners.testFaqPage"/> 
 			<class name="vbDumplingTestRunners.testTestimonialsPage"/> 
 		</classes>
-	</test> --> <!-- FirefoxTest -->
+	</test> <!-- FirefoxTest -->
 	
 	 <test name="ChromeTest">
 		<parameter name = "browserType" value = "chrome" />
